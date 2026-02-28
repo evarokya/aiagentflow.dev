@@ -37,5 +37,35 @@
             "title": "Test & Validate",
             "description": "The Tester Agent writes unit tests and the Judge validates that the code meets all initial requirements."
         }
+    },
+    "Features": {
+        "badge": "Why AI Agent Flow?",
+        "headlinePrefix": "Everything you need to",
+        "headlineSuffix": "scale dev output",
+        "description": "Stop wrestling with bloated frameworks. AI Agent Flow gives you the primitives you need to ship software faster, right from your terminal.",
+        "feature1": {
+            "title": "Local First",
+            "description": "Your code, your rules. No cloud lock-in or sending proprietary architecture to third-party orchestration servers."
+        },
+        "feature2": {
+            "title": "Framework Agnostic",
+            "description": "Works with React, Vue, Svelte, Node, Python, and more. If you can code it, our agents can orchestrate it."
+        },
+        "feature3": {
+            "title": "Predictable Output",
+            "description": "By separating concerns (Architect vs Coder vs Reviewer), you eliminate massive context hallucinations and get reliable results."
+        },
+        "feature4": {
+            "title": "Self-Correcting",
+            "description": "Built-in Judge and Tester agents automatically retry failed tests and fix syntax errors before returning control to you."
+        },
+        "feature5": {
+            "title": "Extensible",
+            "description": "Write custom agents or modify existing prompts. The entire framework is designed to be molded to your team's specific workflow."
+        },
+        "feature6": {
+            "title": "Cost Effective",
+            "description": "Only pay for the LLM tokens you use. No enterprise SaaS subscriptions or hidden orchestration fees."
+        }
     }
 }

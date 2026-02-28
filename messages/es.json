@@ -37,5 +37,35 @@
             "title": "Probar y Validar",
             "description": "El Agente Probador escribe pruebas unitarias y el Juez valida que el código cumple con todos los requisitos iniciales."
         }
+    },
+    "Features": {
+        "badge": "¿Por qué AI Agent Flow?",
+        "headlinePrefix": "Todo lo que necesitas para",
+        "headlineSuffix": "escalar tu desarrollo",
+        "description": "Deja de luchar con frameworks sobrecargados. AI Agent Flow te brinda las primitivas que necesitas para enviar software más rápido, directamente desde tu terminal.",
+        "feature1": {
+            "title": "Local Primero",
+            "description": "Tu código, tus reglas. Sin dependencia de la nube ni envío de tu arquitectura propietaria a servidores de orquestación de terceros."
+        },
+        "feature2": {
+            "title": "Agnóstico de Framework",
+            "description": "Funciona con React, Vue, Svelte, Node, Python y más. Si puedes codificarlo, nuestros agentes pueden orquestarlo."
+        },
+        "feature3": {
+            "title": "Resultados Predecibles",
+            "description": "Al separar responsabilidades (Arquitecto vs Programador vs Revisor), eliminas las alucinaciones de contexto y obtienes resultados fiables."
+        },
+        "feature4": {
+            "title": "Autocorrección",
+            "description": "Los agentes Juez y Probador integrados reintentan automáticamente las pruebas fallidas y corrigen errores de sintaxis antes de devolverte el control."
+        },
+        "feature5": {
+            "title": "Extensible",
+            "description": "Escribe agentes personalizados o modifica los prompts existentes. Todo el framework está diseñado para adaptarse al flujo de trabajo específico de tu equipo."
+        },
+        "feature6": {
+            "title": "Rentable",
+            "description": "Paga solo por los tokens de LLM que utilices. Sin suscripciones SaaS empresariales ni tarifas ocultas de orquestación."
+        }
     }
 }
