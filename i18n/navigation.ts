@@ -4,7 +4,7 @@ import { locales } from './request';
 
 export const routing = defineRouting({
     locales,
-    defaultLocale: 'en'
+    defaultLocale: 'bn'
 });
 
 export const { Link, redirect, usePathname, useRouter } = createNavigation(routing);

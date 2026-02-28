@@ -3,6 +3,7 @@ title: "AI Agent Flow vs LangChain"
 description: "A detailed comparison between AI Agent Flow and LangChain for building AI development workflows."
 date: "2026-02-28"
 author: "AI Agent Flow Team"
+keywords: ["ai agent flow", "langchain", "langchain alternative", "multi-agent framework", "local ai orchestration", "software development ai"]
 ---
 
 # AI Agent Flow vs LangChain: Which is right for you?
@@ -40,7 +41,7 @@ Instead of providing raw chains and memory buffers, AI Agent Flow gives you a pr
 | Feature | AI Agent Flow | LangChain |
 |---------|--------------|-----------|
 | **Core focus** | Software Engineering Automation | Generic LLM Application Building |
-| **Learning Curve** | Low (`ai-agent-flow run "task"`) | High |
+| **Learning Curve** | Low (`aiagentflow run "task"`) | High |
 | **Out-of-box Agents** | Pre-configured Dev Team | None (You build them) |
 | **Execution** | Local CLI | Application Code |
 

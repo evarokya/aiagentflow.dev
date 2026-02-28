@@ -37,7 +37,7 @@ export function Footer() {
                         <h3 className="text-sm font-semibold text-slate-900 dark:text-white uppercase tracking-wider mb-4">{t("resources")}</h3>
                         <ul className="space-y-3">
                             <li><Link href="/blog" className="text-slate-500 dark:text-slate-400 hover:text-brand-primary dark:hover:text-brand-secondary transition-colors">Blog</Link></li>
-                            <li><Link href="/use-cases/ai-agent-flow-vs-langchain" className="text-slate-500 dark:text-slate-400 hover:text-brand-primary dark:hover:text-brand-secondary transition-colors">Alternatives</Link></li>
+                            <li><Link href="/use-cases/aiagentflow-vs-langchain" className="text-slate-500 dark:text-slate-400 hover:text-brand-primary dark:hover:text-brand-secondary transition-colors">Alternatives</Link></li>
                             <li><a href="https://github.com/aiagentflow/aiagentflow/tree/main/docs" target="_blank" rel="noreferrer" className="text-slate-500 dark:text-slate-400 hover:text-brand-primary dark:hover:text-brand-secondary transition-colors">Documentation</a></li>
                         </ul>
                     </div>

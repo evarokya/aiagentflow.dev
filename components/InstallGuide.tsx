@@ -15,7 +15,7 @@ export function InstallGuide() {
     const t = useTranslations("Install");
     const [copied, setCopied] = useState(false);
 
-    const npmCommand = "npm install ai-agent-flow";
+    const npmCommand = "npm install aiagentflow";
 
     const copyToClipboard = () => {
         navigator.clipboard.writeText(npmCommand);

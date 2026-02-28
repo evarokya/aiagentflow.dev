@@ -8,7 +8,7 @@
         "viewGitHub": "View on GitHub"
     },
     "Terminal": {
-        "step1": "$ ai-agent-flow run \"Build a REST API for user auth\"",
+        "step1": "$ aiagentflow run \"Build a REST API for user auth\"",
         "step2": "✔ Architect complete (1,204 tokens)",
         "step3": "✔ Coder complete (3,891 tokens)",
         "step4": "✔ Reviewer complete (987 tokens)",

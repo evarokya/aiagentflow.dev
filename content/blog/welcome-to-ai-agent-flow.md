@@ -3,6 +3,7 @@ title: "Welcome to AI Agent Flow"
 description: "Discover how AI Agent Flow orchestrates full engineering teams on your local machine."
 date: "2026-02-28"
 author: "AI Agent Flow Team"
+keywords: ["ai agent flow", "local ai", "open source ai", "multi-agent orchestration", "software engineering automation", "ai assistants"]
 ---
 
 # Welcome to AI Agent Flow
@@ -13,7 +14,7 @@ Building software is complex. It involves much more than just writing code—you
 
 ## How it works
 
-When you run `ai-agent-flow run "Build a login system"`, you aren't just sending a prompt to an LLM. You are kicking off a structured, multi-agent workflow:
+When you run `aiagentflow run "Build a login system"`, you aren't just sending a prompt to an LLM. You are kicking off a structured, multi-agent workflow:
 
 1. **The Architect** breaks down the task into modules and writes technical specs.
 2. **The Coder** writes the code.
@@ -28,7 +29,7 @@ No cloud lock-in. No sending your proprietary code to a closed platform. It all 
 Install AI Agent Flow today:
 
 ```bash
-npm install -g ai-agent-flow
+npm install -g aiagentflow
 ```
 
 Stay tuned for more updates on how to build custom agents and integrate local LLMs like Ollama into your workflows!

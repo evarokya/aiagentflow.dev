@@ -38,14 +38,14 @@ export function Header() {
 
                     <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-400">
                         <Link href="/blog" className="hover:text-slate-900 dark:hover:text-white transition-colors">Blog</Link>
-                        <Link href="/use-cases/ai-agent-flow-vs-langchain" className="hover:text-slate-900 dark:hover:text-white transition-colors">Comparisons</Link>
+                        <Link href="/use-cases/aiagentflow-vs-langchain" className="hover:text-slate-900 dark:hover:text-white transition-colors">Comparisons</Link>
                         <a href="https://github.com/aiagentflow/aiagentflow" target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 dark:hover:text-white transition-colors">GitHub</a>
                     </nav>
                 </div>
 
                 <div className="flex items-center gap-4">
                     <div className="hidden sm:flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-900 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-800">
-                        <kbd className="font-mono text-xs">npm i -g ai-agent-flow</kbd>
+                        <kbd className="font-mono text-xs">npm i -g aiagentflow</kbd>
                     </div>
                     <ThemeToggle />
                 </div>

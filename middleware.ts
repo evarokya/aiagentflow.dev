@@ -6,11 +6,11 @@ export default createMiddleware({
     locales: locales,
 
     // Used when no locale matches
-    defaultLocale: 'en'
+    defaultLocale: 'bn'
 });
 
 export const config = {
     // Match only internationalized pathnames
     // Catch-all regex to match all routes except next internals, api, and static files
-    matcher: ['/((?!api|_next|_vercel|.*\\..*).*)', '/(es|en)/:path*']
+    matcher: ['/((?!api|_next|_vercel|.*\\..*).*)', '/(es|en|bn)/:path*']
 };

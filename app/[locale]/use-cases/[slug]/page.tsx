@@ -17,6 +17,7 @@ export async function generateMetadata({ params }: PseoPageProps): Promise<Metad
     return {
         title: `${post.metadata.title} — AI Agent Flow`,
         description: post.metadata.description,
+        keywords: post.metadata.keywords,
         openGraph: {
             title: post.metadata.title,
             description: post.metadata.description,

@@ -104,7 +104,7 @@ export function InteractiveDemo() {
                                     >
                                         {activeTab === "react" && (
                                             <>
-                                                <span className="text-brand-secondary">import</span> {"{"} AgentRole, StructuredWorkflow {"}"} <span className="text-brand-secondary">from</span> <span className="text-emerald-400">&quot;ai-agent-flow&quot;</span>;<br /><br />
+                                                <span className="text-brand-secondary">import</span> {"{"} AgentRole, StructuredWorkflow {"}"} <span className="text-brand-secondary">from</span> <span className="text-emerald-400">&quot;aiagentflow&quot;</span>;<br /><br />
                                                 <span className="text-brand-secondary">const</span> workflow = <span className="text-brand-secondary">new</span> <span className="text-amber-300">StructuredWorkflow</span>({"{"}<br />
                                                 {"  "}roles: [AgentRole.<span className="text-brand-primary">Architect</span>, AgentRole.<span className="text-brand-primary">Coder</span>, AgentRole.<span className="text-brand-primary">Reviewer</span>],<br />
                                                 {"  "}model: <span className="text-emerald-400">&quot;claude-3-5-sonnet-20241022&quot;</span>,<br />
@@ -126,7 +126,7 @@ export function InteractiveDemo() {
                                         )}
                                         {activeTab === "cli" && (
                                             <>
-                                                <span className="text-slate-500">$</span> ai-agent-flow run <span className="text-emerald-400">&quot;Build a markdown parser&quot;</span> \<br />
+                                                <span className="text-slate-500">$</span> aiagentflow run <span className="text-emerald-400">&quot;Build a markdown parser&quot;</span> \<br />
                                                 {"    "}<span className="text-brand-secondary">--roles</span> architect,coder,reviewer,tester \<br />
                                                 {"    "}<span className="text-brand-secondary">--model</span> gemini-2.5-pro \<br />
                                                 {"    "}<span className="text-brand-secondary">--dir</span> ./packages/parser

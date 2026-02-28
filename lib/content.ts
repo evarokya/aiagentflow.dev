@@ -10,6 +10,7 @@ export interface PostMetadata {
     date?: string;
     author?: string;
     slug: string;
+    keywords?: string[];
 }
 
 export interface Post {

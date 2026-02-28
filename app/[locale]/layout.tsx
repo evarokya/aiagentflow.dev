@@ -21,7 +21,11 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "AI Agent Flow — Multi-Agent AI Workflow Orchestrator",
   description: "Open-source CLI tool that orchestrates multi-agent AI workflows for software development. Architect, code, review, test, and ship — automatically.",
-  keywords: ["ai agent", "workflow", "multi-agent", "cli", "code review", "testing", "automation", "open source", "local-first"],
+  keywords: [
+    "ai agents", "multi-agent orchestration", "software development automation", "ai coding assistant",
+    "local-first ai", "cli ai tool", "automated code review", "ai testing", "llm workflow", "open source ai agent",
+    "ai engineer framework", "autonomous dev team", "ai pair programmer"
+  ],
   openGraph: {
     title: "AI Agent Flow — Your AI Engineering Team",
     description: "Orchestrate specialized AI agents in a structured workflow. No cloud lock-in. Your code stays on your machine.",
