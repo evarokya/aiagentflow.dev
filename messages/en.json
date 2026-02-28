@@ -74,5 +74,11 @@
         "headlineSuffix": "Multiple ways to run.",
         "description": "Whether you prefer writing code or using the CLI, AI Agent Flow adapts seamlessly to your tooling preferences.",
         "readDocs": "Read Documentation"
+    },
+    "Install": {
+        "badge": "Start Building",
+        "headlinePrefix": "Install in",
+        "headlineSuffix": "seconds",
+        "description": "Add AI Agent Flow to any Node.js project. It brings its own zero-dependency engine, so you won't break your existing toolchain."
     }
 }
