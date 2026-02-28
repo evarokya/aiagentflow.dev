@@ -9,9 +9,9 @@ export default function DocsLayout({
     const docs = getAllPosts("docs");
 
     return (
-        <div className="min-h-screen bg-brand-bg relative overflow-hidden flex flex-col md:flex-row pt-16 mt-0">
+        <div className="min-h-screen bg-brand-bg relative flex flex-col md:flex-row pt-16 mt-0">
             {/* Sidebar Background Glow */}
-            <div className="absolute top-0 left-[-10%] w-[30%] h-[500px] bg-brand-primary/5 blur-[120px] rounded-full pointer-events-none" />
+            <div className="absolute top-0 left-[-10%] w-[35%] h-[600px] bg-brand-primary/10 blur-[150px] rounded-full pointer-events-none opacity-40" />
 
             {/* Sidebar */}
             <DocsSidebar docs={docs} />

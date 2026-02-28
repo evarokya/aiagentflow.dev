@@ -64,12 +64,12 @@ export function DocsSidebar({ docs }: { docs: DocItem[] }) {
 
             {/* Sidebar Container */}
             <aside className={`
-                fixed md:sticky top-0 md:top-16 inset-y-0 left-0 z-40
+                fixed md:sticky top-16 left-0 z-40
                 w-[280px] lg:w-72 bg-[#05050a]/95 md:bg-transparent backdrop-blur-xl md:backdrop-blur-none
                 border-r border-white/5 md:border-white/5
                 transform transition-transform duration-300 ease-in-out
                 ${isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"}
-                overflow-y-auto max-h-screen md:max-h-[calc(100vh-4rem)]
+                overflow-y-auto h-[calc(100vh-4rem)]
             `}>
                 <div className="p-8 pt-24 md:pt-8 text-slate-300">
                     <div className="mb-10 block md:hidden">
@@ -86,14 +86,15 @@ export function DocsSidebar({ docs }: { docs: DocItem[] }) {
                             <nav className="space-y-1">
                                 {cat.items.map((doc) => {
                                     const href = `/docs/${doc.metadata.slug}`;
-                                    const isActive = pathname === href;
+                                    // Robust check for active state
+                                    const isActive = pathname === href || pathname === `${href}/`;
 
                                     return (
                                         <Link
                                             key={doc.metadata.slug}
                                             href={href}
                                             className={`group flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 ${isActive
-                                                ? "bg-brand-primary/10 text-white shadow-[inset_0_0_20px_rgba(var(--brand-primary),0.05)] border border-brand-primary/20"
+                                                ? "bg-brand-primary/10 text-brand-primary shadow-[inset_0_0_20px_rgba(var(--brand-primary),0.05)] border border-brand-primary/20"
                                                 : "text-slate-500 hover:text-white hover:bg-white/5"
                                                 }`}
                                         >
