@@ -1,0 +1,25 @@
+# Landing Page Tracking/Task List
+
+- [x] Create initial documentation
+  - [x] Create `initial-ai-agent-must-readfile.md`
+  - [x] Create `development-guidelines.md`
+  - [x] Create `security-guidelines.md`
+  - [x] Create `clean-code.md`
+- [x] Setup Git repository
+  - [x] Add remote origin
+  - [x] Branch to main
+  - [x] Commit and push initial files
+- [x] Initialize Next.js project
+- [ ] Implement Theme Provider (next-themes) for dark/light mode
+- [ ] Implement i18n library (next-intl or react-i18next) for localization
+- [x] Rewrite README.md for public human consumption
+- [/] Implement Hero Section
+  - [x] Responsive layout
+  - [ ] Dark/Light theme support
+  - [ ] Localization support
+- [ ] Implement Pipeline Section
+- [ ] Implement Features Grid
+- [ ] Implement Interactive Demo
+- [ ] Implement Install Guide & Providers
+- [ ] Implement Footer & SEO
+- [ ] Verify Code Quality (lint, type-check, build)
