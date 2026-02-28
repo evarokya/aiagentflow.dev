@@ -1,8 +1,13 @@
+"use client";
+
 import Link from "next/link";
 import { Logo } from "./Logo";
 import { VisitorCounter } from "./VisitorCounter";
+import { useTranslations } from "next-intl";
 
 export function Footer() {
+    const t = useTranslations("Footer");
+
     return (
         <footer className="bg-slate-50 dark:bg-[#020617] border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-6 py-12 md:py-16">
@@ -16,7 +21,7 @@ export function Footer() {
                             </span>
                         </Link>
                         <p className="text-slate-500 dark:text-slate-400 mb-6 max-w-sm">
-                            The open-source multi-agent orchestration framework for software engineering. Built by developers, for developers.
+                            {t("description")}
                         </p>
                         <div className="flex items-center gap-4">
                             {/* Social Icons Placeholder */}
@@ -29,7 +34,7 @@ export function Footer() {
                     </div>
 
                     <div>
-                        <h3 className="text-sm font-semibold text-slate-900 dark:text-white uppercase tracking-wider mb-4">Resources</h3>
+                        <h3 className="text-sm font-semibold text-slate-900 dark:text-white uppercase tracking-wider mb-4">{t("resources")}</h3>
                         <ul className="space-y-3">
                             <li><Link href="/blog" className="text-slate-500 dark:text-slate-400 hover:text-brand-primary dark:hover:text-brand-secondary transition-colors">Blog</Link></li>
                             <li><Link href="/use-cases/ai-agent-flow-vs-langchain" className="text-slate-500 dark:text-slate-400 hover:text-brand-primary dark:hover:text-brand-secondary transition-colors">Alternatives</Link></li>
@@ -38,11 +43,11 @@ export function Footer() {
                     </div>
 
                     <div>
-                        <h3 className="text-sm font-semibold text-slate-900 dark:text-white uppercase tracking-wider mb-4">Legal</h3>
+                        <h3 className="text-sm font-semibold text-slate-900 dark:text-white uppercase tracking-wider mb-4">{t("legal")}</h3>
                         <ul className="space-y-3">
-                            <li><Link href="#" className="text-slate-500 dark:text-slate-400 hover:text-brand-primary dark:hover:text-brand-secondary transition-colors">Privacy</Link></li>
-                            <li><Link href="#" className="text-slate-500 dark:text-slate-400 hover:text-brand-primary dark:hover:text-brand-secondary transition-colors">Terms</Link></li>
-                            <li><a href="https://opensource.org/licenses/MIT" target="_blank" rel="noreferrer" className="text-slate-500 dark:text-slate-400 hover:text-brand-primary dark:hover:text-brand-secondary transition-colors">License (MIT)</a></li>
+                            <li><Link href="#" className="text-slate-500 dark:text-slate-400 hover:text-brand-primary dark:hover:text-brand-secondary transition-colors">{t("privacy")}</Link></li>
+                            <li><Link href="#" className="text-slate-500 dark:text-slate-400 hover:text-brand-primary dark:hover:text-brand-secondary transition-colors">{t("terms")}</Link></li>
+                            <li><a href="https://opensource.org/licenses/MIT" target="_blank" rel="noreferrer" className="text-slate-500 dark:text-slate-400 hover:text-brand-primary dark:hover:text-brand-secondary transition-colors">{t("license")}</a></li>
                         </ul>
                     </div>
 
@@ -50,7 +55,7 @@ export function Footer() {
 
                 <div className="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4">
                     <p className="text-sm text-slate-500 dark:text-slate-400">
-                        &copy; {new Date().getFullYear()} AI Agent Flow Contributors. All rights reserved.
+                        &copy; {new Date().getFullYear()} {t("allRightsReserved")}
                     </p>
                     <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
                         <VisitorCounter />
@@ -59,7 +64,7 @@ export function Footer() {
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                             </span>
-                            All systems operational
+                            {t("status")}
                         </div>
                     </div>
                 </div>

@@ -78,7 +78,16 @@
     "Install": {
         "badge": "Start Building",
         "headlinePrefix": "Install in",
-        "headlineSuffix": "seconds",
         "description": "Add AI Agent Flow to any Node.js project. It brings its own zero-dependency engine, so you won't break your existing toolchain."
+    },
+    "Footer": {
+        "description": "The open-source multi-agent orchestration framework for software engineering. Built by developers, for developers.",
+        "resources": "Resources",
+        "legal": "Legal",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service",
+        "license": "License (MIT)",
+        "allRightsReserved": "AI Agent Flow Contributors. All rights reserved.",
+        "status": "All systems operational"
     }
 }

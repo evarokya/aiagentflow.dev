@@ -5,8 +5,26 @@ import { InteractiveDemo } from "@/components/InteractiveDemo";
 import { InstallGuide } from "@/components/InstallGuide";
 
 export default function Home() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "AI Agent Flow",
+    "operatingSystem": "Any with Node.js",
+    "applicationCategory": "DeveloperApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+    },
+    "description": "Open-source multi-agent AI orchestration framework for software development."
+  };
+
   return (
     <main className="min-h-screen bg-brand-bg transition-colors duration-300">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Hero />
       <Pipeline />
       <Features />
