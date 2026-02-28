@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Instrument_Serif } from "next/font/google";
 import localFont from "next/font/local";
 import "../globals.css";
 import { NextIntlClientProvider } from 'next-intl';
@@ -16,6 +17,12 @@ const geistMono = localFont({
   src: "../fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
+});
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  variable: "--font-serif",
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -57,7 +64,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-white dark:bg-brand-bg text-slate-900 dark:text-slate-100 selection:bg-brand-secondary/30 transition-colors duration-500`}
+        className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} antialiased min-h-screen bg-white dark:bg-brand-bg text-slate-900 dark:text-slate-100 selection:bg-brand-secondary/30 transition-colors duration-500`}
       >
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider

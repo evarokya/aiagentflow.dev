@@ -60,12 +60,14 @@ export default function PseoPage({ params }: PseoPageProps) {
                 </header>
 
                 <div className="prose prose-invert prose-slate prose-lg md:prose-xl max-w-none 
-          prose-headings:text-white prose-headings:font-bold prose-h2:mt-20 prose-h2:mb-8 prose-h2:pb-4 prose-h2:border-b prose-h2:border-white/10
+          prose-h1:font-serif prose-h1:text-4xl md:prose-h1:text-5xl lg:prose-h1:text-6xl prose-h1:text-white prose-h1:tracking-tighter
+          prose-h2:font-serif prose-h2:text-3xl md:prose-h2:text-4xl prose-h2:text-white/95 prose-h2:mt-24 prose-h2:mb-10 prose-h2:pb-4 prose-h2:border-b prose-h2:border-white/10
+          prose-h3:font-serif prose-h3:text-2xl md:prose-h3:text-3xl prose-h3:text-white/90 prose-h3:mt-16 prose-h3:mb-6
           prose-a:text-brand-secondary hover:prose-a:text-brand-secondary/80 prose-a:transition-colors prose-a:underline-offset-4
           prose-code:text-brand-primary prose-code:bg-white/5 prose-code:px-2 prose-code:py-1 prose-code:rounded-lg prose-code:border prose-code:border-white/10 prose-code:before:content-none prose-code:after:content-none
           prose-pre:bg-[#09090b] prose-pre:border prose-pre:border-white/10 prose-pre:shadow-[0_0_40px_-10px_rgba(var(--brand-primary),0.15)] prose-pre:rounded-2xl
-          prose-strong:text-white prose-strong:font-semibold
-          prose-table:border-collapse prose-th:bg-white/5 prose-th:p-5 prose-th:border prose-th:border-white/10 prose-th:font-semibold prose-th:text-white prose-td:p-5 prose-td:border prose-td:border-white/10">
+          prose-strong:text-white prose-strong:font-bold
+          prose-table:border-collapse prose-th:bg-white/5 prose-th:p-5 prose-th:border prose-th:border-white/10 prose-th:font-black prose-th:text-white prose-td:p-5 prose-td:border prose-td:border-white/10">
                     <ReactMarkdown remarkPlugins={[remarkGfm]}>
                         {post.content}
                     </ReactMarkdown>
