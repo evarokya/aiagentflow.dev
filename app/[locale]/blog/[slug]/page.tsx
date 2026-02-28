@@ -2,7 +2,7 @@ import { getPostBySlug } from "@/lib/content";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import { Metadata } from "next";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 interface PostPageProps {
     params: { slug: string; locale: string };

@@ -24,7 +24,8 @@ export const metadata: Metadata = {
   keywords: [
     "ai agents", "multi-agent orchestration", "software development automation", "ai coding assistant",
     "local-first ai", "cli ai tool", "automated code review", "ai testing", "llm workflow", "open source ai agent",
-    "ai engineer framework", "autonomous dev team", "ai pair programmer"
+    "ai engineer framework", "autonomous dev team", "ai pair programmer",
+    "self hosting ai workflow", "aiagent flow", "ai task flow configuration", "automated ai engineering", "local ai orchestration"
   ],
   openGraph: {
     title: "AI Agent Flow — Your AI Engineering Team",

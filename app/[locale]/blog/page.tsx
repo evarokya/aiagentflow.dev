@@ -1,5 +1,5 @@
 import { getAllPosts } from "@/lib/content";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 export default function BlogIndex() {
     const posts = getAllPosts("blog");

@@ -2,7 +2,7 @@
     "Hero": {
         "headlinePrefix": "Your AI Engineering Team,",
         "headlineSuffix": "Running Locally",
-        "description": "Orchestrate specialized AI agents — architect, coder, reviewer, tester — in a structured workflow. No cloud lock-in. Your code stays on your machine.",
+        "description": "Orchestrate specialized AI agents in a structured, self-hosting AI workflow. Building with aiagentflow provides a powerful AI task flow configuration that keeps your code local and your engineering team productive.",
         "getStarted": "Get Started",
         "viewGitHub": "View on GitHub"
     },
@@ -41,7 +41,7 @@
         "badge": "Why AI Agent Flow?",
         "headlinePrefix": "Everything you need to",
         "headlineSuffix": "scale dev output",
-        "description": "Stop wrestling with bloated frameworks. AI Agent Flow gives you the primitives you need to ship software faster, right from your terminal.",
+        "description": "Stop wrestling with bloated frameworks. AI Agent Flow gives you the self-hosting AI workflow and AI task flow configuration primitives you need to ship software faster, right from your terminal.",
         "feature1": {
             "title": "Local First",
             "description": "Your code, your rules. No cloud lock-in or sending proprietary architecture to third-party orchestration servers."

@@ -45,8 +45,8 @@ export function Footer() {
                     <div>
                         <h3 className="text-sm font-semibold text-slate-900 dark:text-white uppercase tracking-wider mb-4">{t("legal")}</h3>
                         <ul className="space-y-3">
-                            <li><Link href="#" className="text-slate-500 dark:text-slate-400 hover:text-brand-primary dark:hover:text-brand-secondary transition-colors">{t("privacy")}</Link></li>
-                            <li><Link href="#" className="text-slate-500 dark:text-slate-400 hover:text-brand-primary dark:hover:text-brand-secondary transition-colors">{t("terms")}</Link></li>
+                            <li><Link href="/privacy" className="text-slate-500 dark:text-slate-400 hover:text-brand-primary dark:hover:text-brand-secondary transition-colors">{t("privacy")}</Link></li>
+                            <li><Link href="/terms" className="text-slate-500 dark:text-slate-400 hover:text-brand-primary dark:hover:text-brand-secondary transition-colors">{t("terms")}</Link></li>
                             <li><a href="https://opensource.org/licenses/MIT" target="_blank" rel="noreferrer" className="text-slate-500 dark:text-slate-400 hover:text-brand-primary dark:hover:text-brand-secondary transition-colors">{t("license")}</a></li>
                         </ul>
                     </div>

@@ -8,7 +8,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const routes = [
         '',
         '/blog',
-        '/use-cases/aiagentflow-vs-langchain'
+        '/use-cases/aiagentflow-vs-langchain',
+        '/privacy',
+        '/terms'
     ].map((route) => ({
         url: `${baseUrl}${route}`,
         lastModified: new Date().toISOString().split('T')[0],

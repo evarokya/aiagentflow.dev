@@ -2,7 +2,7 @@
     "Hero": {
         "headlinePrefix": "Tu equipo de ingeniería de IA,",
         "headlineSuffix": "Ejecutándose localmente",
-        "description": "Orquesta agentes de IA especializados —arquitecto, programador, revisor, probador— en un flujo de trabajo estructurado. Sin dependencia de la nube. Tu código permanece en tu máquina.",
+        "description": "Orquestra agentes de IA en un flujo de trabajo estructurado y de auto-hospedaje (self-hosting AI workflow). aiagentflow ofrece una configuración de flujo de tareas de IA (AI task flow configuration) que mantiene tu código local y a tu equipo productivo.",
         "getStarted": "Empezar",
         "viewGitHub": "Ver en GitHub"
     },

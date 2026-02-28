@@ -2,6 +2,7 @@ import { getPostBySlug } from "@/lib/content";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import { Metadata } from "next";
+import { Link } from "@/i18n/navigation";
 
 interface PseoPageProps {
     params: { slug: string; locale: string };
@@ -81,9 +82,9 @@ export default function PseoPage({ params }: PseoPageProps) {
                             Don&apos;t spend hours writing boilerplate LangChain agent code. Use our out-of-the-box CLI tool to orchestrate local AI agents today.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
-                            <a href="/" className="px-10 py-4 rounded-full bg-white text-slate-950 hover:bg-slate-200 font-bold transition-all hover:scale-105 hover:shadow-[0_0_40px_-10px_rgba(var(--brand-primary),0.6)] flex items-center justify-center w-full sm:w-auto text-lg">
+                            <Link href="/" className="px-10 py-4 rounded-full bg-white text-slate-950 hover:bg-slate-200 font-bold transition-all hover:scale-105 hover:shadow-[0_0_40px_-10px_rgba(var(--brand-primary),0.6)] flex items-center justify-center w-full sm:w-auto text-lg">
                                 Get Started Free
-                            </a>
+                            </Link>
                             <a href="https://github.com/aiagentflow/aiagentflow" target="_blank" rel="noopener noreferrer" className="px-10 py-4 rounded-full bg-white/5 hover:bg-white/10 text-white font-semibold transition-colors border border-white/10 flex items-center justify-center w-full sm:w-auto backdrop-blur-sm text-lg">
                                 View GitHub Repo
                             </a>
