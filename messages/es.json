@@ -15,5 +15,27 @@
         "step5": "✔ Probador completado (2,103 tokens)",
         "step6": "✔ Juez — APROBADO",
         "step7": "¡Tarea completada con éxito!"
+    },
+    "Pipeline": {
+        "badge": "Cómo Funciona",
+        "headlinePrefix": "Diseñado para",
+        "headlineSuffix": "Calidad y Velocidad",
+        "description": "Nuestros agentes especializados manejan todo el ciclo de desarrollo de software, desde la recopilación de requisitos hasta la escritura de pruebas, asegurando resultados de alta calidad en todo momento.",
+        "step1": {
+            "title": "Analizar y Planificar",
+            "description": "El Agente Arquitecto lee tu prompt, analiza el código base y redacta un plan de implementación completo."
+        },
+        "step2": {
+            "title": "Escribir Código",
+            "description": "El Agente Programador sigue el plan, escribiendo código limpio y mantenible en todo tu stack."
+        },
+        "step3": {
+            "title": "Revisar",
+            "description": "El Agente Revisor inspecciona el código en busca de errores, problemas de seguridad y cumplimiento de la guía de estilo."
+        },
+        "step4": {
+            "title": "Probar y Validar",
+            "description": "El Agente Probador escribe pruebas unitarias y el Juez valida que el código cumple con todos los requisitos iniciales."
+        }
     }
 }

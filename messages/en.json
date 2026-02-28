@@ -15,5 +15,27 @@
         "step5": "✔ Tester complete (2,103 tokens)",
         "step6": "✔ Judge — PASS",
         "step7": "Task completed successfully!"
+    },
+    "Pipeline": {
+        "badge": "How It Works",
+        "headlinePrefix": "Architected for",
+        "headlineSuffix": "Quality & Speed",
+        "description": "Our specialized agents handle the entire software development lifecycle, from gathering requirements to writing tests, ensuring high-quality output every time.",
+        "step1": {
+            "title": "Analyze & Plan",
+            "description": "The Architect Agent reads your prompt, analyzes the codebase, and drafts a comprehensive implementation plan."
+        },
+        "step2": {
+            "title": "Write Code",
+            "description": "The Coder Agent follows the plan, writing clean, maintainable code across your full stack."
+        },
+        "step3": {
+            "title": "Review",
+            "description": "The Reviewer Agent inspects the code for bugs, security issues, and style guide adherence."
+        },
+        "step4": {
+            "title": "Test & Validate",
+            "description": "The Tester Agent writes unit tests and the Judge validates that the code meets all initial requirements."
+        }
     }
 }
