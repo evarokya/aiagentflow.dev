@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Agent Flow - Landing Page
 
-## Getting Started
+Welcome to the repository for the landing page of **[AI Agent Flow](https://github.com/aiagentflow/aiagentflow)**.
 
-First, run the development server:
+AI Agent Flow is an open-source CLI tool that orchestrates multi-agent AI workflows for software development. It provides specialized AI agents—architect, coder, reviewer, and tester—in a structured, local-first workflow.
+
+This repository exclusively contains the source code for the promotional landing page website (`aiagentflow.dev`). For the actual CLI tool and core logic, please visit the [Main AI Agent Flow Repository](https://github.com/aiagentflow/aiagentflow).
+
+## Tech Stack
+This site is built for high performance and excellent developer experience using:
+- **Next.js 14+** (App Router)
+- **TypeScript**
+- **Tailwind CSS**
+- **Framer Motion**
+
+## Running Locally
+
+To run the development server for the landing page:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clone the repository
+git clone https://github.com/aiagentflow/aiagentflow.dev.git
+
+# Navigate into the project
+cd aiagentflow.dev
+
+# Install dependencies
+pnpm install
+
+# Run the local server
+pnpm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Contributing
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+While the core functionality of AI Agent Flow belongs in the main repo, contributions to improve this landing page are always welcome! Feel free to open issues or submit pull requests. Ensure all code follows the `plan/` guidelines documented within this repository.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+MIT
