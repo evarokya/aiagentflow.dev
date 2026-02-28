@@ -4,7 +4,7 @@ description: "Understanding the Architect, Coder, Reviewer, and Judge agents."
 date: "2026-02-28"
 ---
 
-# Agent Roles
+
 
 AI Agent Flow uses a multi-agent "Chain of Thought" approach to ensure high-quality, reliable output. Each agent has a specific specialized role in the process.
 

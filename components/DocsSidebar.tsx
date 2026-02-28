@@ -2,7 +2,7 @@
 
 import { Link, usePathname } from "@/i18n/navigation";
 import { useState, useEffect } from "react";
-import { Menu, X, ChevronRight, Hash, BookOpen, Settings, Users, Terminal } from "lucide-react";
+import { Menu, X, ChevronRight, BookOpen, Terminal } from "lucide-react";
 
 interface DocItem {
     metadata: {

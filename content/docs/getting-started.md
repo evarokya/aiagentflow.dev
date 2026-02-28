@@ -4,7 +4,7 @@ description: "How to install and run your first AI Agent Flow task."
 date: "2026-02-28"
 ---
 
-# Getting Started
+
 
 AI Agent Flow is a local-first, multi-agent orchestration framework designed for software engineering. This guide will help you install the CLI and run your first autonomous task.
 

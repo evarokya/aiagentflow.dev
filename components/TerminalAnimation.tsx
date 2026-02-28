@@ -1,13 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { useTranslations } from "next-intl";
 
 export default function TerminalAnimation() {
     const t = useTranslations("Terminal");
 
-    const terminalSteps = [
+    const terminalSteps = useMemo(() => [
         { text: t("step1"), delay: 0 },
         { text: t("step2"), delay: 800 },
         { text: t("step3"), delay: 2500 },
@@ -15,13 +15,13 @@ export default function TerminalAnimation() {
         { text: t("step5"), delay: 6500 },
         { text: t("step6"), delay: 7800 },
         { text: t("step7"), delay: 8500 },
-    ];
+    ], [t]);
 
     const [displayedSteps, setDisplayedSteps] = useState<number>(0);
     const [isTyping, setIsTyping] = useState(true);
 
     useEffect(() => {
-        const timers = terminalSteps.map((step, index) => {
+        const timers = terminalSteps.map((step: { text: string; delay: number }, index: number) => {
             return setTimeout(() => {
                 setDisplayedSteps(index + 1);
                 if (index === terminalSteps.length - 1) {
@@ -31,7 +31,7 @@ export default function TerminalAnimation() {
         });
 
         return () => timers.forEach(clearTimeout);
-    }, []);
+    }, [terminalSteps]);
 
     return (
         <motion.div
@@ -54,7 +54,7 @@ export default function TerminalAnimation() {
             </div>
 
             <div className="p-6 font-mono text-sm leading-relaxed text-slate-300 min-h-[220px] relative z-10">
-                {terminalSteps.slice(0, displayedSteps).map((step, i) => (
+                {terminalSteps.slice(0, displayedSteps).map((step: { text: string; delay: number }, i: number) => (
                     <motion.div
                         key={i}
                         initial={{ opacity: 0 }}
