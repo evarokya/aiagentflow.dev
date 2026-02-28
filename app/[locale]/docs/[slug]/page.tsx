@@ -1,6 +1,7 @@
 import { getPostBySlug } from "@/lib/content";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { Metadata } from "next";
 
 interface DocPageProps {
@@ -50,7 +51,7 @@ export default function DocPage({ params }: DocPageProps) {
           prose-code:text-brand-primary prose-code:bg-white/5 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:border prose-code:border-white/10 prose-code:before:content-none prose-code:after:content-none
           prose-pre:bg-[#09090b] prose-pre:border prose-pre:border-white/10 prose-pre:shadow-[0_0:30px_-5px_rgba(var(--brand-primary),0.15)] prose-pre:rounded-2xl
           prose-strong:text-white prose-strong:font-semibold">
-                    <ReactMarkdown>
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
                         {doc.content}
                     </ReactMarkdown>
                 </div>

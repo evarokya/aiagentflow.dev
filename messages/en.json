@@ -78,7 +78,30 @@
         "headlinePrefix": "One framework.",
         "headlineSuffix": "Multiple ways to run.",
         "description": "Whether you prefer writing code or using the CLI, AI Agent Flow adapts seamlessly to your tooling preferences.",
-        "readDocs": "Read Documentation"
+        "readDocs": "Read Documentation",
+        "scenarios": {
+            "feature": {
+                "label": "New Feature",
+                "request": "Create a dynamic pricing table component",
+                "react": "import { AgentRole, StructuredWorkflow } from \"aiagentflow\";\n\nconst workflow = new StructuredWorkflow({\n  roles: [AgentRole.Architect, AgentRole.Coder, AgentRole.Reviewer],\n  model: \"claude-3-5-sonnet-20241022\",\n  rootDir: \"./src\"\n});\n\nawait workflow.run(\"Create a dynamic pricing table component\");",
+                "python": "from ai_agent_flow import Workflow, Role\n\nworkflow = Workflow(\n    roles=[Role.ARCHITECT, Role.CODER, Role.REVIEWER],\n    model=\"gpt-4o\",\n    working_dir=\"./app\"\n)\n\nworkflow.run(\"Implement a Redis caching layer for the user API\")",
+                "cli": "aiagentflow run \"Build a markdown parser\" \\\n    --roles architect,coder,reviewer,tester \\\n    --model gemini-2.5-pro \\\n    --dir ./packages/parser"
+            },
+            "bug": {
+                "label": "Bug Fix",
+                "request": "Fix race condition in the auth middleware",
+                "react": "import { AgentRole, StructuredWorkflow } from \"aiagentflow\";\n\nconst workflow = new StructuredWorkflow({\n  roles: [AgentRole.Architect, AgentRole.Coder, AgentRole.Tester],\n  model: \"claude-3-5-sonnet-20241022\"\n});\n\nawait workflow.run(\"Fix race condition in auth middleware when handling concurrent login requests\");",
+                "python": "from ai_agent_flow import Workflow, Role\n\nworkflow = Workflow(\n    roles=[Role.CODER, Role.REVIEWER, Role.TESTER],\n    model=\"gpt-4o\"\n)\n\nworkflow.run(\"Identify and fix the memory leak in the data processing worker loop\")",
+                "cli": "aiagentflow run \"Fix CSS layout shift on mobile\" \\\n    --roles coder,reviewer \\\n    --model claude-3-opus"
+            },
+            "refactor": {
+                "label": "Refactor",
+                "request": "Modernize the legacy user service",
+                "react": "import { AgentRole, StructuredWorkflow } from \"aiagentflow\";\n\nconst workflow = new StructuredWorkflow({\n  roles: [AgentRole.Architect, AgentRole.Coder, AgentRole.Reviewer, AgentRole.Judge],\n  model: \"claude-3-5-sonnet-20241022\"\n});\n\nawait workflow.run(\"Refactor UserService to use async/await and implement the repository pattern\");",
+                "python": "from ai_agent_flow import Workflow, Role\n\nworkflow = Workflow(\n    roles=[Role.ARCHITECT, Role.CODER, Role.REVIEWER],\n    model=\"gpt-4o\"\n)\n\nworkflow.run(\"Migrate the legacy SQL-based audit logger to the new NoSQL-based event store\")",
+                "cli": "aiagentflow run \"Refactor the CLI parser to use a modular architecture\" \\\n    --roles architect,coder,reviewer"
+            }
+        }
     },
     "Install": {
         "badge": "Start Building",
