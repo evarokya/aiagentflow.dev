@@ -1,4 +1,11 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+import createNextIntlPlugin from 'next-intl/plugin';
 
-export default nextConfig;
+const withNextIntl = createNextIntlPlugin();
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+    // Vercel handles standard Next.js deployments automatically.
+    // Removing output: 'export' to ensure i18n middleware works.
+};
+
+export default withNextIntl(nextConfig);

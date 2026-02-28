@@ -10,13 +10,13 @@
   - [x] Branch to main
   - [x] Commit and push initial files
 - [x] Initialize Next.js project
-- [ ] Implement Theme Provider (next-themes) for dark/light mode
-- [ ] Implement i18n library (next-intl or react-i18next) for localization
+- [x] Implement Theme Provider (next-themes) for dark/light mode
+- [x] Implement i18n library (next-intl or react-i18next) for localization
 - [x] Rewrite README.md for public human consumption
-- [/] Implement Hero Section
+- [x] Implement Hero Section
   - [x] Responsive layout
-  - [ ] Dark/Light theme support
-  - [ ] Localization support
+  - [x] Dark/Light theme support
+  - [x] Localization support
 - [ ] Implement Pipeline Section
 - [ ] Implement Features Grid
 - [ ] Implement Interactive Demo
