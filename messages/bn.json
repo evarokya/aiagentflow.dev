@@ -78,7 +78,30 @@
         "headlinePrefix": "একটাই ফ্রেমওয়ার্ক,",
         "headlineSuffix": "কাজের ধরণ অনেক",
         "description": "আপনি কোডিং করুন কিংবা CLI ব্যবহার করুন, aiagentflow আপনার কাজের স্টাইলের সাথে অনায়াসে মানিয়ে যাবে।",
-        "readDocs": "ডকুমেন্টেশন দেখুন"
+        "readDocs": "ডকুমেন্টেশন দেখুন",
+        "scenarios": {
+            "feature": {
+                "label": "নতুন ফিচার",
+                "request": "একটি ডাইনামিক প্রাইসিং টেবিল কম্পোনেন্ট তৈরি করুন",
+                "react": "import { AgentRole, StructuredWorkflow } from \"aiagentflow\";\n\nconst workflow = new StructuredWorkflow({\n  roles: [AgentRole.Architect, AgentRole.Coder, AgentRole.Reviewer],\n  model: \"claude-3-5-sonnet-20241022\",\n  rootDir: \"./src\"\n});\n\nawait workflow.run(\"একটি ডাইনামিক প্রাইসিং টেবিল কম্পোনেন্ট তৈরি করুন\");",
+                "python": "from ai_agent_flow import Workflow, Role\n\nworkflow = Workflow(\n    roles=[Role.ARCHITECT, Role.CODER, Role.REVIEWER],\n    model=\"gpt-4o\",\n    working_dir=\"./app\"\n)\n\nworkflow.run(\"ইউজার API-এর জন্য একটি Redis ক্যাশিং লেয়ার ইমপ্লিমেন্ট করুন\")",
+                "cli": "aiagentflow run \"একটি মার্কডাউন পার্সার তৈরি করুন\" \\\n    --roles architect,coder,reviewer,tester \\\n    --model gemini-2.5-pro \\\n    --dir ./packages/parser"
+            },
+            "bug": {
+                "label": "বাগ ফিক্স",
+                "request": "অথেন্টিকেশন মিডলওয়্যার-এ রেস কন্ডিশন ফিক্স করুন",
+                "react": "import { AgentRole, StructuredWorkflow } from \"aiagentflow\";\n\nconst workflow = new StructuredWorkflow({\n  roles: [AgentRole.Architect, AgentRole.Coder, AgentRole.Tester],\n  model: \"claude-3-5-sonnet-20241022\"\n});\n\nawait workflow.run(\"কনকারেন্ট লগইন রিকুয়েস্ট হ্যান্ডেল করার সময় অথেন্টিকেশন মিডলওয়্যারে রেস কন্ডিশন ফিক্স করুন\");",
+                "python": "from ai_agent_flow import Workflow, Role\n\nworkflow = Workflow(\n    roles=[Role.CODER, Role.REVIEWER, Role.TESTER],\n    model=\"gpt-4o\"\n)\n\nworkflow.run(\"ডেটা প্রসেসিং ওয়ার্কার লুপের মেমরি লিক শনাক্ত করুন এবং ফিক্স করুন\")",
+                "cli": "aiagentflow run \"মোবাইলে CSS লেআউট শিফট ফিক্স করুন\" \\\n    --roles coder,reviewer \\\n    --model claude-3-opus"
+            },
+            "refactor": {
+                "label": "রিফ্যাক্টর",
+                "request": "লিগ্যাসি ইউজার সার্ভিস আধুনিকীকরণ করুন",
+                "react": "import { AgentRole, StructuredWorkflow } from \"aiagentflow\";\n\nconst workflow = new StructuredWorkflow({\n  roles: [AgentRole.Architect, AgentRole.Coder, AgentRole.Reviewer, AgentRole.Judge],\n  model: \"claude-3-5-sonnet-20241022\"\n});\n\nawait workflow.run(\"UserService-কে async/await ব্যবহার করার জন্য রিফ্যাক্টর করুন এবং রিপোজিটরি প্যাটার্ন ইমপ্লিমেন্ট করুন\");",
+                "python": "from ai_agent_flow import Workflow, Role\n\nworkflow = Workflow(\n    roles=[Role.ARCHITECT, Role.CODER, Role.REVIEWER],\n    model=\"gpt-4o\"\n)\n\nworkflow.run(\"লিগ্যাসি SQL-ভিত্তিক অডিট লগারকে নতুন NoSQL-ভিত্তিক ইভেন্ট স্টোরে মাইগ্রেট করুন\")",
+                "cli": "aiagentflow run \"CLI পার্সারকে একটি মডুলার আর্কিটেকচার ব্যবহার করার জন্য রিফ্যাক্টর করুন\" \\\n    --roles architect,coder,reviewer"
+            }
+        }
     },
     "Install": {
         "badge": "শুরু করা যাক",
