@@ -80,6 +80,26 @@
         "headlineSuffix": "মধ্যেই ইনস্টলেশন",
         "description": "যেকোনো Node.js প্রজেক্টে ঝটপট aiagentflow অ্যাড করুন। এর জিরো-ডিপেন্ডেন্সি ইঞ্জিন আপনার বর্তমান এনভায়রনমেন্ট রাখবে একদম ক্লিন।"
     },
+    "Providers": {
+        "badge": "পছন্দসই AI মডেল",
+        "headline": "চলবে আপনার প্রিয় সব মডেলের সাথে",
+        "anthropic": {
+            "title": "Anthropic (Claude)",
+            "description": "আর্কিটেকচার এবং জটিল কোডিংয়ের জন্য সেরা সব মডেল। আমাদের সিস্টেম Claude 3.5 Sonnet-এর জন্য অপ্টিমাইজড।"
+        },
+        "ollama": {
+            "title": "Ollama (Local Models)",
+            "description": "১০০% প্রাইভেসির গ্যারান্টি। কোন API কস্ট ছাড়াই আপনার পিসিতে Llama 3 বা DeepSeek চালান।"
+        }
+    },
+    "Community": {
+        "badge": "ওপেন সোর্স",
+        "headline": "সবার জন্য, সবার অংশগ্রহণে",
+        "description": "aiagentflow একটি MIT লাইসেন্সড প্রজেক্ট। কয়েকশ ডেভেলপার মিলে তৈরি করছে অটোনোমাস ইঞ্জিনিয়ারিংয়ের ভবিষ্যৎ। আপনিও যোগ দিন!",
+        "stars": "GitHub Stars",
+        "contributors": "Contributors",
+        "button": "GitHub-এ স্টার দিন"
+    },
     "Footer": {
         "description": "সফটওয়্যার ইঞ্জিনিয়ারিংয়ের জন্য ওপেন-সোর্স মাল্টি-এজেন্ট অর্কেস্ট্রেশন ফ্রেমওয়ার্ক। ডেভেলপারদের জন্য, ডেভেলপারদের হাত ধরেই।",
         "resources": "রিসোর্স",

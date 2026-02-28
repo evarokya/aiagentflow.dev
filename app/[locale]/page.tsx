@@ -3,6 +3,8 @@ import { Pipeline } from "@/components/Pipeline";
 import { Features } from "@/components/Features";
 import { InteractiveDemo } from "@/components/InteractiveDemo";
 import { InstallGuide } from "@/components/InstallGuide";
+import { Providers } from "@/components/Providers";
+import { Community } from "@/components/Community";
 
 export default function Home() {
   const jsonLd = {
@@ -28,8 +30,10 @@ export default function Home() {
       <Hero />
       <Pipeline />
       <Features />
+      <Providers />
       <InteractiveDemo />
       <InstallGuide />
+      <Community />
       {/* Other sections will be added here */}
     </main>
   );

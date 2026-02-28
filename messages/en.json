@@ -79,6 +79,26 @@
         "headlinePrefix": "Install in",
         "description": "Add AI Agent Flow to any Node.js project. It brings its own zero-dependency engine, so you won't break your existing toolchain."
     },
+    "Providers": {
+        "badge": "Bring Your Own AI",
+        "headline": "Compatible with the models you love",
+        "anthropic": {
+            "title": "Anthropic (Claude)",
+            "description": "State-of-the-art reasoning for architecture and complex coding tasks. Optimized for Claude 3.5 Sonnet."
+        },
+        "ollama": {
+            "title": "Ollama (Local Models)",
+            "description": "Keep everything 100% private. Run Llama 3 or DeepSeek models locally without any API costs."
+        }
+    },
+    "Community": {
+        "badge": "Open Source",
+        "headline": "Built for the community, by the community",
+        "description": "AI Agent Flow is MIT licensed and thrives on contributions. Join hundreds of developers building the future of autonomous engineering.",
+        "stars": "GitHub Stars",
+        "contributors": "Contributors",
+        "button": "Star on GitHub"
+    },
     "Footer": {
         "description": "The open-source multi-agent orchestration framework for software engineering. Built by developers, for developers.",
         "resources": "Resources",

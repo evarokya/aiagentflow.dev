@@ -79,6 +79,26 @@
         "headlinePrefix": "Instálalo en",
         "description": "Añade AI Agent Flow a cualquier proyecto de Node.js. Trae su propio motor sin dependencias, por lo que no romperá tu cadena de herramientas existente."
     },
+    "Providers": {
+        "badge": "Trae tu propia IA",
+        "headline": "Compatible con los modelos que amas",
+        "anthropic": {
+            "title": "Anthropic (Claude)",
+            "description": "Razonamiento de vanguardia para arquitectura y tareas de codificación complejas. Optimizado para Claude 3.5 Sonnet."
+        },
+        "ollama": {
+            "title": "Ollama (Modelos locales)",
+            "description": "Mantenlo todo 100% privado. Ejecuta modelos Llama 3 o DeepSeek localmente sin costes de API."
+        }
+    },
+    "Community": {
+        "badge": "Código Abierto",
+        "headline": "Construido para la comunidad, por la comunidad",
+        "description": "AI Agent Flow tiene licencia MIT y prospera gracias a las contribuciones. Únete a cientos de desarrolladores que construyen el futuro de la ingeniería autónoma.",
+        "stars": "Estrellas en GitHub",
+        "contributors": "Colaboradores",
+        "button": "Dar estrella en GitHub"
+    },
     "Footer": {
         "description": "El framework de orquestación multi-agente de código abierto para ingeniería de software. Creado por desarrolladores, para desarrolladores.",
         "resources": "Recursos",

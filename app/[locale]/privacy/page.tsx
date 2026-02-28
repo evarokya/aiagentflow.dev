@@ -8,49 +8,67 @@ export default function PrivacyPolicy() {
             <div className="absolute top-0 left-1/4 w-[50%] h-[300px] bg-brand-primary/10 blur-[120px] rounded-full mix-blend-screen pointer-events-none" />
 
             <div className="max-w-4xl mx-auto relative z-10">
-                <h1 className="text-4xl md:text-5xl font-black mb-8 tracking-tight">{t('privacy')}</h1>
+                <header className="mb-12">
+                    <h1 className="text-4xl md:text-5xl font-black mb-4 tracking-tight">{t('privacy')}</h1>
+                    <p className="text-slate-400 text-lg">
+                        Last Updated: February 28, 2026
+                    </p>
+                </header>
 
                 <div className="prose prose-invert prose-slate max-w-none">
-                    <p className="text-slate-400 text-lg mb-6">
-                        Last Updated: February 2026
-                    </p>
+                    <section className="mb-12">
+                        <h2 className="text-2xl font-bold mb-4 text-white border-b border-white/10 pb-2">1. Local-First Architecture</h2>
+                        <p className="text-slate-400 leading-relaxed mb-4">
+                            AI Agent Flow is designed with a <strong>local-first</strong> philosophy. When you use our CLI tool:
+                        </p>
+                        <ul className="list-disc list-inside text-slate-400 space-y-2 ml-4">
+                            <li>Your source code never leaves your machine unless you explicitly configure a cloud provider.</li>
+                            <li>Orchestration logic happens locally on your hardware.</li>
+                            <li>We do not have access to your internal repositories, file systems, or proprietary logic.</li>
+                        </ul>
+                    </section>
 
-                    <section className="mb-8">
-                        <h2 className="text-2xl font-bold mb-4 text-white">1. Introduction</h2>
+                    <section className="mb-12">
+                        <h2 className="text-2xl font-bold mb-4 text-white border-b border-white/10 pb-2">2. Data Collection (Website)</h2>
+                        <p className="text-slate-400 leading-relaxed mb-4">
+                            This website (aiagentflow.dev) collects minimal data to improve our promotional efforts:
+                        </p>
+                        <ul className="list-disc list-inside text-slate-400 space-y-2 ml-4">
+                            <li><strong>Analytics:</strong> We use aggregated, anonymized metrics to understand page traffic.</li>
+                            <li><strong>Preferences:</strong> We store your theme (dark/light) and language selection in local storage.</li>
+                            <li><strong>Visitor Counter:</strong> A simple counter tracks unique visits without storing personal identifiers.</li>
+                        </ul>
+                    </section>
+
+                    <section className="mb-12">
+                        <h2 className="text-2xl font-bold mb-4 text-white border-b border-white/10 pb-2">3. CLI Telemetry</h2>
                         <p className="text-slate-400 leading-relaxed">
-                            Welcome to AI Agent Flow. We value your privacy and are committed to protecting your personal data.
-                            This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website.
+                            The AI Agent Flow CLI does <strong>not</strong> include hidden telemetry or tracking. We believe in transparency.
+                            Any future opt-in telemetry for bug reporting will be clearly documented and disabled by default.
                         </p>
                     </section>
 
-                    <section className="mb-8">
-                        <h2 className="text-2xl font-bold mb-4 text-white">2. Data Collection</h2>
+                    <section className="mb-12">
+                        <h2 className="text-2xl font-bold mb-4 text-white border-b border-white/10 pb-2">4. Third-Party AI Providers</h2>
                         <p className="text-slate-400 leading-relaxed">
-                            As a local-first CLI tool, AI Agent Flow does not collect your proprietary source code.
-                            Our website may collect anonymous analytics data to improve the user experience, such as page views and interaction counts.
+                            When you configure the CLI to use providers like Anthropic (Claude) or OpenAI, your prompts are sent to those respective services.
+                            We recommend reviewing the privacy policies of any AI provider you choose to integrate.
                         </p>
                     </section>
 
-                    <section className="mb-8">
-                        <h2 className="text-2xl font-bold mb-4 text-white">3. Cookies</h2>
+                    <section className="mb-12">
+                        <h2 className="text-2xl font-bold mb-4 text-white border-b border-white/10 pb-2">5. Data Security</h2>
                         <p className="text-slate-400 leading-relaxed">
-                            We use essential cookies to maintain your preferences (such as theme and language settings).
-                            You can disable cookies in your browser settings, though some features may not function correctly.
+                            Since most of your data stays on your machine, you are responsible for its security.
+                            We encourage practicing standard security measures like disk encryption and secure environment variable management for API keys.
                         </p>
                     </section>
 
-                    <section className="mb-8">
-                        <h2 className="text-2xl font-bold mb-4 text-white">4. Third-Party Services</h2>
+                    <section className="mb-12">
+                        <h2 className="text-2xl font-bold mb-4 text-white border-b border-white/10 pb-2">6. Contact</h2>
                         <p className="text-slate-400 leading-relaxed">
-                            Our website is hosted on Vercel. We may use third-party tools for analytics or performance monitoring.
-                            These services have their own privacy policies.
-                        </p>
-                    </section>
-
-                    <section className="mb-8">
-                        <h2 className="text-2xl font-bold mb-4 text-white">5. Contact Us</h2>
-                        <p className="text-slate-400 leading-relaxed">
-                            If you have any questions about this Privacy Policy, please contact us through our GitHub repository.
+                            For privacy concerns or questions about our local-first implementation, please open an issue on our
+                            <a href="https://github.com/aiagentflow/aiagentflow" className="text-brand-secondary hover:underline ml-1">GitHub repository</a>.
                         </p>
                     </section>
                 </div>
