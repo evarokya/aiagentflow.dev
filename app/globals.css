@@ -3,25 +3,31 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --brand-primary: 139 92 246;
-    /* violet-500 */
-    --brand-secondary: 217 70 239;
-    /* fuchsia-500 */
-    --brand-tertiary: 99 102 241;
-    /* indigo-500 */
-    --brand-bg: 3 0 20;
-    /* #030014 */
-  }
+    :root {
+        --brand-primary: 139 92 246;
+        /* violet-500 */
+        --brand-secondary: 217 70 239;
+        /* fuchsia-500 */
+        --brand-tertiary: 99 102 241;
+        /* indigo-500 */
+        --brand-bg: 3 0 20;
+        /* #030014 */
+    }
+
+    .light {
+        --brand-bg: 252 251 247;
+        /* Warm White #FCFBF7 */
+    }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-  .font-serif {
-    font-family: var(--font-serif), serif;
-  }
+    .text-balance {
+        text-wrap: balance;
+    }
+
+    .font-serif {
+        font-family: var(--font-serif), serif;
+    }
 }
 
 /* Documentation Premium Callouts */
@@ -30,7 +36,7 @@
 }
 
 .doc-callout-tip {
-    @apply bg-emerald-500/5 border-emerald-500/10 text-emerald-200/90 shadow-[0_0_60px_-15px_rgba(16,185,129,0.15)];
+    @apply bg-emerald-500/5 border-emerald-500/10 text-emerald-200/90 shadow-[0_0_60px_-15px_rgba(16, 185, 129, 0.15)];
 }
 
 .doc-callout-tip::before {
@@ -39,7 +45,7 @@
 }
 
 .doc-callout-warning {
-    @apply bg-amber-500/5 border-amber-500/10 text-amber-200/90 shadow-[0_0_60px_-15px_rgba(245,158,11,0.15)];
+    @apply bg-amber-500/5 border-amber-500/10 text-amber-200/90 shadow-[0_0_60px_-15px_rgba(245, 158, 11, 0.15)];
 }
 
 .doc-callout-warning::before {
@@ -49,11 +55,11 @@
 
 /* Prose Overrides for Documentation Hierarchy */
 .prose h2 {
-    @apply scroll-mt-32 font-bold tracking-tight text-white mb-8;
+    @apply scroll-mt-32 font-bold tracking-tight text-white dark:text-white mb-8;
 }
 
 .prose h3 {
-    @apply scroll-mt-32 font-bold tracking-tight text-white/90 mb-6;
+    @apply scroll-mt-32 font-bold tracking-tight text-white/90 dark:text-white/90 mb-6;
 }
 
 .prose :where(code):not(:where([class~="not-prose"] *)) {
@@ -61,13 +67,31 @@
 }
 
 .prose p {
-    @apply mb-8 leading-relaxed text-slate-400/90;
+    @apply mb-8 leading-relaxed text-slate-600 dark:text-slate-400/90;
 }
 
 .prose strong {
-    @apply text-white font-black;
+    @apply text-slate-900 dark:text-white font-black;
 }
 
 .prose blockquote {
-    @apply border-l-4 border-brand-primary/30 bg-white/5 p-8 rounded-2xl italic text-slate-300;
+    @apply border-l-4 border-brand-primary/30 bg-white/5 p-8 rounded-2xl italic text-slate-700 dark:text-slate-300;
+}
+
+/* Premium Backlink Styling */
+.prose a {
+    @apply font-bold text-brand-primary no-underline border-b border-brand-primary/20 hover:border-brand-primary transition-all duration-300;
+}
+
+.prose-link {
+    @apply relative inline-block text-brand-primary font-bold transition-all duration-300;
+}
+
+.prose-link::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-brand-primary transition-all duration-300;
+}
+
+.prose-link:hover::after {
+    @apply w-full;
 }

@@ -4,6 +4,8 @@ description: "Discover how AI Agent Flow orchestrates full engineering teams on 
 date: "2026-02-28"
 author: "AI Agent Flow Team"
 keywords: ["ai agent flow", "local ai", "open source ai", "multi-agent orchestration", "software engineering automation", "ai assistants"]
+category: "Engineering"
+image: "/blog/engineering-header.png"
 ---
 
 # Welcome to AI Agent Flow
@@ -25,6 +27,8 @@ When you run `aiagentflow run "Build a login system"`, you aren't just sending a
 No cloud lock-in. No sending your proprietary code to a closed platform. It all runs on your machine, integrating directly with your local Git repository.
 
 ## Get Started
+
+Ready to experience the future of local-first engineering? Head over to our [Documentation](/docs) to learn how to configure your agents, or check out our [GitHub Repository](https://github.com/aiagentflow/aiagentflow) to star the project and join the community.
 
 Install AI Agent Flow today:
 

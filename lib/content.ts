@@ -11,6 +11,8 @@ export interface PostMetadata {
     author?: string;
     slug: string;
     keywords?: string[];
+    category?: string;
+    image?: string;
 }
 
 export interface Post {
