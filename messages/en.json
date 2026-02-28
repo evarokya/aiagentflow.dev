@@ -1,6 +1,5 @@
 {
     "Hero": {
-        "badge": "v1.0.0 Now Available",
         "headlinePrefix": "Your AI Engineering Team,",
         "headlineSuffix": "Running Locally",
         "description": "Orchestrate specialized AI agents — architect, coder, reviewer, tester — in a structured workflow. No cloud lock-in. Your code stays on your machine.",

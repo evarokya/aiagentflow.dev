@@ -18,19 +18,6 @@ export default function Hero() {
             </div>
 
             <div className="relative z-10 max-w-5xl mx-auto text-center">
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.7, ease: "easeOut" }}
-                    className="inline-flex items-center space-x-2 bg-white/5 dark:bg-white/5 border border-slate-200/50 dark:border-white/10 text-slate-700 dark:text-slate-300 px-4 py-1.5 rounded-full text-sm font-medium mb-8 backdrop-blur-md shadow-sm transition-all hover:bg-white/10"
-                >
-                    <span className="flex h-2 w-2 relative">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-primary/75 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-primary"></span>
-                    </span>
-                    <span className="tracking-wide uppercase text-xs font-semibold">{t("badge")}</span>
-                </motion.div>
-
                 <motion.h1
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}

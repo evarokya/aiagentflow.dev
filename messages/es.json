@@ -1,6 +1,5 @@
 {
     "Hero": {
-        "badge": "v1.0.0 Ya Disponible",
         "headlinePrefix": "Tu equipo de ingeniería de IA,",
         "headlineSuffix": "Ejecutándose localmente",
         "description": "Orquesta agentes de IA especializados —arquitecto, programador, revisor, probador— en un flujo de trabajo estructurado. Sin dependencia de la nube. Tu código permanece en tu máquina.",
