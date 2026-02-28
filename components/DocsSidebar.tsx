@@ -2,7 +2,7 @@
 
 import { Link, usePathname } from "@/i18n/navigation";
 import { useState, useEffect } from "react";
-import { Menu, X, ChevronRight, BookOpen, Terminal } from "lucide-react";
+import { Menu, X, ChevronRight, Terminal } from "lucide-react";
 
 interface DocItem {
     metadata: {
@@ -116,10 +116,10 @@ export function DocsSidebar({ docs }: { docs: DocItem[] }) {
                                 <Terminal className="w-4 h-4 text-slate-700" />
                                 GitHub Repo
                             </a>
-                            <Link href="/blog" className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-500 hover:text-white hover:bg-white/5 transition-all duration-200">
+                            {/* <Link href="/blog" className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-500 hover:text-white hover:bg-white/5 transition-all duration-200">
                                 <BookOpen className="w-4 h-4 text-slate-700" />
                                 Blog
-                            </Link>
+                            </Link> */}
                         </nav>
                     </div>
                 </div>

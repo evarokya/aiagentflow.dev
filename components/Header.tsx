@@ -39,8 +39,7 @@ export function Header() {
                     </Link>
 
                     <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-400">
-                        <Link href="/blog" className="hover:text-slate-900 dark:hover:text-white transition-colors">{t("blog")}</Link>
-                        <Link href="/docs/getting-started" className="hover:text-slate-900 dark:hover:text-white transition-colors">{t("docs")}</Link>
+                        <Link href="/use-cases/aiagentflow-vs-langchain" className="hover:text-slate-900 dark:hover:text-white transition-colors">{t("comparisons")}</Link>
                         <Link href="/use-cases/aiagentflow-vs-langchain" className="hover:text-slate-900 dark:hover:text-white transition-colors">{t("comparisons")}</Link>
                         <a href="https://github.com/aiagentflow/aiagentflow" target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 dark:hover:text-white transition-colors">{t("github")}</a>
                     </nav>
@@ -48,7 +47,7 @@ export function Header() {
 
                 <div className="flex items-center gap-4">
                     <div className="hidden sm:flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-900 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-800">
-                        <kbd className="font-mono text-xs">npm i -g aiagentflow</kbd>
+                        <kbd className="font-mono text-xs">npm i -g @aiagentflow/cli</kbd>
                     </div>
                     <ThemeToggle />
                 </div>

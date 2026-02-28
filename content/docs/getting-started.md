@@ -26,7 +26,7 @@ AI Agent Flow is a local-first, multi-agent orchestration framework designed for
 Install the package globally via npm:
 
 ```bash
-npm install -g aiagentflow
+npm install -g @aiagentflow/cli
 ```
 
 Verify the installation:

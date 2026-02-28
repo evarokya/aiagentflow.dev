@@ -8,7 +8,7 @@
     "Hero": {
         "headlinePrefix": "Tu equipo de ingeniería de IA,",
         "headlineSuffix": "Ejecutándose localmente",
-        "description": "Orquestra agentes de IA en un flujo de trabajo estructurado y de auto-hospedaje (self-hosting AI workflow). aiagentflow ofrece una configuración de flujo de tareas de IA (AI task flow configuration) que mantiene tu código local y a tu equipo productivo.",
+        "description": "Orquestra agentes de IA en un flujo de trabajo estructurado y de auto-hospedaje (self-hosting AI workflow). @aiagentflow/cli ofrece una configuración de flujo de tareas de IA (AI task flow configuration) que mantiene tu código local y a tu equipo productivo.",
         "getStarted": "Empezar",
         "viewGitHub": "Ver en GitHub"
     },
@@ -83,21 +83,21 @@
             "feature": {
                 "label": "Nueva Función",
                 "request": "Crear un componente de tabla de precios dinámica",
-                "react": "import { AgentRole, StructuredWorkflow } from \"aiagentflow\";\n\nconst workflow = new StructuredWorkflow({\n  roles: [AgentRole.Architect, AgentRole.Coder, AgentRole.Reviewer],\n  model: \"claude-3-5-sonnet-20241022\",\n  rootDir: \"./src\"\n});\n\nawait workflow.run(\"Crear un componente de tabla de precios dinámica\");",
+                "react": "import { AgentRole, StructuredWorkflow } from \"@aiagentflow/cli\";\n\nconst workflow = new StructuredWorkflow({\n  roles: [AgentRole.Architect, AgentRole.Coder, AgentRole.Reviewer],\n  model: \"claude-3-5-sonnet-20241022\",\n  rootDir: \"./src\"\n});\n\nawait workflow.run(\"Crear un componente de tabla de precios dinámica\");",
                 "python": "from ai_agent_flow import Workflow, Role\n\nworkflow = Workflow(\n    roles=[Role.ARCHITECT, Role.CODER, Role.REVIEWER],\n    model=\"gpt-4o\",\n    working_dir=\"./app\"\n)\n\nworkflow.run(\"Implementar una capa de caché Redis para la API de usuario\")",
                 "cli": "aiagentflow run \"Construir un analizador de markdown\" \\\n    --roles architect,coder,reviewer,tester \\\n    --model gemini-2.5-pro \\\n    --dir ./packages/parser"
             },
             "bug": {
                 "label": "Corrección de Error",
                 "request": "Corregir condición de carrera en el middleware de autenticación",
-                "react": "import { AgentRole, StructuredWorkflow } from \"aiagentflow\";\n\nconst workflow = new StructuredWorkflow({\n  roles: [AgentRole.Architect, AgentRole.Coder, AgentRole.Tester],\n  model: \"claude-3-5-sonnet-20241022\"\n});\n\nawait workflow.run(\"Corregir condición de carrera en el middleware de autenticación al manejar solicitudes de inicio de sesión concurrentes\");",
+                "react": "import { AgentRole, StructuredWorkflow } from \"@aiagentflow/cli\";\n\nconst workflow = new StructuredWorkflow({\n  roles: [AgentRole.Architect, AgentRole.Coder, AgentRole.Tester],\n  model: \"claude-3-5-sonnet-20241022\"\n});\n\nawait workflow.run(\"Corregir condición de carrera en el middleware de autenticación al manejar solicitudes de inicio de sesión concurrentes\");",
                 "python": "from ai_agent_flow import Workflow, Role\n\nworkflow = Workflow(\n    roles=[Role.CODER, Role.REVIEWER, Role.TESTER],\n    model=\"gpt-4o\"\n)\n\nworkflow.run(\"Identificar y corregir la fuga de memoria en el bucle del trabajador de procesamiento de datos\")",
                 "cli": "aiagentflow run \"Corregir el cambio de diseño CSS en móviles\" \\\n    --roles coder,reviewer \\\n    --model claude-3-opus"
             },
             "refactor": {
                 "label": "Refactorización",
                 "request": "Modernizar el servicio de usuario heredado",
-                "react": "import { AgentRole, StructuredWorkflow } from \"aiagentflow\";\n\nconst workflow = new StructuredWorkflow({\n  roles: [AgentRole.Architect, AgentRole.Coder, AgentRole.Reviewer, AgentRole.Judge],\n  model: \"claude-3-5-sonnet-20241022\"\n});\n\nawait workflow.run(\"Refactorizar UserService para usar async/await e implementar el patrón repository\");",
+                "react": "import { AgentRole, StructuredWorkflow } from \"@aiagentflow/cli\";\n\nconst workflow = new StructuredWorkflow({\n  roles: [AgentRole.Architect, AgentRole.Coder, AgentRole.Reviewer, AgentRole.Judge],\n  model: \"claude-3-5-sonnet-20241022\"\n});\n\nawait workflow.run(\"Refactorizar UserService para usar async/await e implementar el patrón repository\");",
                 "python": "from ai_agent_flow import Workflow, Role\n\nworkflow = Workflow(\n    roles=[Role.ARCHITECT, Role.CODER, Role.REVIEWER],\n    model=\"gpt-4o\"\n)\n\nworkflow.run(\"Migrar el registrador de auditoría basado en SQL heredado al nuevo almacén de eventos basado en NoSQL\")",
                 "cli": "aiagentflow run \"Refactorizar el analizador de CLI para usar una arquitectura modular\" \\\n    --roles architect,coder,reviewer"
             }
@@ -106,7 +106,7 @@
     "Install": {
         "badge": "Empieza a Construir",
         "headlinePrefix": "Instálalo en",
-        "description": "Añade AI Agent Flow a cualquier proyecto de Node.js. Trae su propio motor sin dependencias, por lo que no romperá tu cadena de herramientas existente."
+        "description": "Añade @aiagentflow/cli a cualquier proyecto de Node.js. Trae su propio motor sin dependencias, por lo que no romperá tu cadena de herramientas existente."
     },
     "Providers": {
         "badge": "Trae tu propia IA",
