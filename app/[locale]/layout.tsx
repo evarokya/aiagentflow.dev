@@ -4,6 +4,8 @@ import "../globals.css";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
@@ -59,7 +61,11 @@ export default async function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            {children}
+            <div className="flex flex-col min-h-screen">
+              <Header />
+              <main className="flex-1 mt-16">{children}</main>
+              <Footer />
+            </div>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
