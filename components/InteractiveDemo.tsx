@@ -57,7 +57,7 @@ export function InteractiveDemo() {
                             transition={{ duration: 0.5, delay: 0.3 }}
                             className="flex flex-col sm:flex-row gap-4"
                         >
-                            <a href="/docs" className="px-8 py-3.5 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-semibold text-center transition-all hover:scale-105 hover:shadow-[0_0_30px_-5px_rgba(var(--brand-primary),0.5)]">
+                            <a href="https://github.com/aiagentflow/aiagentflow/tree/main/docs" target="_blank" rel="noreferrer" className="px-8 py-3.5 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-semibold text-center transition-all hover:scale-105 hover:shadow-[0_0_30px_-5px_rgba(var(--brand-primary),0.5)]">
                                 {t("readDocs")}
                             </a>
                         </motion.div>

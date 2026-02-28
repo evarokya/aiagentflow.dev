@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Logo } from "./Logo";
 import { VisitorCounter } from "./VisitorCounter";
 import { useTranslations } from "next-intl";

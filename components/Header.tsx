@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ThemeToggle } from "./ThemeToggle";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
@@ -23,8 +23,8 @@ export function Header() {
             animate={{ y: 0 }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
             className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 border-b ${scrolled
-                    ? "bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-slate-200 dark:border-slate-800 shadow-sm"
-                    : "bg-transparent border-transparent"
+                ? "bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-slate-200 dark:border-slate-800 shadow-sm"
+                : "bg-transparent border-transparent"
                 }`}
         >
             <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">

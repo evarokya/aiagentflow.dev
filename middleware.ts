@@ -11,5 +11,6 @@ export default createMiddleware({
 
 export const config = {
     // Match only internationalized pathnames
-    matcher: ['/', '/(es|en)/:path*']
+    // Catch-all regex to match all routes except next internals, api, and static files
+    matcher: ['/((?!api|_next|_vercel|.*\\..*).*)', '/(es|en)/:path*']
 };
