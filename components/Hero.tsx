@@ -77,9 +77,11 @@ export default function Hero() {
                         {t("viewGitHub")}
                     </a>
                 </motion.div>
-            </div>
 
-            <TerminalAnimation />
+                <div className="mt-20">
+                    <TerminalAnimation />
+                </div>
+            </div>
         </section>
     );
 }
