@@ -19,4 +19,55 @@
   .text-balance {
     text-wrap: balance;
   }
+  .font-serif {
+    font-family: var(--font-serif), serif;
+  }
+}
+
+/* Documentation Premium Callouts */
+.doc-callout {
+    @apply my-12 p-10 rounded-[2.5rem] border backdrop-blur-2xl relative overflow-hidden transition-all duration-700 hover:shadow-2xl hover:border-white/20;
+}
+
+.doc-callout-tip {
+    @apply bg-emerald-500/5 border-emerald-500/10 text-emerald-200/90 shadow-[0_0_60px_-15px_rgba(16,185,129,0.15)];
+}
+
+.doc-callout-tip::before {
+    content: "💡";
+    @apply absolute top-8 right-8 text-3xl opacity-40;
+}
+
+.doc-callout-warning {
+    @apply bg-amber-500/5 border-amber-500/10 text-amber-200/90 shadow-[0_0_60px_-15px_rgba(245,158,11,0.15)];
+}
+
+.doc-callout-warning::before {
+    content: "⚠️";
+    @apply absolute top-8 right-8 text-3xl opacity-40;
+}
+
+/* Prose Overrides for Documentation Hierarchy */
+.prose h2 {
+    @apply scroll-mt-32 font-bold tracking-tight text-white mb-8;
+}
+
+.prose h3 {
+    @apply scroll-mt-32 font-bold tracking-tight text-white/90 mb-6;
+}
+
+.prose :where(code):not(:where([class~="not-prose"] *)) {
+    @apply px-2 py-1 rounded-lg bg-white/5 border border-white/10 text-brand-primary font-bold before:content-none after:content-none;
+}
+
+.prose p {
+    @apply mb-8 leading-relaxed text-slate-400/90;
+}
+
+.prose strong {
+    @apply text-white font-black;
+}
+
+.prose blockquote {
+    @apply border-l-4 border-brand-primary/30 bg-white/5 p-8 rounded-2xl italic text-slate-300;
 }
