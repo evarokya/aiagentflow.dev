@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --brand-primary: 139 92 246;
+    /* violet-500 */
+    --brand-secondary: 217 70 239;
+    /* fuchsia-500 */
+    --brand-tertiary: 99 102 241;
+    /* indigo-500 */
+    --brand-bg: 3 0 20;
+    /* #030014 */
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

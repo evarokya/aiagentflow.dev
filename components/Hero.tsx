@@ -14,32 +14,35 @@ export default function Hero() {
                 <ThemeToggle />
             </div>
 
-            <div className="absolute inset-0 z-0 bg-white dark:bg-slate-950 transition-colors duration-300">
-                <div className="absolute top-0 inset-x-0 h-96 bg-gradient-to-b from-blue-100 dark:from-blue-900/20 to-transparent blur-3xl opacity-50 transition-colors duration-300" />
+            <div className="absolute inset-0 z-0 bg-white dark:bg-brand-bg transition-colors duration-500">
+                {/* Premium animated gradient orbs */}
+                <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-brand-primary/20 blur-[120px] mix-blend-screen animate-blob" />
+                <div className="absolute top-[20%] right-[-10%] w-[40%] h-[40%] rounded-full bg-brand-secondary/20 blur-[120px] mix-blend-screen animate-blob animation-delay-2000" />
+                <div className="absolute bottom-[-20%] left-[20%] w-[40%] h-[40%] rounded-full bg-brand-tertiary/20 blur-[120px] mix-blend-screen animate-blob animation-delay-4000" />
             </div>
 
             <div className="relative z-10 max-w-5xl mx-auto text-center">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5 }}
-                    className="inline-flex items-center space-x-2 bg-blue-50 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 text-blue-600 dark:text-blue-400 px-3 py-1 rounded-full text-sm font-medium mb-8 transition-colors duration-300"
+                    transition={{ duration: 0.7, ease: "easeOut" }}
+                    className="inline-flex items-center space-x-2 bg-white/5 dark:bg-white/5 border border-slate-200/50 dark:border-white/10 text-slate-700 dark:text-slate-300 px-4 py-1.5 rounded-full text-sm font-medium mb-8 backdrop-blur-md shadow-sm transition-all hover:bg-white/10"
                 >
                     <span className="flex h-2 w-2 relative">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-primary/75 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-primary"></span>
                     </span>
-                    <span>{t("badge")}</span>
+                    <span className="tracking-wide uppercase text-xs font-semibold">{t("badge")}</span>
                 </motion.div>
 
                 <motion.h1
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.1 }}
-                    className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 dark:text-white mb-6 transition-colors duration-300"
+                    transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
+                    className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-slate-900 dark:text-white mb-6"
                 >
                     {t("headlinePrefix")} <br className="hidden md:block" />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-400">
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-tertiary">
                         {t("headlineSuffix")}
                     </span>
                 </motion.h1>
@@ -61,7 +64,7 @@ export default function Hero() {
                 >
                     <a
                         href="#install"
-                        className="w-full sm:w-auto px-8 py-3.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium transition-colors shadow-lg shadow-blue-500/25 flex items-center justify-center"
+                        className="w-full sm:w-auto px-8 py-4 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-950 font-semibold transition-all hover:scale-105 hover:shadow-[0_0_40px_-10px_rgba(var(--brand-secondary),0.5)] flex items-center justify-center"
                     >
                         {t("getStarted")}
                     </a>

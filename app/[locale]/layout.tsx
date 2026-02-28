@@ -52,7 +52,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-white selection:bg-blue-500/30 transition-colors duration-300`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-white dark:bg-brand-bg text-slate-900 dark:text-slate-100 selection:bg-brand-secondary/30 transition-colors duration-500`}
       >
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider

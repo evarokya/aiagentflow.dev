@@ -12,8 +12,25 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        brand: {
+          primary: "rgb(var(--brand-primary) / <alpha-value>)",
+          secondary: "rgb(var(--brand-secondary) / <alpha-value>)",
+          tertiary: "rgb(var(--brand-tertiary) / <alpha-value>)",
+          bg: "rgb(var(--brand-bg) / <alpha-value>)",
+        }
       },
-    },
+      animation: {
+        blob: "blob 10s infinite",
+      },
+      keyframes: {
+        blob: {
+          "0%": { transform: "translate(0px, 0px) scale(1)" },
+          "33%": { transform: "translate(30px, -50px) scale(1.1)" },
+          "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
+          "100%": { transform: "translate(0px, 0px) scale(1)" },
+        },
+      },
+    }
   },
   plugins: [
     require('@tailwindcss/typography'),

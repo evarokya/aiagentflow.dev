@@ -38,50 +38,52 @@ export default function PseoPage({ params }: PseoPageProps) {
     }
 
     return (
-        <div className="min-h-screen bg-slate-950 text-slate-300 py-32 px-6 md:px-12 relative overflow-hidden">
-            {/* Dynamic Grid Background */}
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20 pointer-events-none" />
+        <div className="min-h-screen bg-brand-bg text-slate-300 py-32 px-6 md:px-12 relative overflow-hidden">
+            {/* Premium Dynamic Grid & Glow Background */}
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(var(--brand-primary),0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(var(--brand-primary),0.1)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20 pointer-events-none" />
+            <div className="absolute top-0 left-[20%] w-[60%] h-[500px] bg-brand-primary/10 blur-[150px] rounded-full pointer-events-none mix-blend-screen" />
 
             <article className="max-w-4xl mx-auto relative z-10">
                 <header className="mb-16 text-center">
-                    <div className="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-medium mb-6 uppercase tracking-wider">
+                    <div className="inline-flex items-center space-x-2 bg-brand-secondary/10 border border-brand-secondary/20 text-brand-secondary px-4 py-1.5 rounded-full text-xs font-semibold mb-6 uppercase tracking-wider backdrop-blur-sm">
                         Comparison Guide
                     </div>
-                    <h1 className="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400 mb-6 tracking-tight leading-tight">
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-tertiary mb-6 tracking-tighter leading-[1.1]">
                         {post.metadata.title}
                     </h1>
-                    <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+                    <p className="text-xl md:text-2xl text-slate-400/90 max-w-2xl mx-auto leading-relaxed">
                         {post.metadata.description}
                     </p>
                 </header>
 
                 <div className="prose prose-invert prose-slate prose-lg md:prose-xl max-w-none 
-          prose-headings:text-white prose-headings:font-bold prose-h2:mt-16 prose-h2:mb-6 prose-h2:pb-2 prose-h2:border-b prose-h2:border-slate-800
-          prose-a:text-cyan-400 hover:prose-a:text-cyan-300 prose-a:transition-colors
-          prose-code:text-cyan-300 prose-code:bg-slate-900 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:before:content-none prose-code:after:content-none
-          prose-pre:bg-[#0d1117] prose-pre:border prose-pre:border-slate-800 prose-pre:shadow-2xl prose-pre:shadow-blue-900/20
+          prose-headings:text-white prose-headings:font-bold prose-h2:mt-20 prose-h2:mb-8 prose-h2:pb-4 prose-h2:border-b prose-h2:border-white/10
+          prose-a:text-brand-secondary hover:prose-a:text-brand-secondary/80 prose-a:transition-colors prose-a:underline-offset-4
+          prose-code:text-brand-primary prose-code:bg-white/5 prose-code:px-2 prose-code:py-1 prose-code:rounded-lg prose-code:border prose-code:border-white/10 prose-code:before:content-none prose-code:after:content-none
+          prose-pre:bg-[#09090b] prose-pre:border prose-pre:border-white/10 prose-pre:shadow-[0_0_40px_-10px_rgba(var(--brand-primary),0.15)] prose-pre:rounded-2xl
           prose-strong:text-white prose-strong:font-semibold
-          prose-table:border-collapse prose-th:bg-slate-900 prose-th:p-4 prose-th:border prose-th:border-slate-800 prose-td:p-4 prose-td:border prose-td:border-slate-800">
+          prose-table:border-collapse prose-th:bg-white/5 prose-th:p-5 prose-th:border prose-th:border-white/10 prose-th:font-semibold prose-th:text-white prose-td:p-5 prose-td:border prose-td:border-white/10">
                     <ReactMarkdown>
                         {post.content}
                     </ReactMarkdown>
                 </div>
 
-                {/* High Converting CTA Box */}
-                <div className="mt-24 p-8 md:p-12 rounded-3xl bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 shadow-2xl relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 blur-3xl rounded-full" />
-                    <div className="absolute bottom-0 left-0 w-64 h-64 bg-cyan-500/10 blur-3xl rounded-full" />
+                {/* High Converting Premium CTA Box */}
+                <div className="mt-32 p-8 md:p-16 rounded-[2.5rem] bg-[#09090b]/80 backdrop-blur-xl border border-white/10 shadow-[0_0_50px_-12px_rgba(var(--brand-primary),0.2)] relative overflow-hidden group">
+                    <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/10 via-transparent to-brand-secondary/10 opacity-50 group-hover:opacity-100 transition-opacity duration-700" />
+                    <div className="absolute top-0 right-0 w-96 h-96 bg-brand-primary/15 blur-[100px] rounded-full mix-blend-screen" />
+                    <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-secondary/15 blur-[100px] rounded-full mix-blend-screen" />
 
                     <div className="relative z-10 text-center">
-                        <h3 className="text-3xl font-bold text-white mb-4">Ready to automate your dev workflow?</h3>
-                        <p className="text-slate-400 mb-8 max-w-xl mx-auto">
+                        <h3 className="text-3xl md:text-4xl font-black text-white mb-6 tracking-tight">Ready to automate your dev workflow?</h3>
+                        <p className="text-lg text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
                             Don&apos;t spend hours writing boilerplate LangChain agent code. Use our out-of-the-box CLI tool to orchestrate local AI agents today.
                         </p>
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                            <a href="/" className="px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium transition-colors shadow-lg shadow-blue-500/25 flex items-center justify-center w-full sm:w-auto">
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
+                            <a href="/" className="px-10 py-4 rounded-full bg-white text-slate-950 hover:bg-slate-200 font-bold transition-all hover:scale-105 hover:shadow-[0_0_40px_-10px_rgba(var(--brand-primary),0.6)] flex items-center justify-center w-full sm:w-auto text-lg">
                                 Get Started Free
                             </a>
-                            <a href="https://github.com/aiagentflow/aiagentflow" target="_blank" rel="noopener noreferrer" className="px-8 py-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-medium transition-colors border border-slate-700 flex items-center justify-center w-full sm:w-auto">
+                            <a href="https://github.com/aiagentflow/aiagentflow" target="_blank" rel="noopener noreferrer" className="px-10 py-4 rounded-full bg-white/5 hover:bg-white/10 text-white font-semibold transition-colors border border-white/10 flex items-center justify-center w-full sm:w-auto backdrop-blur-sm text-lg">
                                 View GitHub Repo
                             </a>
                         </div>

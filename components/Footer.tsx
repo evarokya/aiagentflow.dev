@@ -31,18 +31,18 @@ export function Footer() {
                     <div>
                         <h3 className="text-sm font-semibold text-slate-900 dark:text-white uppercase tracking-wider mb-4">Resources</h3>
                         <ul className="space-y-3">
-                            <li><Link href="/blog" className="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Blog</Link></li>
-                            <li><Link href="/use-cases/ai-agent-flow-vs-langchain" className="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Alternatives</Link></li>
-                            <li><a href="https://github.com/aiagentflow/aiagentflow/tree/main/docs" target="_blank" rel="noreferrer" className="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Documentation</a></li>
+                            <li><Link href="/blog" className="text-slate-500 dark:text-slate-400 hover:text-brand-primary dark:hover:text-brand-secondary transition-colors">Blog</Link></li>
+                            <li><Link href="/use-cases/ai-agent-flow-vs-langchain" className="text-slate-500 dark:text-slate-400 hover:text-brand-primary dark:hover:text-brand-secondary transition-colors">Alternatives</Link></li>
+                            <li><a href="https://github.com/aiagentflow/aiagentflow/tree/main/docs" target="_blank" rel="noreferrer" className="text-slate-500 dark:text-slate-400 hover:text-brand-primary dark:hover:text-brand-secondary transition-colors">Documentation</a></li>
                         </ul>
                     </div>
 
                     <div>
                         <h3 className="text-sm font-semibold text-slate-900 dark:text-white uppercase tracking-wider mb-4">Legal</h3>
                         <ul className="space-y-3">
-                            <li><Link href="#" className="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Privacy</Link></li>
-                            <li><Link href="#" className="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Terms</Link></li>
-                            <li><a href="https://opensource.org/licenses/MIT" target="_blank" rel="noreferrer" className="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">License (MIT)</a></li>
+                            <li><Link href="#" className="text-slate-500 dark:text-slate-400 hover:text-brand-primary dark:hover:text-brand-secondary transition-colors">Privacy</Link></li>
+                            <li><Link href="#" className="text-slate-500 dark:text-slate-400 hover:text-brand-primary dark:hover:text-brand-secondary transition-colors">Terms</Link></li>
+                            <li><a href="https://opensource.org/licenses/MIT" target="_blank" rel="noreferrer" className="text-slate-500 dark:text-slate-400 hover:text-brand-primary dark:hover:text-brand-secondary transition-colors">License (MIT)</a></li>
                         </ul>
                     </div>
 
