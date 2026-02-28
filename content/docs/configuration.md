@@ -8,6 +8,10 @@ date: "2026-02-28"
 
 AI Agent Flow supports both cloud-based and local LLM providers. Configuration is handled via environment variables or a `.aiagentflow` config file in your home directory.
 
+<div class="doc-callout doc-callout-tip">
+    <strong>Pro Tip:</strong> For the most reliable autonomous engineering, we recommend <strong>Claude 3.5 Sonnet</strong>. It consistently outperforms other models in complex architectural reasoning.
+</div>
+
 ## Anthropic (Recommended)
 
 Anthropic's Claude 3.5 Sonnet is the recommended model for architecture and coding tasks due to its superior reasoning capabilities.

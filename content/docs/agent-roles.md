@@ -8,6 +8,10 @@ date: "2026-02-28"
 
 AI Agent Flow uses a multi-agent "Chain of Thought" approach to ensure high-quality, reliable output. Each agent has a specific specialized role in the process.
 
+<div class="doc-callout doc-callout-tip">
+    <strong>Developer Insight:</strong> This multi-agent separation prevents "hallucination cascade" — where a single model might ignore its own errors. Each agent acts as a check on the previous one.
+</div>
+
 ## 🏛️ The Architect
 The Architect is the first agent to act. Its job is to:
 - Analyze the user request.
