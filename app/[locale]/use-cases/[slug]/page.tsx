@@ -2,6 +2,9 @@ import { getPostBySlug } from "@/lib/content";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
+import rehypeSlug from "rehype-slug";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 
@@ -68,7 +71,10 @@ export default function PseoPage({ params }: PseoPageProps) {
           prose-pre:bg-[#09090b] prose-pre:border prose-pre:border-white/10 prose-pre:shadow-[0_0_40px_-10px_rgba(var(--brand-primary),0.15)] prose-pre:rounded-2xl
           prose-strong:text-white prose-strong:font-bold
           prose-table:border-collapse prose-th:bg-white/5 prose-th:p-5 prose-th:border prose-th:border-white/10 prose-th:font-black prose-th:text-white prose-td:p-5 prose-td:border prose-td:border-white/10">
-                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                    <ReactMarkdown
+                        remarkPlugins={[remarkGfm]}
+                        rehypePlugins={[rehypeRaw, rehypeSlug, [rehypeAutolinkHeadings, { behavior: 'wrap' }]]}
+                    >
                         {post.content}
                     </ReactMarkdown>
                 </div>
