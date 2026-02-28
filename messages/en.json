@@ -1,4 +1,10 @@
 {
+    "Header": {
+        "blog": "Blog",
+        "docs": "Docs",
+        "comparisons": "Comparisons",
+        "github": "GitHub"
+    },
     "Hero": {
         "headlinePrefix": "Your AI Engineering Team,",
         "headlineSuffix": "Running Locally",

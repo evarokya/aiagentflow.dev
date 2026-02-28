@@ -1,4 +1,10 @@
 {
+    "Header": {
+        "blog": "ব্লগ",
+        "docs": "ডকস",
+        "comparisons": "তুুলনা",
+        "github": "গিটহাব"
+    },
     "Hero": {
         "headlinePrefix": "আপনার নিজস্ব AI ইঞ্জিনিয়ারিং টিম,",
         "headlineSuffix": "চলবে আপনারই পিসিতে",
