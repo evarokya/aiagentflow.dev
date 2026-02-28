@@ -3,16 +3,12 @@
 import { motion } from "framer-motion";
 import TerminalAnimation from "./TerminalAnimation";
 import { useTranslations } from "next-intl";
-import { ThemeToggle } from "./ThemeToggle";
 
 export default function Hero() {
     const t = useTranslations("Hero");
 
     return (
         <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden px-6">
-            <div className="absolute top-4 right-4 z-50">
-                <ThemeToggle />
-            </div>
 
             <div className="absolute inset-0 z-0 bg-white dark:bg-brand-bg transition-colors duration-500">
                 {/* Premium animated gradient orbs */}

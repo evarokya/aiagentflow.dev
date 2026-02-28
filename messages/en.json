@@ -67,5 +67,12 @@
             "title": "Cost Effective",
             "description": "Only pay for the LLM tokens you use. No enterprise SaaS subscriptions or hidden orchestration fees."
         }
+    },
+    "Demo": {
+        "badge": "See It In Action",
+        "headlinePrefix": "One framework.",
+        "headlineSuffix": "Multiple ways to run.",
+        "description": "Whether you prefer writing code or using the CLI, AI Agent Flow adapts seamlessly to your tooling preferences.",
+        "readDocs": "Read Documentation"
     }
 }

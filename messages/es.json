@@ -67,5 +67,12 @@
             "title": "Rentable",
             "description": "Paga solo por los tokens de LLM que utilices. Sin suscripciones SaaS empresariales ni tarifas ocultas de orquestación."
         }
+    },
+    "Demo": {
+        "badge": "Míralo en Acción",
+        "headlinePrefix": "Un framework.",
+        "headlineSuffix": "Múltiples formas de ejecutar.",
+        "description": "Ya sea que prefieras escribir código o usar la CLI, AI Agent Flow se adapta perfectamente a tus preferencias de herramientas.",
+        "readDocs": "Leer Documentación"
     }
 }
