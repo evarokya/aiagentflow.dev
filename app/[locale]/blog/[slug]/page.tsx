@@ -8,7 +8,8 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import { TableOfContents } from "@/components/TableOfContents";
-import { Clock, ChevronLeft, ChevronRight, Share2, Twitter, Facebook, Copy } from "lucide-react";
+import Image from "next/image";
+import { Clock, ChevronLeft, ChevronRight, Twitter, Facebook, Copy } from "lucide-react";
 
 interface PostPageProps {
     params: { slug: string; locale: string };
@@ -62,10 +63,12 @@ export default function BlogPost({ params }: PostPageProps) {
         <div className="min-h-screen bg-brand-bg relative transition-colors duration-500">
             {/* Massive Hero Section */}
             <div className="relative h-[60vh] md:h-[70vh] min-h-[500px] w-full overflow-hidden">
-                <img
+                <Image
                     src={post.metadata.image || "/blog-placeholder.jpg"}
                     alt={post.metadata.title}
-                    className="absolute inset-0 w-full h-full object-cover"
+                    fill
+                    className="object-cover"
+                    priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/60 to-transparent" />
 
