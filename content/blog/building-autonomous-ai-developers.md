@@ -5,7 +5,7 @@ date: "2026-03-01"
 author: "The AI Agent Flow Team"
 keywords: ["build autonomous ai agents", "custom ai developers", "system prompts for coding", "ai task orchestration"]
 category: "Engineering"
-image: "/blog/engineering-header.png"
+image: "/blog/autonomous-devs-header.png"
 ---
 
 The dream of AI in software engineering isn't just a smarter autocomplete. The dream is to be able to say, "Migrate our authentication from JWTs to session cookies," and have a system reliably executing that complex refactor while you focus on higher-level product decisions.

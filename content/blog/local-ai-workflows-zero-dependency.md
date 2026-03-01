@@ -5,7 +5,7 @@ date: "2026-03-01"
 author: "The AI Agent Flow Team"
 keywords: ["local ai developer tools", "run ai agents locally", "ollama coding agents", "private ai workflows", "zero dependency ai framework", "local first software engineering"]
 category: "Engineering"
-image: "/blog/engineering-header.png"
+image: "/blog/local-ai-header.png"
 ---
 
 The current landscape of AI-assisted engineering is dominated by SaaS platforms. You push your code to a cloud repo, a proprietary cloud service runs an LLM over it, and eventually, a PR miraculously appears.

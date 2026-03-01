@@ -5,7 +5,7 @@ date: "2026-03-01"
 author: "The AI Agent Flow Team"
 keywords: ["multi-agent framework", "single agent vs multi agent", "ai agents for coding", "specialized ai dev tools", "context window management"]
 category: "Engineering"
-image: "/blog/engineering-header.png"
+image: "/blog/multi-agent-header.png"
 ---
 
 If you've spent any time working with AI coding assistants, you know the drill. You ask the AI to "add a feature," and cross your fingers. 

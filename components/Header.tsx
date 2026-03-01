@@ -40,8 +40,7 @@ export function Header() {
 
                     <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-400">
                         <Link href="/blog" className="hover:text-slate-900 dark:hover:text-white transition-colors">{t("blog")}</Link>
-                        <Link href="/docs/getting-started" className="hover:text-slate-900 dark:hover:text-white transition-colors">{t("docs")}</Link>
-                        <Link href="/use-cases/aiagentflow-vs-langchain" className="hover:text-slate-900 dark:hover:text-white transition-colors">{t("comparisons")}</Link>
+                        {/* <Link href="/docs/getting-started" className="hover:text-slate-900 dark:hover:text-white transition-colors">{t("docs")}</Link> */}
                         <Link href="/use-cases/aiagentflow-vs-langchain" className="hover:text-slate-900 dark:hover:text-white transition-colors">{t("comparisons")}</Link>
                         <a href="https://github.com/aiagentflow/aiagentflow" target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 dark:hover:text-white transition-colors">{t("github")}</a>
                     </nav>
