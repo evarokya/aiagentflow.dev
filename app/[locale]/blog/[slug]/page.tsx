@@ -1,10 +1,6 @@
 import { getPostBySlug, getAllPosts } from "@/lib/content";
 import { notFound } from "next/navigation";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import rehypeRaw from "rehype-raw";
-import rehypeSlug from "rehype-slug";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import { MarkdownRenderer } from "@/components/MarkdownRenderer";
 import { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import { TableOfContents } from "@/components/TableOfContents";
@@ -107,19 +103,7 @@ export default function BlogPost({ params }: PostPageProps) {
                 {/* Main Content Area */}
                 <div className="flex-1 min-w-0 py-16 md:py-32 px-6 md:px-16 lg:px-24">
                     <article className="min-w-0 w-full overflow-hidden">
-                        <div className="prose prose-invert prose-slate prose-lg md:prose-xl max-w-none min-w-0 break-words
-                            prose-h2:font-serif prose-h2:text-4xl md:prose-h2:text-5xl prose-h2:text-white prose-h2:mt-24 prose-h2:mb-10 prose-h2:pb-6 prose-h2:border-b prose-h2:border-white/5
-                            prose-h3:font-serif prose-h3:text-2xl md:prose-h3:text-3xl prose-h3:text-white/90 prose-h3:mt-16 prose-h3:mb-6
-                            prose-p:text-slate-600 dark:text-slate-400 prose-p:leading-[1.8] prose-p:mb-10
-                            prose-strong:text-slate-900 dark:text-white prose-strong:font-black
-                            prose-pre:bg-[#09090b] prose-pre:border prose-pre:border-white/10 prose-pre:shadow-2xl prose-pre:rounded-[2rem] prose-pre:overflow-x-auto prose-pre:max-w-[100vw]">
-                            <ReactMarkdown
-                                remarkPlugins={[remarkGfm]}
-                                rehypePlugins={[rehypeRaw, rehypeSlug, [rehypeAutolinkHeadings, { behavior: 'wrap' }]]}
-                            >
-                                {post.content}
-                            </ReactMarkdown>
-                        </div>
+                        <MarkdownRenderer content={post.content} />
 
                         {/* Social Share & Backlinks */}
                         <div className="mt-24 pt-12 border-t border-slate-200 dark:border-white/5 flex flex-wrap items-center justify-between gap-8">

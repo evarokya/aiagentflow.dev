@@ -1,10 +1,6 @@
 import { getPostBySlug, getAllPosts } from "@/lib/content";
 import { notFound } from "next/navigation";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import rehypeRaw from "rehype-raw";
-import rehypeSlug from "rehype-slug";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import { MarkdownRenderer } from "@/components/MarkdownRenderer";
 import { Metadata } from "next";
 import { TableOfContents } from "@/components/TableOfContents";
 import { Link } from "@/i18n/navigation";
@@ -84,21 +80,17 @@ export default function DocPage({ params }: DocPageProps) {
                         </div>
                     </header>
 
-                    <div className="prose prose-invert prose-slate prose-lg md:prose-xl max-w-none 
+                    <MarkdownRenderer
+                        content={doc.content}
+                        className="prose prose-invert prose-slate prose-lg md:prose-xl max-w-none 
                         prose-h2:font-serif prose-h2:text-3xl md:prose-h2:text-4xl prose-h2:text-white/95 prose-h2:mt-24 prose-h2:mb-8 prose-h2:pt-10 prose-h2:border-t prose-h2:border-white/5
                         prose-h3:font-serif prose-h3:text-2xl md:prose-h3:text-3xl prose-h3:text-white/90 prose-h3:mt-16 prose-h3:mb-6
                         prose-p:text-slate-400/90 prose-p:leading-relaxed prose-p:mb-8
                         prose-a:text-brand-primary hover:prose-a:text-brand-secondary prose-a:transition-colors prose-a:underline-offset-4
                         prose-code:text-brand-primary prose-code:bg-white/5 prose-code:px-2 prose-code:py-1 prose-code:rounded-lg prose-code:border prose-code:border-white/10 prose-code:before:content-none prose-code:after:content-none
                         prose-pre:bg-[#09090b] prose-pre:border prose-pre:border-white/10 prose-pre:shadow-[0_0_40px_-10px_rgba(var(--brand-primary),0.15)] prose-pre:rounded-2xl
-                        prose-strong:text-white prose-strong:font-bold">
-                        <ReactMarkdown
-                            remarkPlugins={[remarkGfm]}
-                            rehypePlugins={[rehypeRaw, rehypeSlug, [rehypeAutolinkHeadings, { behavior: 'wrap' }]]}
-                        >
-                            {doc.content}
-                        </ReactMarkdown>
-                    </div>
+                        prose-strong:text-white prose-strong:font-bold"
+                    />
 
                     {/* Next/Prev Navigation */}
                     <div className="mt-24 pt-10 border-t border-white/5 flex flex-col sm:flex-row gap-4 justify-between">
