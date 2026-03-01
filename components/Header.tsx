@@ -7,9 +7,11 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
 import { useTranslations } from "next-intl";
+import { usePathname } from "@/i18n/navigation";
 
 export function Header() {
     const t = useTranslations("Header");
+    const pathname = usePathname();
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -50,11 +52,21 @@ export function Header() {
                         </span>
                     </Link>
 
-                    <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-400">
-                        <Link href="/blog" className="hover:text-slate-900 dark:hover:text-white transition-colors">{t("blog")}</Link>
+                    <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
+                        <Link
+                            href="/blog"
+                            className={`transition-colors ${pathname.startsWith('/blog') ? "text-slate-900 dark:text-white font-semibold" : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"}`}
+                        >
+                            {t("blog")}
+                        </Link>
                         {/* <Link href="/docs/getting-started" className="hover:text-slate-900 dark:hover:text-white transition-colors">{t("docs")}</Link> */}
-                        <Link href="/use-cases/aiagentflow-vs-langchain" className="hover:text-slate-900 dark:hover:text-white transition-colors">{t("comparisons")}</Link>
-                        <a href="https://github.com/aiagentflow/aiagentflow" target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 dark:hover:text-white transition-colors">{t("github")}</a>
+                        <Link
+                            href="/use-cases/aiagentflow-vs-langchain"
+                            className={`transition-colors ${pathname.startsWith('/use-cases') ? "text-slate-900 dark:text-white font-semibold" : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"}`}
+                        >
+                            {t("comparisons")}
+                        </Link>
+                        <a href="https://github.com/aiagentflow/aiagentflow" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">{t("github")}</a>
                     </nav>
                 </div>
 
@@ -79,14 +91,14 @@ export function Header() {
                         <nav className="flex flex-col px-6 py-6 space-y-6">
                             <Link
                                 href="/blog"
-                                className="text-lg font-medium text-slate-900 dark:text-white hover:text-brand-primary dark:hover:text-brand-primary transition-colors"
+                                className={`text-lg font-medium transition-colors ${pathname.startsWith('/blog') ? "text-brand-primary" : "text-slate-900 dark:text-white hover:text-brand-primary dark:hover:text-brand-primary"}`}
                                 onClick={() => setMobileMenuOpen(false)}
                             >
                                 {t("blog")}
                             </Link>
                             <Link
                                 href="/use-cases/aiagentflow-vs-langchain"
-                                className="text-lg font-medium text-slate-900 dark:text-white hover:text-brand-primary dark:hover:text-brand-primary transition-colors"
+                                className={`text-lg font-medium transition-colors ${pathname.startsWith('/use-cases') ? "text-brand-primary" : "text-slate-900 dark:text-white hover:text-brand-primary dark:hover:text-brand-primary"}`}
                                 onClick={() => setMobileMenuOpen(false)}
                             >
                                 {t("comparisons")}
