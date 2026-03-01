@@ -63,13 +63,13 @@ export function InteractiveDemo() {
                             className="space-y-4 mb-10"
                         >
                             <h4 className="text-sm font-bold text-slate-500 uppercase tracking-widest">{t("badge")}</h4>
-                            <div className="flex flex-wrap gap-3">
+                            <div className="flex flex-wrap gap-2 md:gap-3">
                                 {scenarios.map((scenario) => (
                                     <button
                                         key={scenario}
                                         onClick={() => setActiveScenario(scenario)}
-                                        className={`px-6 py-2.5 rounded-xl text-sm font-bold transition-all duration-300 border ${activeScenario === scenario
-                                            ? "bg-brand-primary text-white border-brand-primary shadow-lg shadow-brand-primary/25 scale-105"
+                                        className={`px-4 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 border ${activeScenario === scenario
+                                            ? "bg-brand-primary text-white border-brand-primary shadow-lg shadow-brand-primary/25 lg:scale-105"
                                             : "bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-400 border-transparent hover:border-slate-300 dark:hover:border-white/10"
                                             }`}
                                     >
@@ -102,13 +102,13 @@ export function InteractiveDemo() {
                     >
                         <div className="rounded-2xl overflow-hidden bg-[#09090b] border border-slate-800/80 shadow-[0_0_80px_-20px_rgba(var(--brand-primary),0.4)]">
                             {/* Window Header */}
-                            <div className="flex items-center justify-between px-4 py-3 bg-[#121216] border-b border-white/5">
-                                <div className="flex space-x-2">
+                            <div className="flex flex-wrap items-center justify-between gap-3 px-4 py-3 bg-[#121216] border-b border-white/5">
+                                <div className="flex space-x-2 shrink-0">
                                     <div className="w-3 h-3 rounded-full bg-red-500/20 border border-red-500/40"></div>
                                     <div className="w-3 h-3 rounded-full bg-amber-500/20 border border-amber-500/40"></div>
                                     <div className="w-3 h-3 rounded-full bg-emerald-500/20 border border-emerald-500/40"></div>
                                 </div>
-                                <div className="flex space-x-1 bg-[#09090b] rounded-lg p-1 border border-white/5">
+                                <div className="flex flex-wrap shadow-sm space-x-1 sm:space-x-1 bg-[#09090b] rounded-lg p-1 border border-white/5 mx-auto">
                                     {(["react", "python", "cli"] as const).map((tab) => (
                                         <button
                                             key={tab}
@@ -119,11 +119,11 @@ export function InteractiveDemo() {
                                         </button>
                                     ))}
                                 </div>
-                                <div className="w-12"></div> {/* Spacer for symmetry */}
+                                <div className="hidden sm:block w-12 shrink-0"></div> {/* Spacer for symmetry */}
                             </div>
 
                             {/* Code Content */}
-                            <div className="p-8 min-h-[320px] relative overflow-hidden">
+                            <div className="p-4 sm:p-8 min-h-[320px] relative overflow-x-auto overflow-y-hidden">
                                 <AnimatePresence mode="wait">
                                     <motion.div
                                         key={`${activeScenario}-${activeTab}`}
@@ -169,7 +169,7 @@ export function InteractiveDemo() {
                             </div>
 
                             {/* Footer / Status Bar */}
-                            <div className="px-6 py-3 bg-[#121216] border-t border-white/5 flex items-center justify-between text-[10px] font-bold uppercase tracking-widest text-slate-600">
+                            <div className="px-4 py-3 bg-[#121216] border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-3 text-[10px] font-bold uppercase tracking-widest text-slate-600">
                                 <div className="flex items-center gap-4">
                                     <span className="flex items-center gap-1.5">
                                         <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
