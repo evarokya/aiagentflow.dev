@@ -66,11 +66,11 @@
         },
         "feature5": {
             "title": "কাস্টমাইজযোগ্য",
-            "description": "চাইলে কাস্টম এজেন্ট লিখুন অথবা টিমের প্রয়োজন অনুযায়ী প্রম্পটগুলো বদলে নিন একদম মনের মতো।"
+            "description": "চাইলে কাস্টম এজেন্ট লিখুন অথবা টিমের প্রয়োজন অনুযায়ী প্রম্পটগুলো বদলে নিন একদম মনের মতো।"
         },
         "feature6": {
-            "title": "সাশ্রয়ী ও স্বচ্ছ",
-            "description": "শুধুমাত্র এলএলএম (LLM) টোকেনের জন্য পে করুন। বাড়তি কোন হিডেন চার্জ বা মান্থলি সাবস্ক্রিপশনের ঝামেলা নেই।"
+            "title": "স্ট্রিমিং এবং অটো ডিটেকশন",
+            "description": "--stream ফ্ল্যাগ ব্যবহার করে রিয়েল টাইমে এজেন্টদের কোড লিখতে দেখুন। Anthropic, OpenAI, Gemini এবং Ollama এর এভেইলএবল মডেলগুলো অটোমেটিক ডিটেক্ট করে।"
         }
     },
     "Demo": {
@@ -83,23 +83,17 @@
             "feature": {
                 "label": "নতুন ফিচার",
                 "request": "একটি ডাইনামিক প্রাইসিং টেবিল কম্পোনেন্ট তৈরি করুন",
-                "react": "import { AgentRole, StructuredWorkflow } from \"@aiagentflow/cli\";\n\nconst workflow = new StructuredWorkflow({\n  roles: [AgentRole.Architect, AgentRole.Coder, AgentRole.Reviewer],\n  model: \"claude-3-5-sonnet-20241022\",\n  rootDir: \"./src\"\n});\n\nawait workflow.run(\"একটি ডাইনামিক প্রাইসিং টেবিল কম্পোনেন্ট তৈরি করুন\");",
-                "python": "from ai_agent_flow import Workflow, Role\n\nworkflow = Workflow(\n    roles=[Role.ARCHITECT, Role.CODER, Role.REVIEWER],\n    model=\"gpt-4o\",\n    working_dir=\"./app\"\n)\n\nworkflow.run(\"ইউজার API-এর জন্য একটি Redis ক্যাশিং লেয়ার ইমপ্লিমেন্ট করুন\")",
-                "cli": "aiagentflow run \"একটি মার্কডাউন পার্সার তৈরি করুন\" \\\n    --roles architect,coder,reviewer,tester \\\n    --model gemini-2.5-pro \\\n    --dir ./packages/parser"
+                "cli": "# আপনার প্রজেক্ট শুরু করুন\\naiagentflow init\\n\\n# স্ট্রিমিং সহ একটি টাস্ক রান করুন\\naiagentflow run \"একটি ডাইনামিক প্রাইসিং টেবিল কম্পোনেন্ট তৈরি করুন\" --stream\\n\\n# প্রোভাইডারের হেলথ চেক করুন\\naiagentflow doctor"
             },
-            "bug": {
+            "bugfix": {
                 "label": "বাগ ফিক্স",
                 "request": "অথেন্টিকেশন মিডলওয়্যার-এ রেস কন্ডিশন ফিক্স করুন",
-                "react": "import { AgentRole, StructuredWorkflow } from \"@aiagentflow/cli\";\n\nconst workflow = new StructuredWorkflow({\n  roles: [AgentRole.Architect, AgentRole.Coder, AgentRole.Tester],\n  model: \"claude-3-5-sonnet-20241022\"\n});\n\nawait workflow.run(\"কনকারেন্ট লগইন রিকুয়েস্ট হ্যান্ডেল করার সময় অথেন্টিকেশন মিডলওয়্যারে রেস কন্ডিশন ফিক্স করুন\");",
-                "python": "from ai_agent_flow import Workflow, Role\n\nworkflow = Workflow(\n    roles=[Role.CODER, Role.REVIEWER, Role.TESTER],\n    model=\"gpt-4o\"\n)\n\nworkflow.run(\"ডেটা প্রসেসিং ওয়ার্কার লুপের মেমরি লিক শনাক্ত করুন এবং ফিক্স করুন\")",
-                "cli": "aiagentflow run \"মোবাইলে CSS লেআউট শিফট ফিক্স করুন\" \\\n    --roles coder,reviewer \\\n    --model claude-3-opus"
+                "cli": "aiagentflow run \"কনকারেন্ট লগইন রিকুয়েস্ট হ্যান্ডেল করার সময় অথেন্টিকেশন মিডলওয়্যারে রেস কন্ডিশন ফিক্স করুন\" \\\\\\n    --stream \\\\\\n    --auto \\\\\\n    --context src/middleware/auth.ts"
             },
             "refactor": {
                 "label": "রিফ্যাক্টর",
                 "request": "লিগ্যাসি ইউজার সার্ভিস আধুনিকীকরণ করুন",
-                "react": "import { AgentRole, StructuredWorkflow } from \"@aiagentflow/cli\";\n\nconst workflow = new StructuredWorkflow({\n  roles: [AgentRole.Architect, AgentRole.Coder, AgentRole.Reviewer, AgentRole.Judge],\n  model: \"claude-3-5-sonnet-20241022\"\n});\n\nawait workflow.run(\"UserService-কে async/await ব্যবহার করার জন্য রিফ্যাক্টর করুন এবং রিপোজিটরি প্যাটার্ন ইমপ্লিমেন্ট করুন\");",
-                "python": "from ai_agent_flow import Workflow, Role\n\nworkflow = Workflow(\n    roles=[Role.ARCHITECT, Role.CODER, Role.REVIEWER],\n    model=\"gpt-4o\"\n)\n\nworkflow.run(\"লিগ্যাসি SQL-ভিত্তিক অডিট লগারকে নতুন NoSQL-ভিত্তিক ইভেন্ট স্টোরে মাইগ্রেট করুন\")",
-                "cli": "aiagentflow run \"CLI পার্সারকে একটি মডুলার আর্কিটেকচার ব্যবহার করার জন্য রিফ্যাক্টর করুন\" \\\n    --roles architect,coder,reviewer"
+                "cli": "aiagentflow run \"UserService-কে async/await ব্যবহার করার জন্য রিফ্যাক্টর করুন এবং রিপোজিটরি প্যাটার্ন ইমপ্লিমেন্ট করুন\" \\\\\\n    --stream \\\\\\n    --auto"
             }
         }
     },
@@ -114,7 +108,15 @@
         "headline": "চলবে আপনার প্রিয় সব মডেলের সাথে",
         "anthropic": {
             "title": "Anthropic (Claude)",
-            "description": "আর্কিটেকচার এবং জটিল কোডিংয়ের জন্য সেরা সব মডেল। আমাদের সিস্টেম Claude 3.5 Sonnet-এর জন্য অপ্টিমাইজড।"
+            "description": "আর্কিটেকচার এবং জটিল কোডিংয়ের জন্য সেরা সব মডেল। আমাদের সিস্টেম claude-sonnet-4-20250514-এর জন্য অপ্টিমাইজড।"
+        },
+        "openai": {
+            "title": "OpenAI (GPT-4o)",
+            "description": "দ্রুত কোড এক্সিকিউশন ও জটিল এজেন্ট রাউটিং এর জন্য সুপার ফাস্ট টোকেন জেনারেশন।"
+        },
+        "gemini": {
+            "title": "Google Gemini",
+            "description": "Gemini 2.5 Pro এর বিশাল কন্টেক্সট উইন্ডো ব্যবহার করে এক নিমেষেই স্ক্যান করুন যেকোনো বড় কোডবেস।"
         },
         "ollama": {
             "title": "Ollama (Local Models)",

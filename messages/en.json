@@ -69,8 +69,8 @@
             "description": "Write custom agents or modify existing prompts. The entire framework is designed to be molded to your team's specific workflow."
         },
         "feature6": {
-            "title": "Cost Effective",
-            "description": "Only pay for the LLM tokens you use. No enterprise SaaS subscriptions or hidden orchestration fees."
+            "title": "Streaming & Auto-Detection",
+            "description": "Use the --stream flag to watch agents code in real-time. Automatically detect available models from Anthropic, OpenAI, Gemini, and Ollama out-of-the-box."
         }
     },
     "Demo": {
@@ -83,23 +83,17 @@
             "feature": {
                 "label": "New Feature",
                 "request": "Create a dynamic pricing table component",
-                "react": "import { AgentRole, StructuredWorkflow } from \"@aiagentflow/cli\";\n\nconst workflow = new StructuredWorkflow({\n  roles: [AgentRole.Architect, AgentRole.Coder, AgentRole.Reviewer],\n  model: \"claude-3-5-sonnet-20241022\",\n  rootDir: \"./src\"\n});\n\nawait workflow.run(\"Create a dynamic pricing table component\");",
-                "python": "from ai_agent_flow import Workflow, Role\n\nworkflow = Workflow(\n    roles=[Role.ARCHITECT, Role.CODER, Role.REVIEWER],\n    model=\"gpt-4o\",\n    working_dir=\"./app\"\n)\n\nworkflow.run(\"Implement a Redis caching layer for the user API\")",
-                "cli": "aiagentflow run \"Build a markdown parser\" \\\n    --roles architect,coder,reviewer,tester \\\n    --model gemini-2.5-pro \\\n    --dir ./packages/parser"
+                "cli": "# Initialize your project\\naiagentflow init\\n\\n# Run a task with streaming\\naiagentflow run \"Create a dynamic pricing table component\" --stream\\n\\n# Check provider health\\naiagentflow doctor"
             },
-            "bug": {
+            "bugfix": {
                 "label": "Bug Fix",
-                "request": "Fix race condition in the auth middleware",
-                "react": "import { AgentRole, StructuredWorkflow } from \"@aiagentflow/cli\";\n\nconst workflow = new StructuredWorkflow({\n  roles: [AgentRole.Architect, AgentRole.Coder, AgentRole.Tester],\n  model: \"claude-3-5-sonnet-20241022\"\n});\n\nawait workflow.run(\"Fix race condition in auth middleware when handling concurrent login requests\");",
-                "python": "from ai_agent_flow import Workflow, Role\n\nworkflow = Workflow(\n    roles=[Role.CODER, Role.REVIEWER, Role.TESTER],\n    model=\"gpt-4o\"\n)\n\nworkflow.run(\"Identify and fix the memory leak in the data processing worker loop\")",
-                "cli": "aiagentflow run \"Fix CSS layout shift on mobile\" \\\n    --roles coder,reviewer \\\n    --model claude-3-opus"
+                "request": "Fix race condition in auth middleware when handling concurrent login requests",
+                "cli": "aiagentflow run \"Fix race condition in auth middleware when handling concurrent login requests\" \\\\\\n    --stream \\\\\\n    --auto \\\\\\n    --context src/middleware/auth.ts"
             },
             "refactor": {
                 "label": "Refactor",
-                "request": "Modernize the legacy user service",
-                "react": "import { AgentRole, StructuredWorkflow } from \"@aiagentflow/cli\";\n\nconst workflow = new StructuredWorkflow({\n  roles: [AgentRole.Architect, AgentRole.Coder, AgentRole.Reviewer, AgentRole.Judge],\n  model: \"claude-3-5-sonnet-20241022\"\n});\n\nawait workflow.run(\"Refactor UserService to use async/await and implement the repository pattern\");",
-                "python": "from ai_agent_flow import Workflow, Role\n\nworkflow = Workflow(\n    roles=[Role.ARCHITECT, Role.CODER, Role.REVIEWER],\n    model=\"gpt-4o\"\n)\n\nworkflow.run(\"Migrate the legacy SQL-based audit logger to the new NoSQL-based event store\")",
-                "cli": "aiagentflow run \"Refactor the CLI parser to use a modular architecture\" \\\n    --roles architect,coder,reviewer"
+                "request": "Refactor UserService to use async/await and implement the repository pattern",
+                "cli": "aiagentflow run \"Refactor UserService to use async/await and implement the repository pattern\" \\\\\\n    --stream \\\\\\n    --auto"
             }
         }
     },
@@ -113,7 +107,15 @@
         "headline": "Compatible with the models you love",
         "anthropic": {
             "title": "Anthropic (Claude)",
-            "description": "State-of-the-art reasoning for architecture and complex coding tasks. Optimized for Claude 3.5 Sonnet."
+            "description": "State-of-the-art reasoning for architecture and complex coding tasks. Optimized for claude-sonnet-4-20250514."
+        },
+        "openai": {
+            "title": "OpenAI (GPT-4o)",
+            "description": "Lighting fast token generation for rapid code execution and complex agent routing."
+        },
+        "gemini": {
+            "title": "Google Gemini",
+            "description": "Access enormous context windows for scanning massive codebases effortlessly with Gemini 2.5 Pro."
         },
         "ollama": {
             "title": "Ollama (Local Models)",

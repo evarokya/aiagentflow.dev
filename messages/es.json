@@ -69,8 +69,8 @@
             "description": "Escribe agentes personalizados o modifica los prompts existentes. Todo el framework está diseñado para adaptarse al flujo de trabajo específico de tu equipo."
         },
         "feature6": {
-            "title": "Rentable",
-            "description": "Paga solo por los tokens de LLM que utilices. Sin suscripciones SaaS empresariales ni tarifas ocultas de orquestación."
+            "title": "Streaming y Autodetección",
+            "description": "Usa la opción --stream para ver a los agentes programar en tiempo real. Detecta automáticamente los modelos disponibles de Anthropic, OpenAI, Gemini y Ollama desde el primer momento."
         }
     },
     "Demo": {
@@ -83,23 +83,17 @@
             "feature": {
                 "label": "Nueva Función",
                 "request": "Crear un componente de tabla de precios dinámica",
-                "react": "import { AgentRole, StructuredWorkflow } from \"@aiagentflow/cli\";\n\nconst workflow = new StructuredWorkflow({\n  roles: [AgentRole.Architect, AgentRole.Coder, AgentRole.Reviewer],\n  model: \"claude-3-5-sonnet-20241022\",\n  rootDir: \"./src\"\n});\n\nawait workflow.run(\"Crear un componente de tabla de precios dinámica\");",
-                "python": "from ai_agent_flow import Workflow, Role\n\nworkflow = Workflow(\n    roles=[Role.ARCHITECT, Role.CODER, Role.REVIEWER],\n    model=\"gpt-4o\",\n    working_dir=\"./app\"\n)\n\nworkflow.run(\"Implementar una capa de caché Redis para la API de usuario\")",
-                "cli": "aiagentflow run \"Construir un analizador de markdown\" \\\n    --roles architect,coder,reviewer,tester \\\n    --model gemini-2.5-pro \\\n    --dir ./packages/parser"
+                "cli": "# Inicializa tu proyecto\\naiagentflow init\\n\\n# Ejecuta una tarea con streaming\\naiagentflow run \"Crear un componente de tabla de precios dinámica\" --stream\\n\\n# Verifica el estado de los proveedores\\naiagentflow doctor"
             },
-            "bug": {
+            "bugfix": {
                 "label": "Corrección de Error",
                 "request": "Corregir condición de carrera en el middleware de autenticación",
-                "react": "import { AgentRole, StructuredWorkflow } from \"@aiagentflow/cli\";\n\nconst workflow = new StructuredWorkflow({\n  roles: [AgentRole.Architect, AgentRole.Coder, AgentRole.Tester],\n  model: \"claude-3-5-sonnet-20241022\"\n});\n\nawait workflow.run(\"Corregir condición de carrera en el middleware de autenticación al manejar solicitudes de inicio de sesión concurrentes\");",
-                "python": "from ai_agent_flow import Workflow, Role\n\nworkflow = Workflow(\n    roles=[Role.CODER, Role.REVIEWER, Role.TESTER],\n    model=\"gpt-4o\"\n)\n\nworkflow.run(\"Identificar y corregir la fuga de memoria en el bucle del trabajador de procesamiento de datos\")",
-                "cli": "aiagentflow run \"Corregir el cambio de diseño CSS en móviles\" \\\n    --roles coder,reviewer \\\n    --model claude-3-opus"
+                "cli": "aiagentflow run \"Corregir condición de carrera en el middleware de autenticación al manejar solicitudes de inicio de sesión concurrentes\" \\\\\\n    --stream \\\\\\n    --auto \\\\\\n    --context src/middleware/auth.ts"
             },
             "refactor": {
                 "label": "Refactorización",
                 "request": "Modernizar el servicio de usuario heredado",
-                "react": "import { AgentRole, StructuredWorkflow } from \"@aiagentflow/cli\";\n\nconst workflow = new StructuredWorkflow({\n  roles: [AgentRole.Architect, AgentRole.Coder, AgentRole.Reviewer, AgentRole.Judge],\n  model: \"claude-3-5-sonnet-20241022\"\n});\n\nawait workflow.run(\"Refactorizar UserService para usar async/await e implementar el patrón repository\");",
-                "python": "from ai_agent_flow import Workflow, Role\n\nworkflow = Workflow(\n    roles=[Role.ARCHITECT, Role.CODER, Role.REVIEWER],\n    model=\"gpt-4o\"\n)\n\nworkflow.run(\"Migrar el registrador de auditoría basado en SQL heredado al nuevo almacén de eventos basado en NoSQL\")",
-                "cli": "aiagentflow run \"Refactorizar el analizador de CLI para usar una arquitectura modular\" \\\n    --roles architect,coder,reviewer"
+                "cli": "aiagentflow run \"Refactorizar UserService para usar async/await e implementar el patrón repository\" \\\\\\n    --stream \\\\\\n    --auto"
             }
         }
     },
@@ -113,7 +107,15 @@
         "headline": "Compatible con los modelos que amas",
         "anthropic": {
             "title": "Anthropic (Claude)",
-            "description": "Razonamiento de vanguardia para arquitectura y tareas de codificación complejas. Optimizado para Claude 3.5 Sonnet."
+            "description": "Razonamiento de vanguardia para arquitectura y tareas de codificación complejas. Optimizado para claude-sonnet-4-20250514."
+        },
+        "openai": {
+            "title": "OpenAI (GPT-4o)",
+            "description": "Generación de tokens ultrarrápida para ejecución rápida de código y enrutamiento complejo de agentes."
+        },
+        "gemini": {
+            "title": "Google Gemini",
+            "description": "Accede a enormes ventanas de contexto para escanear bases de código masivas sin esfuerzo con Gemini 2.5 Pro."
         },
         "ollama": {
             "title": "Ollama (Modelos locales)",
