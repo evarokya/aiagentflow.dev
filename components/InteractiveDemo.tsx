@@ -4,15 +4,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 
-type TabType = "react" | "python" | "cli";
-type ScenarioType = "feature" | "bug" | "refactor";
+type ScenarioType = "feature" | "bugfix" | "refactor";
 
 export function InteractiveDemo() {
     const t = useTranslations("Demo");
-    const [activeTab, setActiveTab] = useState<TabType>("react");
     const [activeScenario, setActiveScenario] = useState<ScenarioType>("feature");
 
-    const scenarios: ScenarioType[] = ["feature", "bug", "refactor"];
+    const scenarios: ScenarioType[] = ["feature", "bugfix", "refactor"];
 
     return (
         <section className="py-24 relative overflow-hidden bg-white dark:bg-brand-bg transition-colors duration-500">
@@ -108,25 +106,22 @@ export function InteractiveDemo() {
                                     <div className="w-3 h-3 rounded-full bg-amber-500/20 border border-amber-500/40"></div>
                                     <div className="w-3 h-3 rounded-full bg-emerald-500/20 border border-emerald-500/40"></div>
                                 </div>
-                                <div className="flex flex-wrap shadow-sm space-x-1 sm:space-x-1 bg-[#09090b] rounded-lg p-1 border border-white/5 mx-auto max-w-full overflow-hidden">
-                                    {(["react", "python", "cli"] as const).map((tab) => (
-                                        <button
-                                            key={tab}
-                                            onClick={() => setActiveTab(tab)}
-                                            className={`px-3 py-1 text-xs font-semibold rounded-md transition-all ${activeTab === tab ? "bg-white/10 text-white shadow-sm" : "text-slate-500 hover:text-slate-300 hover:bg-white/5"}`}
-                                        >
-                                            {tab === "react" ? "React/TS" : tab === "python" ? "Python" : "CLI"}
-                                        </button>
-                                    ))}
+                                <div className="hidden sm:flex flex-wrap shadow-sm space-x-1 sm:space-x-1 bg-[#09090b] rounded-lg p-1 border border-white/5 mx-auto max-w-full overflow-hidden opacity-0 pointer-events-none">
+                                    <button className="px-3 py-1 text-xs font-semibold rounded-md">Spacer</button>
                                 </div>
-                                <div className="hidden sm:block w-12 shrink-0"></div> {/* Spacer for symmetry */}
+                                <div className="flex items-center gap-2 px-3 py-1 rounded bg-white/5 border border-white/10 text-xs font-mono text-slate-400">
+                                    <svg className="w-3.5 h-3.5 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    bash
+                                </div>
                             </div>
 
                             {/* Code Content */}
                             <div className="p-4 sm:p-8 min-h-[320px] relative overflow-x-auto overflow-y-hidden max-w-full">
                                 <AnimatePresence mode="wait">
                                     <motion.div
-                                        key={`${activeScenario}-${activeTab}`}
+                                        key={activeScenario}
                                         initial={{ opacity: 0, filter: "blur(10px)", y: 10 }}
                                         animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
                                         exit={{ opacity: 0, filter: "blur(10px)", y: -10 }}
@@ -143,26 +138,21 @@ export function InteractiveDemo() {
                                         </div>
 
                                         {/* Output Preview */}
-                                        <div className="text-slate-300 whitespace-pre">
-                                            {activeTab === "cli" ? (
-                                                <div className="flex gap-3">
-                                                    <span className="text-slate-600 select-none">$</span>
-                                                    <span>{t(`scenarios.${activeScenario}.cli`)}</span>
+                                        <div className="text-slate-300">
+                                            {t(`scenarios.${activeScenario}.cli`).split("\\n").map((line, i) => (
+                                                <div key={i} className={`flex gap-3 ${line.trim() === '' ? 'h-6' : ''}`}>
+                                                    {line.trim() !== '' && !line.startsWith('#') && (
+                                                        <span className="text-slate-600 select-none">$</span>
+                                                    )}
+                                                    <span dangerouslySetInnerHTML={{
+                                                        __html: line
+                                                            .replace(/"([^"]+)"/g, '<span class="text-emerald-400">"$1"</span>')
+                                                            .replace(/#\s*(.*)/g, '<span class="text-slate-500"># $1</span>')
+                                                            .replace(/\b(aiagentflow|run|init|doctor)\b/g, '<span class="text-brand-secondary">$1</span>')
+                                                            .replace(/(--stream|--auto|--context|--roles|--model|--dir)/g, '<span class="text-sky-400">$1</span>')
+                                                    }} />
                                                 </div>
-                                            ) : (
-                                                t(`scenarios.${activeScenario}.${activeTab}`).split("\n").map((line, i) => (
-                                                    <div key={i} className="flex gap-4">
-                                                        <span className="w-4 text-slate-700 select-none text-right">{i + 1}</span>
-                                                        <span dangerouslySetInnerHTML={{
-                                                            __html: line
-                                                                .replace(/"([^"]+)"/g, '<span class="text-emerald-400">"$1"</span>')
-                                                                .replace(/\b(import|from|const|await|new|from|as)\b/g, '<span class="text-brand-secondary">$1</span>')
-                                                                .replace(/\b(Architect|Coder|Reviewer|Tester|Judge|ARCHITECT|CODER|REVIEWER|TESTER|Workflow|StructuredWorkflow|Role|AgentRole)\b/g, '<span class="text-amber-300">$1</span>')
-                                                                .replace(/\.run\(/g, '.<span class="text-sky-400">run</span>(')
-                                                        }} />
-                                                    </div>
-                                                ))
-                                            )}
+                                            ))}
                                         </div>
                                     </motion.div>
                                 </AnimatePresence>
@@ -179,7 +169,7 @@ export function InteractiveDemo() {
                                 </div>
                                 <div className="flex items-center gap-4">
                                     <span>Line 1, Col 1</span>
-                                    <span>{activeTab === "react" ? "TypeScript" : activeTab === "python" ? "Python" : "Zsh"}</span>
+                                    <span>Zsh</span>
                                 </div>
                             </div>
                         </div>
