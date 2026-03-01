@@ -98,9 +98,9 @@ export function InteractiveDemo() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="relative"
+                        className="relative min-w-0 w-full"
                     >
-                        <div className="rounded-2xl overflow-hidden bg-[#09090b] border border-slate-800/80 shadow-[0_0_80px_-20px_rgba(var(--brand-primary),0.4)]">
+                        <div className="rounded-2xl overflow-hidden bg-[#09090b] border border-slate-800/80 shadow-[0_0_80px_-20px_rgba(var(--brand-primary),0.4)] w-full max-w-full">
                             {/* Window Header */}
                             <div className="flex flex-wrap items-center justify-between gap-3 px-4 py-3 bg-[#121216] border-b border-white/5">
                                 <div className="flex space-x-2 shrink-0">
@@ -108,7 +108,7 @@ export function InteractiveDemo() {
                                     <div className="w-3 h-3 rounded-full bg-amber-500/20 border border-amber-500/40"></div>
                                     <div className="w-3 h-3 rounded-full bg-emerald-500/20 border border-emerald-500/40"></div>
                                 </div>
-                                <div className="flex flex-wrap shadow-sm space-x-1 sm:space-x-1 bg-[#09090b] rounded-lg p-1 border border-white/5 mx-auto">
+                                <div className="flex flex-wrap shadow-sm space-x-1 sm:space-x-1 bg-[#09090b] rounded-lg p-1 border border-white/5 mx-auto max-w-full overflow-hidden">
                                     {(["react", "python", "cli"] as const).map((tab) => (
                                         <button
                                             key={tab}
@@ -123,7 +123,7 @@ export function InteractiveDemo() {
                             </div>
 
                             {/* Code Content */}
-                            <div className="p-4 sm:p-8 min-h-[320px] relative overflow-x-auto overflow-y-hidden">
+                            <div className="p-4 sm:p-8 min-h-[320px] relative overflow-x-auto overflow-y-hidden max-w-full">
                                 <AnimatePresence mode="wait">
                                     <motion.div
                                         key={`${activeScenario}-${activeTab}`}

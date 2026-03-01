@@ -66,17 +66,17 @@ export function InstallGuide() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.3 }}
-                            className="relative group"
+                            className="relative group min-w-0 w-full"
                         >
                             <div className="absolute -inset-1 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-                            <div className="relative flex items-center justify-between bg-white dark:bg-[#09090b] border border-slate-200 dark:border-white/10 rounded-xl p-4">
-                                <code className="text-sm sm:text-base font-mono text-slate-800 dark:text-slate-300">
+                            <div className="relative flex items-center justify-between bg-white dark:bg-[#09090b] border border-slate-200 dark:border-white/10 rounded-xl p-3 sm:p-4 overflow-hidden w-full">
+                                <div className="overflow-x-auto flex-1 font-mono text-slate-800 dark:text-slate-300 py-1 no-scrollbar text-sm md:text-base">
                                     <span className="text-brand-primary select-none">$ </span>
-                                    {npmCommand}
-                                </code>
+                                    <span className="whitespace-nowrap">{npmCommand}</span>
+                                </div>
                                 <button
                                     onClick={copyToClipboard}
-                                    className="ml-4 p-2 rounded-lg bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 text-slate-600 dark:text-slate-400 hover:text-brand-primary transition-all focus:outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-2 dark:focus:ring-offset-[#09090b]"
+                                    className="ml-2 sm:ml-4 p-2 shrink-0 rounded-lg bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 text-slate-600 dark:text-slate-400 hover:text-brand-primary transition-all focus:outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-2 dark:focus:ring-offset-[#09090b]"
                                     aria-label="Copy command"
                                 >
                                     {copied ? (
