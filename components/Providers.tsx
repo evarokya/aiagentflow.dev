@@ -94,6 +94,41 @@ export function Providers() {
                             </p>
                         </div>
                     </motion.div>
+                    {/* OpenAI Card */}
+                    <motion.div
+                        variants={cardVariants}
+                        className="relative group p-8 rounded-[2.5rem] bg-slate-50 dark:bg-[#030014] border border-slate-200 dark:border-white/10 hover:border-emerald-500/30 transition-all duration-500 overflow-hidden"
+                    >
+                        <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                        <div className="relative z-10">
+                            <div className="w-16 h-16 rounded-2xl bg-white dark:bg-slate-900 flex items-center justify-center mb-6 border border-slate-200 dark:border-white/5 shadow-sm">
+                                <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-emerald-400 to-emerald-600">O</span>
+                            </div>
+                            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">{t("openai.title")}</h3>
+                            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                {t("openai.description")}
+                            </p>
+                        </div>
+                    </motion.div>
+
+                    {/* Google Gemini Card */}
+                    <motion.div
+                        variants={cardVariants}
+                        className="relative group p-8 rounded-[2.5rem] bg-slate-50 dark:bg-[#030014] border border-slate-200 dark:border-white/10 hover:border-purple-500/30 transition-all duration-500 overflow-hidden"
+                    >
+                        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                        <div className="relative z-10">
+                            <div className="w-16 h-16 rounded-2xl bg-white dark:bg-slate-900 flex items-center justify-center mb-6 border border-slate-200 dark:border-white/5 shadow-sm">
+                                <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-400 to-fuchsia-500">G</span>
+                            </div>
+                            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">{t("gemini.title")}</h3>
+                            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                {t("gemini.description")}
+                            </p>
+                        </div>
+                    </motion.div>
                 </motion.div>
 
                 <motion.p
@@ -103,7 +138,7 @@ export function Providers() {
                     transition={{ delay: 0.8 }}
                     className="text-center mt-12 text-slate-500 dark:text-slate-500 text-sm font-medium"
                 >
-                    + More providers like OpenAI and Mistral coming soon
+                    + More providers like Mistral coming soon
                 </motion.p>
             </div>
         </section>
