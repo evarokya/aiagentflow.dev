@@ -30,8 +30,8 @@ export function BlogGrid({ allPosts }: BlogGridProps) {
 
     return (
         <div className="max-w-[1400px] mx-auto relative z-10 font-sans">
-            <header className="text-center mb-20">
-                <h1 className="text-5xl md:text-7xl font-serif text-slate-900 dark:text-white mb-6 tracking-tight">
+            <header className="text-center mb-12 sm:mb-20">
+                <h1 className="text-4xl sm:text-5xl md:text-7xl font-serif text-slate-900 dark:text-white mb-6 tracking-tight text-balance">
                     Insights & Engineering
                 </h1>
                 <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-xl font-medium mb-12">
@@ -78,7 +78,7 @@ export function BlogGrid({ allPosts }: BlogGridProps) {
                             href={`/blog/${post.metadata.slug}`}
                             className="group flex flex-col h-full"
                         >
-                            <article className="flex flex-col h-full rounded-[2.5rem] bg-white dark:bg-[#09090b]/80 border border-slate-200 dark:border-white/5 overflow-hidden transition-all duration-500 hover:border-brand-primary/30 hover:shadow-2xl hover:shadow-brand-primary/5 group-hover:-translate-y-2 relative">
+                            <article className="flex flex-col h-full rounded-[2.5rem] bg-white dark:bg-[#09090b]/80 border border-slate-200 dark:border-white/5 overflow-hidden transition-all duration-500 hover:border-brand-primary/30 hover:shadow-2xl hover:shadow-brand-primary/5 group-hover:-translate-y-2 relative min-w-0">
                                 {/* Image Placeholder/Visual */}
                                 <div className="aspect-[16/10] bg-slate-100 dark:bg-white/5 relative overflow-hidden">
                                     {post.metadata.image ? (
@@ -112,7 +112,7 @@ export function BlogGrid({ allPosts }: BlogGridProps) {
                                         </div>
                                     </div>
 
-                                    <h2 className="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-brand-primary transition-colors mb-4 leading-tight">
+                                    <h2 className="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-brand-primary transition-colors mb-4 break-words leading-tight">
                                         {post.metadata.title}
                                     </h2>
 
