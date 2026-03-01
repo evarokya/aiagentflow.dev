@@ -8,20 +8,14 @@ export function VisitorCounter() {
     const pathname = usePathname();
 
     useEffect(() => {
-        // In a real application without a database, we would call an external API or Edge function
-        // For this static site demo, we'll simulate a realistic growing count + current reading based on path
-        const baseCount = 14205;
-        const pageSpecificCount = pathname.length * 42;
-
-        setVisitors(baseCount + pageSpecificCount + Math.floor(Math.random() * 10));
-
-        // Optional: Real integration would look like this
-        /*
-        fetch('/api/visitors', { method: 'POST' })
-          .then(res => res.json())
-          .then(data => setVisitors(data.count))
-          .catch(console.error);
-        */
+        // Fetch real views based on IP from our API route
+        fetch('/api/views', { method: 'POST' })
+            .then(res => res.json())
+            .then(data => setVisitors(data.count))
+            .catch(() => {
+                // Fallback if API fails
+                setVisitors(14205);
+            });
     }, [pathname]);
 
     if (visitors === null) return null;

@@ -14,12 +14,20 @@
     },
     "Terminal": {
         "step1": "$ aiagentflow run \"Build a REST API for user auth\"",
-        "step2": "✔ Architect complete (1,204 tokens)",
-        "step3": "✔ Coder complete (3,891 tokens)",
-        "step4": "✔ Reviewer complete (987 tokens)",
-        "step5": "✔ Tester complete (2,103 tokens)",
-        "step6": "✔ Judge — PASS",
-        "step7": "Task completed successfully!"
+        "step2": "AI Workflow — Running Task",
+        "step3": "──────────────────────────────",
+        "step4": "Task: Build a REST API for user auth",
+        "step5": " ",
+        "step6": "[INFO]  🧠 Architect starting...",
+        "step7": "✔ 🧠 Architect complete (1,204 tokens)",
+        "step8": "[INFO]  💻 Coder starting...",
+        "step9": "✔ 💻 Coder complete (3,891 tokens)",
+        "step10": "[INFO]  Wrote 4 file(s)",
+        "step11": "[INFO]  🔍 Reviewer starting...",
+        "step12": "✔ 🔍 Reviewer complete (987 tokens)",
+        "step13": "[INFO]  🧪 Tester starting...",
+        "step14": "✔ 🧪 Tester complete (2,103 tokens)",
+        "step15": "Task completed successfully!"
     },
     "Pipeline": {
         "badge": "How It Works",

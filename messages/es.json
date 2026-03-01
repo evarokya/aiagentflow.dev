@@ -13,13 +13,21 @@
         "viewGitHub": "Ver en GitHub"
     },
     "Terminal": {
-        "step1": "$ aiagentflow run \"Construir API REST para autenticación\"",
-        "step2": "✔ Arquitecto completado (1,204 tokens)",
-        "step3": "✔ Programador completado (3,891 tokens)",
-        "step4": "✔ Revisor completado (987 tokens)",
-        "step5": "✔ Probador completado (2,103 tokens)",
-        "step6": "✔ Juez — APROBADO",
-        "step7": "¡Tarea completada con éxito!"
+        "step1": "$ aiagentflow run \"Construir una API REST para usuarios\"",
+        "step2": "AI Workflow — Tarea en ejecución",
+        "step3": "──────────────────────────────",
+        "step4": "Tarea: Construir una API REST para usuarios",
+        "step5": " ",
+        "step6": "[INFO]  🧠 Arquitecto iniciando...",
+        "step7": "✔ 🧠 Arquitecto completado (1,204 tokens)",
+        "step8": "[INFO]  💻 Programador iniciando...",
+        "step9": "✔ 💻 Programador completado (3,891 tokens)",
+        "step10": "[INFO]  Escribió 4 archivo(s)",
+        "step11": "[INFO]  🔍 Revisor iniciando...",
+        "step12": "✔ 🔍 Revisor completado (987 tokens)",
+        "step13": "[INFO]  🧪 Probador iniciando...",
+        "step14": "✔ 🧪 Probador completado (2,103 tokens)",
+        "step15": "¡Tarea completada con éxito!"
     },
     "Pipeline": {
         "badge": "Cómo Funciona",

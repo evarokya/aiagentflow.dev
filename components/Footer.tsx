@@ -59,13 +59,7 @@ export function Footer() {
                     </p>
                     <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
                         <VisitorCounter />
-                        <div className="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
-                            <span className="flex h-2 w-2 relative">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                            </span>
-                            {t("status")}
-                        </div>
+
                     </div>
                 </div>
             </div>

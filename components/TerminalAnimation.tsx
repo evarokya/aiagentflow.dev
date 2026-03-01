@@ -10,11 +10,19 @@ export default function TerminalAnimation() {
     const terminalSteps = useMemo(() => [
         { text: t("step1"), delay: 0 },
         { text: t("step2"), delay: 800 },
-        { text: t("step3"), delay: 2500 },
-        { text: t("step4"), delay: 5000 },
-        { text: t("step5"), delay: 6500 },
-        { text: t("step6"), delay: 7800 },
-        { text: t("step7"), delay: 8500 },
+        { text: t("step3"), delay: 900 },
+        { text: t("step4"), delay: 1000 },
+        { text: t("step5"), delay: 1100 },
+        { text: t("step6"), delay: 1500 },
+        { text: t("step7"), delay: 3500 },
+        { text: t("step8"), delay: 3800 },
+        { text: t("step9"), delay: 6500 },
+        { text: t("step10"), delay: 6800 },
+        { text: t("step11"), delay: 7100 },
+        { text: t("step12"), delay: 8500 },
+        { text: t("step13"), delay: 8800 },
+        { text: t("step14"), delay: 11000 },
+        { text: t("step15"), delay: 12000 },
     ], [t]);
 
     const [displayedSteps, setDisplayedSteps] = useState<number>(0);
