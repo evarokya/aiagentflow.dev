@@ -2,14 +2,16 @@
 
 import { Link } from "@/i18n/navigation";
 import { ThemeToggle } from "./ThemeToggle";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
 import { useTranslations } from "next-intl";
 
 export function Header() {
     const t = useTranslations("Header");
     const [scrolled, setScrolled] = useState(false);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -29,9 +31,19 @@ export function Header() {
                 : "bg-transparent border-transparent"
                 }`}
         >
-            <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-                <div className="flex items-center gap-8">
-                    <Link href="/" className="flex items-center gap-2 group">
+            <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between relative">
+
+                {/* Mobile Menu Toggle (Left) */}
+                <button
+                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                    className="md:hidden p-2 -ml-2 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
+                >
+                    {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                </button>
+
+                {/* Logo Area (Left on Desktop, Centered on Mobile) */}
+                <div className="flex items-center gap-8 absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0">
+                    <Link href="/" className="flex items-center gap-2 group" onClick={() => setMobileMenuOpen(false)}>
                         <Logo className="w-8 h-8 group-hover:scale-110 transition-transform duration-300" />
                         <span className="font-bold text-lg tracking-tight text-slate-900 dark:text-white hidden sm:block">
                             AI Agent Flow
@@ -53,6 +65,45 @@ export function Header() {
                     <ThemeToggle />
                 </div>
             </div>
+
+            {/* Mobile Navigation Dropdown */}
+            <AnimatePresence>
+                {mobileMenuOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="md:hidden overflow-hidden bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800"
+                    >
+                        <nav className="flex flex-col px-6 py-6 space-y-6">
+                            <Link
+                                href="/blog"
+                                className="text-lg font-medium text-slate-900 dark:text-white hover:text-brand-primary dark:hover:text-brand-primary transition-colors"
+                                onClick={() => setMobileMenuOpen(false)}
+                            >
+                                {t("blog")}
+                            </Link>
+                            <Link
+                                href="/use-cases/aiagentflow-vs-langchain"
+                                className="text-lg font-medium text-slate-900 dark:text-white hover:text-brand-primary dark:hover:text-brand-primary transition-colors"
+                                onClick={() => setMobileMenuOpen(false)}
+                            >
+                                {t("comparisons")}
+                            </Link>
+                            <a
+                                href="https://github.com/aiagentflow/aiagentflow"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-lg font-medium text-slate-900 dark:text-white hover:text-brand-primary dark:hover:text-brand-primary transition-colors"
+                                onClick={() => setMobileMenuOpen(false)}
+                            >
+                                {t("github")}
+                            </a>
+                        </nav>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </motion.header>
     );
 }
