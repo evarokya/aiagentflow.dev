@@ -64,17 +64,17 @@ export default function DocPage({ params }: DocPageProps) {
                             {readingTime} min read
                         </div>
                     </div>
-                    <h1 className="text-4xl md:text-6xl font-serif text-white mb-8 tracking-tight leading-[1.1] text-balance">
+                    <h1 className="text-4xl md:text-6xl font-serif text-slate-900 dark:text-white mb-8 tracking-tight leading-[1.1] text-balance">
                         {doc.metadata.title}
                     </h1>
-                    <p className="text-slate-400 text-xl md:text-2xl leading-relaxed max-w-3xl font-medium opacity-90">
+                    <p className="text-slate-600 dark:text-slate-400 text-xl md:text-2xl leading-relaxed max-w-3xl font-medium opacity-90">
                         {doc.metadata.description}
                     </p>
 
                     <div className="mt-10 flex items-center gap-6 text-xs font-bold text-slate-500 uppercase tracking-widest">
                         <div className="flex items-center gap-2">
-                            <span className="text-slate-700">Last updated</span>
-                            <span className="text-slate-300">{doc.metadata.date || "Feb 28, 2026"}</span>
+                            <span className="text-slate-700 dark:text-slate-500">Last updated</span>
+                            <span className="text-slate-500 dark:text-slate-300">{doc.metadata.date || "Feb 28, 2026"}</span>
                         </div>
                     </div>
                 </header>
@@ -96,13 +96,13 @@ export default function DocPage({ params }: DocPageProps) {
                     {prevDoc ? (
                         <Link
                             href={`/docs/${prevDoc.metadata.slug}`}
-                            className="group flex flex-col gap-2 p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-brand-primary/30 transition-all text-left max-w-sm"
+                            className="group flex flex-col gap-2 p-6 rounded-2xl bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/5 hover:border-brand-primary/30 dark:hover:border-brand-primary/30 transition-all text-left max-w-sm"
                         >
                             <span className="text-xs font-bold text-slate-500 uppercase tracking-widest flex items-center gap-2">
                                 <ChevronLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
                                 Previous
                             </span>
-                            <span className="text-white font-bold group-hover:text-brand-primary transition-colors">
+                            <span className="text-slate-900 dark:text-white font-bold group-hover:text-brand-primary dark:group-hover:text-brand-primary transition-colors">
                                 {prevDoc.metadata.title}
                             </span>
                         </Link>
@@ -111,13 +111,13 @@ export default function DocPage({ params }: DocPageProps) {
                     {nextDoc ? (
                         <Link
                             href={`/docs/${nextDoc.metadata.slug}`}
-                            className="group flex flex-col gap-2 p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-brand-primary/30 transition-all text-right max-w-sm"
+                            className="group flex flex-col gap-2 p-6 rounded-2xl bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/5 hover:border-brand-primary/30 dark:hover:border-brand-primary/30 transition-all text-right max-w-sm"
                         >
                             <span className="text-xs font-bold text-slate-500 uppercase tracking-widest flex items-center justify-end gap-2">
                                 Next
                                 <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                             </span>
-                            <span className="text-white font-bold group-hover:text-brand-primary transition-colors">
+                            <span className="text-slate-900 dark:text-white font-bold group-hover:text-brand-primary dark:group-hover:text-brand-primary transition-colors">
                                 {nextDoc.metadata.title}
                             </span>
                         </Link>

@@ -12,7 +12,7 @@ interface MarkdownRendererProps {
 }
 
 export function MarkdownRenderer({ content, className }: MarkdownRendererProps) {
-    const defaultClasses = "prose prose-invert prose-slate prose-lg md:prose-xl max-w-none min-w-0 break-words prose-h2:font-serif prose-h2:text-4xl md:prose-h2:text-5xl prose-h2:text-white prose-h2:mt-12 prose-h2:mb-6 prose-h2:pb-4 prose-h2:border-b prose-h2:border-white/5 prose-h3:font-serif prose-h3:text-2xl md:prose-h3:text-3xl prose-h3:text-white/90 prose-h3:mt-8 prose-h3:mb-4 prose-p:text-slate-600 dark:text-slate-400 prose-p:leading-[1.8] prose-p:mb-6 prose-strong:text-slate-900 dark:text-white prose-strong:font-black prose-pre:bg-[#09090b] prose-pre:border prose-pre:border-white/10 prose-pre:shadow-2xl prose-pre:rounded-[2rem] prose-pre:overflow-x-auto prose-pre:max-w-[100vw]";
+    const defaultClasses = "prose dark:prose-invert prose-slate prose-lg md:prose-xl max-w-none min-w-0 break-words prose-h2:font-serif prose-h2:text-4xl md:prose-h2:text-5xl prose-h2:text-slate-900 dark:prose-h2:text-white prose-h2:mt-12 prose-h2:mb-6 prose-h2:pb-4 prose-h2:border-b prose-h2:border-slate-200 dark:prose-h2:border-white/5 prose-h3:font-serif prose-h3:text-2xl md:prose-h3:text-3xl prose-h3:text-slate-800 dark:prose-h3:text-white/90 prose-h3:mt-8 prose-h3:mb-4 prose-p:text-slate-600 dark:text-slate-400 prose-p:leading-[1.8] prose-p:mb-6 prose-strong:text-slate-900 dark:text-white prose-strong:font-black prose-pre:bg-slate-900 dark:prose-pre:bg-[#09090b] prose-pre:border prose-pre:border-slate-800 dark:prose-pre:border-white/10 prose-pre:shadow-2xl prose-pre:rounded-[2rem] prose-pre:overflow-x-auto prose-pre:max-w-[100vw]";
 
     return (
         <div className={className || defaultClasses}>

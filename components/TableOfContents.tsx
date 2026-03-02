@@ -55,7 +55,7 @@ export function TableOfContents() {
                             e.preventDefault();
                             document.getElementById(item.id)?.scrollIntoView({ behavior: "smooth" });
                         }}
-                        className={`block text-sm transition-all duration-300 hover:text-white ${item.level === 3 ? "pl-4" : ""
+                        className={`block text-sm transition-all duration-300 hover:text-slate-900 dark:hover:text-white ${item.level === 3 ? "pl-4" : ""
                             } ${activeId === item.id
                                 ? "text-brand-primary font-bold translate-x-1"
                                 : "text-slate-500 font-medium"

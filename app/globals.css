@@ -57,11 +57,11 @@
 
     /* Prose Overrides for Documentation Hierarchy */
     .prose h2 {
-        @apply scroll-mt-32 font-bold tracking-tight text-white dark:text-white mb-8;
+        @apply scroll-mt-32 font-bold tracking-tight text-slate-900 dark:text-white mb-8;
     }
 
     .prose h3 {
-        @apply scroll-mt-32 font-bold tracking-tight text-white/90 dark:text-white/90 mb-6;
+        @apply scroll-mt-32 font-bold tracking-tight text-slate-800 dark:text-white/90 mb-6;
     }
 
     .prose :where(code):not(:where([class~="not-prose"] *)) {
