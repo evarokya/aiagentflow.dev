@@ -80,8 +80,8 @@ export function DocsSidebar({ docs }: { docs: DocItem[] }) {
                 ${isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"}
                 overflow-y-auto h-[calc(100vh-4rem)]
             `}>
-                <div className="p-8 pt-24 md:pt-8 text-slate-300">
-                    <div className="mb-10 block md:hidden">
+                <div className="py-8 px-6 md:py-6 text-slate-300">
+                    <div className="mb-8 block md:hidden">
                         <span className="font-black text-xl tracking-tighter text-white">AI Agent Flow</span>
                         <div className="h-1 w-full bg-gradient-to-r from-brand-primary to-transparent mt-2 rounded-full opacity-50" />
                     </div>
