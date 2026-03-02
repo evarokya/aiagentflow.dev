@@ -6,6 +6,10 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
     // Vercel handles standard Next.js deployments automatically.
     // Removing output: 'export' to ensure i18n middleware works.
+    output: "standalone",
+    experimental: {
+        outputFileTracingRoot: process.cwd(),
+    },
 };
 
 export default withNextIntl(nextConfig);
