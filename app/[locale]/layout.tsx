@@ -7,6 +7,7 @@ import { getMessages } from 'next-intl/server';
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import Script from "next/script";
 
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
@@ -66,6 +67,16 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} antialiased min-h-screen bg-white dark:bg-brand-bg text-slate-900 dark:text-slate-100 selection:bg-brand-secondary/30 transition-colors duration-500`}
       >
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-SDL9BLML9T" />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-SDL9BLML9T');
+          `}
+        </Script>
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider
             attribute="class"
