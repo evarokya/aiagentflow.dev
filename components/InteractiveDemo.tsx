@@ -9,6 +9,7 @@ type ScenarioType = "feature" | "bugfix" | "refactor";
 export function InteractiveDemo() {
     const t = useTranslations("Demo");
     const [activeScenario, setActiveScenario] = useState<ScenarioType>("feature");
+    const [activeTab, setActiveTab] = useState<"terminal" | "code">("terminal");
 
     const scenarios: ScenarioType[] = ["feature", "bugfix", "refactor"];
 
@@ -65,7 +66,7 @@ export function InteractiveDemo() {
                                 {scenarios.map((scenario) => (
                                     <button
                                         key={scenario}
-                                        onClick={() => setActiveScenario(scenario)}
+                                        onClick={() => { setActiveScenario(scenario); setActiveTab("terminal"); }}
                                         className={`px-4 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 border ${activeScenario === scenario
                                             ? "bg-brand-primary text-white border-brand-primary shadow-lg shadow-brand-primary/25 lg:scale-105"
                                             : "bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-400 border-transparent hover:border-slate-300 dark:hover:border-white/10"
@@ -109,11 +110,31 @@ export function InteractiveDemo() {
                                 <div className="hidden sm:flex flex-wrap shadow-sm space-x-1 sm:space-x-1 bg-[#09090b] rounded-lg p-1 border border-white/5 mx-auto max-w-full overflow-hidden opacity-0 pointer-events-none">
                                     <button className="px-3 py-1 text-xs font-semibold rounded-md">Spacer</button>
                                 </div>
-                                <div className="flex items-center gap-2 px-3 py-1 rounded bg-white/5 border border-white/10 text-xs font-mono text-slate-400">
-                                    <svg className="w-3.5 h-3.5 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                    </svg>
-                                    bash
+                                <div className="flex space-x-2">
+                                    <button
+                                        onClick={() => setActiveTab("terminal")}
+                                        className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-xs font-mono transition-colors ${activeTab === "terminal"
+                                            ? "bg-white/10 text-white border border-white/10 shadow-sm"
+                                            : "text-slate-500 hover:text-slate-300 hover:bg-white/5 border border-transparent"
+                                            }`}
+                                    >
+                                        <svg className={`w-3.5 h-3.5 ${activeTab === "terminal" ? "text-brand-primary" : "text-slate-500"}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                        </svg>
+                                        Terminal
+                                    </button>
+                                    <button
+                                        onClick={() => setActiveTab("code")}
+                                        className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-xs font-mono transition-colors ${activeTab === "code"
+                                            ? "bg-white/10 text-white border border-white/10 shadow-sm"
+                                            : "text-slate-500 hover:text-slate-300 hover:bg-white/5 border border-transparent"
+                                            }`}
+                                    >
+                                        <svg className={`w-3.5 h-3.5 ${activeTab === "code" ? "text-brand-tertiary" : "text-slate-500"}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                                        </svg>
+                                        Output.tsx
+                                    </button>
                                 </div>
                             </div>
 
@@ -121,7 +142,7 @@ export function InteractiveDemo() {
                             <div className="p-4 sm:p-8 min-h-[320px] relative overflow-x-auto overflow-y-hidden max-w-full">
                                 <AnimatePresence mode="wait">
                                     <motion.div
-                                        key={activeScenario}
+                                        key={`${activeScenario}-${activeTab}`}
                                         initial={{ opacity: 0, filter: "blur(10px)", y: 10 }}
                                         animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
                                         exit={{ opacity: 0, filter: "blur(10px)", y: -10 }}
@@ -137,23 +158,53 @@ export function InteractiveDemo() {
                                             <p className="text-white font-medium italic">&quot;{t(`scenarios.${activeScenario}.request`)}&quot;</p>
                                         </div>
 
-                                        {/* Output Preview */}
-                                        <div className="text-slate-300">
-                                            {t(`scenarios.${activeScenario}.cli`).split("\\n").map((line, i) => (
-                                                <div key={i} className={`flex gap-3 ${line.trim() === '' ? 'h-6' : ''}`}>
-                                                    {line.trim() !== '' && !line.startsWith('#') && (
-                                                        <span className="text-slate-600 select-none">$</span>
-                                                    )}
-                                                    <span dangerouslySetInnerHTML={{
-                                                        __html: line
-                                                            .replace(/"([^"]+)"/g, '<span class="text-emerald-400">"$1"</span>')
-                                                            .replace(/#\s*(.*)/g, '<span class="text-slate-500"># $1</span>')
-                                                            .replace(/\b(aiagentflow|run|init|doctor)\b/g, '<span class="text-brand-secondary">$1</span>')
-                                                            .replace(/(--stream|--auto|--context|--roles|--model|--dir)/g, '<span class="text-sky-400">$1</span>')
-                                                    }} />
-                                                </div>
-                                            ))}
-                                        </div>
+                                        {/* Content Preview based on Tab */}
+                                        {activeTab === "terminal" ? (
+                                            <motion.div
+                                                key="terminal"
+                                                initial={{ opacity: 0, y: 5 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                className="text-slate-300"
+                                            >
+                                                {t(`scenarios.${activeScenario}.cli`).split("\\n").map((line, i) => (
+                                                    <div key={i} className={`flex gap-3 ${line.trim() === '' ? 'h-6' : ''}`}>
+                                                        {line.trim() !== '' && !line.startsWith('#') && (
+                                                            <span className="text-slate-600 select-none">$</span>
+                                                        )}
+                                                        <span dangerouslySetInnerHTML={{
+                                                            __html: line
+                                                                .replace(/"([^"]+)"/g, '<span class="text-emerald-400">"$1"</span>')
+                                                                .replace(/#\s*(.*)/g, '<span class="text-slate-500"># $1</span>')
+                                                                .replace(/\b(aiagentflow|run|init|doctor)\b/g, '<span class="text-brand-secondary">$1</span>')
+                                                                .replace(/(--stream|--auto|--context|--roles|--model|--dir)/g, '<span class="text-sky-400">$1</span>')
+                                                        }} />
+                                                    </div>
+                                                ))}
+                                            </motion.div>
+                                        ) : (
+                                            <motion.div
+                                                key="code"
+                                                initial={{ opacity: 0, y: 5 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                className="text-slate-300"
+                                            >
+                                                {t(`scenarios.${activeScenario}.diff`).split("\\n").map((line, i) => (
+                                                    <div key={i} className={`flex gap-4 ${line.trim() === '' ? 'h-6 whitespace-pre' : 'whitespace-pre'}`}>
+                                                        <span className="text-slate-600 select-none w-6 text-right shrink-0">{i + 1}</span>
+                                                        <span className={
+                                                            line.trim().startsWith('//') ? "text-slate-500 italic" :
+                                                                line.includes('export') || line.includes('import') || line.includes('return') ? "text-pink-400" :
+                                                                    line.includes('const') || line.includes('function') ? "text-brand-primary" :
+                                                                        line.includes('className') || line.includes('constructor') ? "text-brand-tertiary" :
+                                                                            line.includes('<') && line.includes('>') ? "text-emerald-400" :
+                                                                                "text-slate-300"
+                                                        }>
+                                                            {line}
+                                                        </span>
+                                                    </div>
+                                                ))}
+                                            </motion.div>
+                                        )}
                                     </motion.div>
                                 </AnimatePresence>
                             </div>

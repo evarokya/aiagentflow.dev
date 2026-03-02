@@ -83,25 +83,28 @@
     },
     "Demo": {
         "badge": "See It In Action",
-        "headlinePrefix": "One framework.",
-        "headlineSuffix": "Multiple ways to run.",
-        "description": "Whether you prefer writing code or using the CLI, AI Agent Flow adapts seamlessly to your tooling preferences.",
-        "readDocs": "Read Documentation",
+        "headlinePrefix": "Stop writing boilerplate.",
+        "headlineSuffix": "Start orchestrating.",
+        "description": "Watch how our CLI orchestrates multiple specialized AI agents, from architecture to testing, returning fully functional code right to your local environment.",
+        "readDocs": "Read the Docs",
         "scenarios": {
             "feature": {
-                "label": "New Feature",
-                "request": "Create a dynamic pricing table component",
-                "cli": "# Initialize your project\\naiagentflow init\\n\\n# Run a task with streaming\\naiagentflow run \"Create a dynamic pricing table component\" --stream\\n\\n# Check provider health\\naiagentflow doctor"
+                "label": "Build a Feature",
+                "request": "Build a responsive Next.js navigation header with Framer Motion animations.",
+                "cli": "> aiagentflow run \"Build a responsive Next.js navigation header...\"\n# Initializing AI task flow configuration...\n# Connecting to local DeepSeek Coder...\n\n[INFO]  🧠 Architect drafted `Header.tsx` structure\n[INFO]  💻 Coder implemented responsive Tailwind layout\n[INFO]  💻 Coder added Framer Motion hover states\n[INFO]  🔍 Reviewer approved mobile accessibility\n[SUCCESS] Wrote 1 file (1,452 tokens).",
+                "diff": "export function Header() {\n  return (\n    <motion.header\n      initial={{ y: -100 }}\n      animate={{ y: 0 }}\n      className=\"sticky top-0 z-50 w-full\"\n    >\n      {/* Navigation Content */}\n    </motion.header>\n  );\n}"
             },
             "bugfix": {
-                "label": "Bug Fix",
-                "request": "Fix race condition in auth middleware when handling concurrent login requests",
-                "cli": "aiagentflow run \"Fix race condition in auth middleware when handling concurrent login requests\" \\\\\\n    --stream \\\\\\n    --auto \\\\\\n    --context src/middleware/auth.ts"
+                "label": "Fix a Bug",
+                "request": "Fix the hydration mismatch error in the ThemeProvider component.",
+                "cli": "> aiagentflow run \"Fix hydration mismatch inside ThemeProvider\"\n# Scanning generic AI agent developers workspace...\n\n[INFO]  🔍 Reviewer detected server/client state mismatch\n[INFO]  💻 Coder implemented `mounted` state hook\n[INFO]  💻 Coder deferred rendering until hydration\n[INFO]  🧪 Tester ran `pnpm build` (Passed)\n[SUCCESS] Updated 1 file (389 tokens).",
+                "diff": "export function ThemeProvider({ children }) {\n  const [mounted, setMounted] = useState(false);\n\n  // Wait until after client-side hydration\n  useEffect(() => {\n    setMounted(true);\n  }, []);\n\n  if (!mounted) return null;\n\n  return <NextThemesProvider>{children}</NextThemesProvider>;\n}"
             },
             "refactor": {
-                "label": "Refactor",
-                "request": "Refactor UserService to use async/await and implement the repository pattern",
-                "cli": "aiagentflow run \"Refactor UserService to use async/await and implement the repository pattern\" \\\\\\n    --stream \\\\\\n    --auto"
+                "label": "Refactor Code",
+                "request": "Refactor the massive user.ts service into a functional repository pattern.",
+                "cli": "> aiagentflow run \"Refactor user.ts into a repository pattern\"\n# Analyzing dependency graph for user.ts...\n\n[INFO]  🧠 Architect extracted 3 core interfaces\n[INFO]  💻 Coder isolated `UserAuthRepository`\n[INFO]  💻 Coder isolated `UserProfileRepository`\n[INFO]  🧪 Tester verified 14 unit tests pass\n[SUCCESS] Deleted user.ts, created 3 files (8,921 tokens).",
+                "diff": "// user.ts (Before - 1,200 lines)\n// ❌ Monolithic class with mixed responsibilities\n\n// src/repositories/UserRepository.ts (After)\nexport class UserRepository implements IUserRepository {\n  constructor(private readonly db: DatabaseClient) {}\n\n  async findById(id: string): Promise<User> {\n    return this.db.users.findUnique({ where: { id } });\n  }\n}"
             }
         }
     },
