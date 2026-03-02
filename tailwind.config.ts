@@ -30,6 +30,27 @@ const config: Config = {
           "100%": { transform: "translate(0px, 0px) scale(1)" },
         },
       },
+      typography: (theme: any) => ({
+        DEFAULT: {
+          css: {
+            h1: {
+              fontFamily: `${theme('fontFamily.serif')}`,
+              fontWeight: '700',
+              letterSpacing: '-0.025em',
+            },
+            h2: {
+              fontFamily: `${theme('fontFamily.serif')}`,
+              fontWeight: '700',
+              letterSpacing: '-0.025em',
+            },
+            h3: {
+              fontFamily: `${theme('fontFamily.serif')}`,
+              fontWeight: '700',
+              letterSpacing: '-0.025em',
+            },
+          },
+        },
+      }),
     }
   },
   plugins: [
