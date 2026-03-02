@@ -4,6 +4,7 @@ import rehypeRaw from "rehype-raw";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import Image from "next/image";
+import { CodeBlock } from "./CodeBlock";
 
 interface MarkdownRendererProps {
     content: string;
@@ -42,7 +43,8 @@ export function MarkdownRenderer({ content, className }: MarkdownRendererProps) 
                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
                             />
                         );
-                    }
+                    },
+                    pre: (props) => <CodeBlock {...props} />
                 }}
             >
                 {content}
