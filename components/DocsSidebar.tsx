@@ -2,7 +2,7 @@
 
 import { Link, usePathname } from "@/i18n/navigation";
 import { useState, useEffect } from "react";
-import { Menu, X, ChevronRight, Terminal, BookOpen } from "lucide-react";
+import { Menu, X, ChevronRight, Terminal, BookOpen, Search } from "lucide-react";
 
 interface DocItem {
     metadata: {
@@ -14,6 +14,7 @@ interface DocItem {
 export function DocsSidebar({ docs }: { docs: DocItem[] }) {
     const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
+    const [searchQuery, setSearchQuery] = useState("");
 
     // Close sidebar on navigation (mobile)
     useEffect(() => {
@@ -41,6 +42,14 @@ export function DocsSidebar({ docs }: { docs: DocItem[] }) {
             items: docs.filter(d => ["agent-roles"].includes(d.metadata.slug))
         }
     ];
+
+    // Filter categories based on search query
+    const filteredCategories = categories.map(category => ({
+        ...category,
+        items: category.items.filter(item =>
+            item.metadata.title.toLowerCase().includes(searchQuery.toLowerCase())
+        )
+    })).filter(category => category.items.length > 0);
 
     return (
         <>
@@ -77,37 +86,54 @@ export function DocsSidebar({ docs }: { docs: DocItem[] }) {
                         <div className="h-1 w-full bg-gradient-to-r from-brand-primary to-transparent mt-2 rounded-full opacity-50" />
                     </div>
 
-                    {categories.map((cat, idx) => (
-                        <div key={idx} className="mb-10">
-                            <h3 className="text-[11px] font-black text-slate-500 uppercase tracking-[0.2em] mb-4 flex items-center gap-2">
-                                <span className="text-sm grayscale-[0.5] opacity-70">{cat.emoji}</span>
-                                {cat.title}
-                            </h3>
-                            <nav className="space-y-1">
-                                {cat.items.map((doc) => {
-                                    const href = `/docs/${doc.metadata.slug}`;
-                                    // Robust check for active state
-                                    const isActive = pathname === href || pathname === `${href}/`;
+                    {/* Search Field */}
+                    <div className="mb-8 relative">
+                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
+                        <input
+                            type="text"
+                            placeholder="Search docs..."
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                            className="w-full bg-white/5 border border-white/10 rounded-xl py-2.5 pl-9 pr-4 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-brand-primary/50 focus:bg-white/10 transition-colors"
+                        />
+                    </div>
 
-                                    return (
-                                        <Link
-                                            key={doc.metadata.slug}
-                                            href={href}
-                                            className={`group flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 ${isActive
-                                                ? "bg-brand-primary/10 text-brand-primary shadow-[inset_0_0_20px_rgba(var(--brand-primary),0.05)] border border-brand-primary/20"
-                                                : "text-slate-500 hover:text-white hover:bg-white/5"
-                                                }`}
-                                        >
-                                            <span className="flex items-center gap-3">
-                                                <ChevronRight className={`w-3.5 h-3.5 transition-transform duration-300 ${isActive ? "rotate-90 text-brand-primary" : "text-slate-700 group-hover:text-slate-500"}`} />
-                                                {doc.metadata.title}
-                                            </span>
-                                        </Link>
-                                    );
-                                })}
-                            </nav>
+                    {filteredCategories.length === 0 ? (
+                        <div className="text-center py-8 text-sm text-slate-500">
+                            No matching documentation found.
                         </div>
-                    ))}
+                    ) : (
+                        filteredCategories.map((cat, idx) => (
+                            <div key={idx} className="mb-10">
+                                <h3 className="text-[11px] font-black text-slate-500 uppercase tracking-[0.2em] mb-4 flex items-center gap-2">
+                                    <span className="text-sm grayscale-[0.5] opacity-70">{cat.emoji}</span>
+                                    {cat.title}
+                                </h3>
+                                <nav className="space-y-1">
+                                    {cat.items.map((doc) => {
+                                        const href = `/docs/${doc.metadata.slug}`;
+                                        // Robust check for active state
+                                        const isActive = pathname === href || pathname === `${href}/`;
+
+                                        return (
+                                            <Link
+                                                key={doc.metadata.slug}
+                                                href={href}
+                                                className={`group flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 ${isActive
+                                                    ? "bg-brand-primary/10 text-brand-primary shadow-[inset_0_0_20px_rgba(var(--brand-primary),0.05)] border border-brand-primary/20"
+                                                    : "text-slate-500 hover:text-white hover:bg-white/5"
+                                                    }`}
+                                            >
+                                                <span className="flex items-center gap-3">
+                                                    <ChevronRight className={`w-3.5 h-3.5 transition-transform duration-300 ${isActive ? "rotate-90 text-brand-primary" : "text-slate-700 group-hover:text-slate-500"}`} />
+                                                    {doc.metadata.title}
+                                                </span>
+                                            </Link>
+                                        );
+                                    })}
+                                </nav>
+                            </div>
+                        )))}
 
                     <div className="pt-8 border-t border-white/5 mt-auto">
                         <h3 className="text-[11px] font-black text-slate-500 uppercase tracking-[0.2em] mb-4">Resources</h3>
