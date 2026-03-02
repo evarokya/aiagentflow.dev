@@ -13,28 +13,58 @@ export function Logo({ className, ...props }: LogoProps) {
             {...props}
         >
             <defs>
-                <linearGradient id="agentFlowGradComponent" x1="0%" y1="0%" x2="100%" y2="100%">
+                <linearGradient id="agentFlowGradComponent" x1="0%" y1="100%" x2="100%" y2="0%">
                     <stop offset="0%" stopColor="#3B82F6" />
                     <stop offset="100%" stopColor="#06B6D4" />
                 </linearGradient>
+                <linearGradient id="agentFlowGlow" x1="0%" y1="100%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.4" />
+                    <stop offset="100%" stopColor="#06B6D4" stopOpacity="0.4" />
+                </linearGradient>
             </defs>
 
-            {/* Data paths (flows) */}
-            <path d="M 120 256 L 392 256" stroke="url(#agentFlowGradComponent)" strokeWidth="24" strokeLinecap="round" opacity={0.6} />
-            <path d="M 120 256 L 256 120" stroke="url(#agentFlowGradComponent)" strokeWidth="16" strokeLinecap="round" opacity={0.4} />
-            <path d="M 120 256 L 256 392" stroke="url(#agentFlowGradComponent)" strokeWidth="16" strokeLinecap="round" opacity={0.4} />
-            <path d="M 256 120 L 392 256" stroke="url(#agentFlowGradComponent)" strokeWidth="16" strokeLinecap="round" opacity={0.4} />
-            <path d="M 256 392 L 392 256" stroke="url(#agentFlowGradComponent)" strokeWidth="16" strokeLinecap="round" opacity={0.4} />
+            {/* Glowing Backdrop */}
+            <path
+                d="M256 64 L384 416 L128 416 Z"
+                fill="none"
+                stroke="url(#agentFlowGlow)"
+                strokeWidth="48"
+                strokeLinejoin="round"
+                className="blur-md"
+            />
 
-            {/* Nodes (Agents) */}
-            <circle cx="120" cy="256" r="48" fill="url(#agentFlowGradComponent)" />
-            <circle cx="256" cy="120" r="36" fill="url(#agentFlowGradComponent)" opacity={0.9} />
-            <circle cx="256" cy="392" r="36" fill="url(#agentFlowGradComponent)" opacity={0.9} />
-            <circle cx="392" cy="256" r="64" fill="url(#agentFlowGradComponent)" />
+            {/* The Main "A" geometry with continuous flowchart lines */}
+            <path
+                d="M 230 110 L 140 370"
+                fill="none"
+                stroke="url(#agentFlowGradComponent)"
+                strokeWidth="40"
+                strokeLinecap="round"
+            />
 
-            {/* Inner glowing cores */}
-            <circle cx="120" cy="256" r="20" fill="#ffffff" opacity={0.5} />
-            <circle cx="392" cy="256" r="30" fill="#ffffff" opacity={0.6} />
+            <path
+                d="M 282 110 L 372 370"
+                fill="none"
+                stroke="url(#agentFlowGradComponent)"
+                strokeWidth="40"
+                strokeLinecap="round"
+            />
+
+            {/* Crossbar styled as an interconnected data node line */}
+            <path
+                d="M 175 280 L 335 280"
+                fill="none"
+                stroke="url(#agentFlowGradComponent)"
+                strokeWidth="32"
+                strokeLinecap="round"
+            />
+
+            {/* Glowing Circuit Node / Agent */}
+            <circle cx="256" cy="110" r="28" fill="#ffffff" />
+            <circle cx="256" cy="110" r="14" fill="url(#agentFlowGradComponent)" />
+
+            <circle cx="140" cy="370" r="24" fill="url(#agentFlowGradComponent)" />
+            <circle cx="372" cy="370" r="24" fill="url(#agentFlowGradComponent)" />
         </svg>
     );
 }
