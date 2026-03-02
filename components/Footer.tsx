@@ -2,7 +2,6 @@
 
 import { Link } from "@/i18n/navigation";
 import { Logo } from "./Logo";
-import { VisitorCounter } from "./VisitorCounter";
 import { useTranslations } from "next-intl";
 
 export function Footer() {
@@ -58,7 +57,6 @@ export function Footer() {
                         &copy; {new Date().getFullYear()} {t("allRightsReserved")}
                     </p>
                     <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
-                        <VisitorCounter />
 
                     </div>
                 </div>
