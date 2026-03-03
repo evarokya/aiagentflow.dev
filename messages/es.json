@@ -48,7 +48,7 @@
         },
         "step4": {
             "title": "Testing y Validación",
-            "description": "El agente Tester escribe las pruebas unitarias y el Juez confirma que todo cumple con lo que pediste."
+            "description": "El agente Tester escribe pruebas unitarias mientras que el agente Fixer resuelve automáticamente cualquier comentario de revisión o test fallido. Finalmente, el Juez asegura que todos los requisitos se cumplan."
         }
     },
     "Features": {
@@ -66,11 +66,11 @@
         },
         "feature3": {
             "title": "Resultados Fiables",
-            "description": "Al separar roles (Arquitecto, Coder y Revisor), minimizamos las alucinaciones y garantizamos un output sólido."
+            "description": "Al inyectar tus documentos de arquitectura, especificaciones de API y PRDs como contexto directo, eliminamos las alucinaciones y alineamos el resultado a tus estándares de código."
         },
         "feature4": {
             "title": "Self-Healing",
-            "description": "Los agentes Juez y Tester detectan errores y los fixean automáticamente, ahorrándote horas de debugging."
+            "description": "Los agentes Fixer, Juez y Tester integrados detectan, reintentan y resuelven errores automáticamente antes de que siquiera los veas."
         },
         "feature5": {
             "title": "100% Personalizable",
@@ -90,8 +90,8 @@
         "scenarios": {
             "feature": {
                 "label": "Nueva Feature",
-                "request": "Crear un componente de tabla de precios dinámica",
-                "cli": "# Inicializa el proyecto\naiagentflow init\n\n# Ejecuta con streaming\naiagentflow run \"Crear una tabla de precios dinámica\" --stream\n\n# Chequea tus modelos\naiagentflow doctor"
+                "request": "Construir un header responsive de Next.js",
+                "cli": "aiagentflow run \"Construir un header responsive de Next.js\" --context docs/design-system.md"
             },
             "bugfix": {
                 "label": "Fix de Bug",
@@ -100,8 +100,8 @@
             },
             "refactor": {
                 "label": "Refactor",
-                "request": "Modernizar servicio de usuarios legacy",
-                "cli": "aiagentflow run \"Refactorizar UserService para usar async/await y aplicar patrón Repository\" \\\\\\n    --stream \\\\\\n    --auto"
+                "request": "Refactorizar especificación en tareas batch",
+                "cli": "aiagentflow plan docs/refactor-spec.md -o tasks.txt\\n\\naiagentflow run --batch tasks.txt --auto"
             }
         }
     },

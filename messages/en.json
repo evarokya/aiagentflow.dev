@@ -48,7 +48,7 @@
         },
         "step4": {
             "title": "Test & Validate",
-            "description": "The Tester Agent writes unit tests while the Judge ensures all requirements are met before finishing."
+            "description": "The Tester Agent writes unit tests while the Fixer Agent automatically resolves any review comments or failing tests. Finally, the Judge ensures all requirements are met."
         }
     },
     "Features": {
@@ -66,11 +66,11 @@
         },
         "feature3": {
             "title": "Reliable Outputs",
-            "description": "By separating concerns between specialized agents, we eliminate hallucinations and deliver production-ready code."
+            "description": "By injecting your existing architecture docs, API specs, and PRDs as direct context, we eliminate hallucinations and align the output to your specific coding standards."
         },
         "feature4": {
             "title": "Self-Healing",
-            "description": "Built-in Judge and Tester agents automatically detect, retry, and fix errors before you even see them."
+            "description": "Built-in Fixer, Judge, and Tester agents automatically detect, retry, and resolve errors before you even see them."
         },
         "feature5": {
             "title": "Extensible",
@@ -86,5 +86,69 @@
         "headlinePrefix": "Up and running",
         "headlineSuffix": "in seconds",
         "description": "Add @aiagentflow/cli to any Node.js project. Our zero-dependency engine ensures your environment stays clean."
+    },
+    "Demo": {
+        "badge": "Quick Demo",
+        "headlinePrefix": "One tool,",
+        "headlineSuffix": "infinite possibilities",
+        "description": "Whether integrating into your workflow or via CLI, aiagentflow adapts perfectly to your way of working.",
+        "readDocs": "Read documentation",
+        "scenarios": {
+            "feature": {
+                "label": "New Feature",
+                "request": "Build a responsive Next.js header",
+                "cli": "aiagentflow run \"Build a responsive Next.js header\" --context docs/design-system.md"
+            },
+            "bugfix": {
+                "label": "Bug Fix",
+                "request": "Fix race condition in auth middleware",
+                "cli": "aiagentflow run \"Fix race condition in auth middleware when handling concurrent logins\" \\\\\\n    --stream \\\\\\n    --auto \\\\\\n    --context src/middleware/auth.ts"
+            },
+            "refactor": {
+                "label": "Refactor",
+                "request": "Refactor specification in batch tasks",
+                "cli": "aiagentflow plan docs/refactor-spec.md -o tasks.txt\\n\\naiagentflow run --batch tasks.txt --auto"
+            }
+        }
+    },
+    "Providers": {
+        "badge": "Use your favorite AI",
+        "headline": "Compatible with the best models",
+        "anthropic": {
+            "title": "Anthropic (Claude)",
+            "description": "Ideal for complex architectures. Optimized for claude-sonnet-3.5 and above."
+        },
+        "openai": {
+            "title": "OpenAI (GPT-4o)",
+            "description": "Pure speed for task execution and smart agent routing."
+        },
+        "gemini": {
+            "title": "Google Gemini",
+            "description": "Leverage its massive context window to analyze entire repositories in a second."
+        },
+        "ollama": {
+            "title": "Ollama (Local Models)",
+            "description": "Total privacy and zero cost. Run Llama 3 or DeepSeek directly on your machine."
+        }
+    },
+    "Community": {
+        "badge": "Open Source",
+        "headline": "From the community, for the community",
+        "description": "aiagentflow is an MIT-licensed project. Join hundreds of devs shaping the future of autonomous engineering.",
+        "stars": "Stars on GitHub",
+        "contributors": "Contributors",
+        "button": "Give us a star"
+    },
+    "Footer": {
+        "description": "Open source multi-agent orchestration framework. For developers, by developers.",
+        "resources": "Resources",
+        "blog": "Blog",
+        "docs": "Docs",
+        "legal": "Legal",
+        "privacy": "Privacy",
+        "terms": "Terms",
+        "license": "License (MIT)",
+        "allRightsReserved": "© aiagentflow contributors.",
+        "status": "All systems operational"
     }
 }
