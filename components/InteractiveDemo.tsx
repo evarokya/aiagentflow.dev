@@ -83,7 +83,7 @@ export function InteractiveDemo() {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.4 }}
-                            className="flex flex-col sm:flex-row gap-4"
+                            className="hidden lg:flex flex-col sm:flex-row gap-4"
                         >
                             <a href="/docs/getting-started" className="px-8 py-3.5 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-semibold text-center transition-all hover:scale-105 hover:shadow-[0_0_30px_-5px_rgba(var(--brand-primary),0.5)]">
                                 {t("readDocs")}
@@ -224,6 +224,19 @@ export function InteractiveDemo() {
                                 </div>
                             </div>
                         </div>
+                    </motion.div>
+
+                    {/* Mobile "Read the docs" button (hidden on desktop) */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                        className="flex flex-col lg:hidden w-full"
+                    >
+                        <a href="/docs/getting-started" className="px-8 py-4 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-semibold text-center transition-all active:scale-95 shadow-lg">
+                            {t("readDocs")}
+                        </a>
                     </motion.div>
 
                 </div>
