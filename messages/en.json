@@ -6,9 +6,9 @@
         "github": "GitHub"
     },
     "Hero": {
-        "headlinePrefix": "Your AI Engineering Team,",
-        "headlineSuffix": "Running Locally",
-        "description": "Orchestrate specialized AI agents in a structured, self-hosting AI workflow. Building with @aiagentflow/cli provides a powerful AI task flow configuration that keeps your code local and your engineering team productive.",
+        "headlinePrefix": "The Open-Source AI",
+        "headlineSuffix": "Orchestration Engine.",
+        "description": "Stop wrestling with generic chat assistants. AI Agent Flow is a local-first, multi-agent orchestration framework designed strictly for software engineering. Architect, code, review, and test—automatically.",
         "getStarted": "Get Started",
         "viewGitHub": "View on GitHub"
     },
@@ -31,9 +31,9 @@
     },
     "Pipeline": {
         "badge": "How It Works",
-        "headlinePrefix": "Architected for",
-        "headlineSuffix": "Quality & Speed",
-        "description": "Our specialized agents handle the entire software development lifecycle, from gathering requirements to writing tests, ensuring high-quality output every time.",
+        "headlinePrefix": "A Deterministic",
+        "headlineSuffix": "Multi-Agent Pipeline",
+        "description": "We replaced the chaotic 'do anything' LLM loop with a strict Directed Acyclic Graph (DAG) of specialized engineering personas. Predictable inputs, locally verified outputs.",
         "step1": {
             "title": "Analyze & Plan",
             "description": "The Architect Agent reads your prompt, analyzes the codebase, and drafts a comprehensive implementation plan."
@@ -53,9 +53,9 @@
     },
     "Features": {
         "badge": "Why AI Agent Flow?",
-        "headlinePrefix": "Everything you need to",
-        "headlineSuffix": "scale dev output",
-        "description": "Stop wrestling with bloated frameworks. AI Agent Flow gives you the self-hosting AI workflow and AI task flow configuration primitives you need to ship software faster, right from your terminal.",
+        "headlinePrefix": "Primitives for",
+        "headlineSuffix": "Autonomous Engineering",
+        "description": "Everything you need to build, run, and scale specialized AI development workflows directly from your local terminal. No cloud lock-in. No context window exhaustion.",
         "feature1": {
             "title": "Local First",
             "description": "Your code, your rules. No cloud lock-in or sending proprietary architecture to third-party orchestration servers."
@@ -83,9 +83,9 @@
     },
     "Demo": {
         "badge": "See It In Action",
-        "headlinePrefix": "Stop writing boilerplate.",
-        "headlineSuffix": "Start orchestrating.",
-        "description": "Watch how our CLI orchestrates multiple specialized AI agents, from architecture to testing, returning fully functional code right to your local environment.",
+        "headlinePrefix": "Stop typing boilerplate.",
+        "headlineSuffix": "Start directing.",
+        "description": "Invoke highly specialized agent swarms directly from your command line. Watch them plan, execute, and self-correct against real terminal output.",
         "readDocs": "Read the Docs",
         "scenarios": {
             "feature": {
