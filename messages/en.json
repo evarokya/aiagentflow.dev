@@ -144,6 +144,8 @@
     "Footer": {
         "description": "The open-source multi-agent orchestration framework for software engineering. Built by developers, for developers.",
         "resources": "Resources",
+        "blog": "Blog",
+        "docs": "Documentation",
         "legal": "Legal",
         "privacy": "Privacy Policy",
         "terms": "Terms of Service",

@@ -141,6 +141,8 @@
     "Footer": {
         "description": "El framework de orquestación multi-agente de código abierto para ingeniería de software. Creado por desarrolladores, para desarrolladores.",
         "resources": "Recursos",
+        "blog": "Blog",
+        "docs": "Documentación",
         "legal": "Legal",
         "privacy": "Política de Privacidad",
         "terms": "Términos de Servicio",
