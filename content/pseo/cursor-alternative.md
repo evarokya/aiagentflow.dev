@@ -53,4 +53,4 @@ Unlike Cursor, which fundamentally requires transmitting your codebase context t
 
 Want an entirely air-gapped autonomous software engineer running strictly on your enterprise GPUs?
 
-[Install AI Agent Flow today](/docs/getting-started) and start orchestrating your local AI developer team without sacrificing privacy or lock-in to a specific IDE ecosystem.
+[Install AI Agent Flow today](/docs/getting-started) and start orchestrating your local AI execution pipeline without sacrificing privacy or locking into a specific IDE ecosystem.

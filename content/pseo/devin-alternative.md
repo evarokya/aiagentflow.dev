@@ -47,6 +47,6 @@ You choose your intelligence provider. Want to use GPT-4o for complex architectu
 
 ## Ready to Break Out of the Sandbox?
 
-Forget closed ecosystems and expensive cloud subscriptions. Orchestrate your own team of AI developers directly from your command line.
+Forget closed ecosystems and expensive cloud subscriptions. Orchestrate autonomous engineering workflows directly from your command line.
 
-[Install AI Agent Flow today](/docs/getting-started) and start building your open-source, local-first engineering team.
+[Install AI Agent Flow today](/docs/getting-started) and start building your open-source, local-first orchestration engine.
