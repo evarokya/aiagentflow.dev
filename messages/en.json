@@ -6,23 +6,23 @@
         "github": "GitHub"
     },
     "Hero": {
-        "headlinePrefix": "The Open-Source AI",
-        "headlineSuffix": "Orchestration Engine.",
-        "description": "Stop wrestling with generic chat assistants. AI Agent Flow is a local-first, multi-agent orchestration framework designed strictly for software engineering. Architect, code, review, and test—automatically.",
+        "headlinePrefix": "Your Autonomous AI",
+        "headlineSuffix": "Engineering Team.",
+        "description": "Stop wrestling with generic chat assistants. aiagentflow is a local-first, multi-agent framework built specifically for software engineering. Architect, code, review, and test—all from your terminal.",
         "getStarted": "Get Started",
         "viewGitHub": "View on GitHub"
     },
     "Terminal": {
         "step1": "$ aiagentflow run \"Build a REST API for user auth\"",
-        "step2": "AI Workflow — Running Task",
+        "step2": "AI Workflow — Executing Task",
         "step3": "──────────────────────────────",
         "step4": "Task: Build a REST API for user auth",
         "step5": " ",
-        "step6": "[INFO]  🧠 Architect starting...",
+        "step6": "[INFO]  🧠 Architect initializing...",
         "step7": "✔ 🧠 Architect complete (1,204 tokens)",
-        "step8": "[INFO]  💻 Coder starting...",
+        "step8": "[INFO]  💻 Coder initializing...",
         "step9": "✔ 💻 Coder complete (3,891 tokens)",
-        "step10": "[INFO]  Wrote 4 file(s)",
+        "step10": "[INFO]  Wrote 4 files",
         "step11": "[INFO]  🔍 Reviewer starting...",
         "step12": "✔ 🔍 Reviewer complete (987 tokens)",
         "step13": "[INFO]  🧪 Tester starting...",
@@ -30,127 +30,61 @@
         "step15": "Task completed successfully!"
     },
     "Pipeline": {
-        "badge": "How It Works",
+        "badge": "How it works",
         "headlinePrefix": "A Deterministic",
         "headlineSuffix": "Multi-Agent Pipeline",
-        "description": "We replaced the chaotic 'do anything' LLM loop with a strict Directed Acyclic Graph (DAG) of specialized engineering personas. Predictable inputs, locally verified outputs.",
+        "description": "We replaced chaotic LLM loops with a strict Directed Acyclic Graph (DAG) of specialized engineering personas. Predictable inputs, locally verified outputs.",
         "step1": {
             "title": "Analyze & Plan",
-            "description": "The Architect Agent reads your prompt, analyzes the codebase, and drafts a comprehensive implementation plan."
+            "description": "The Architect Agent analyzes your codebase and drafts a solid implementation plan before a single line of code is written."
         },
         "step2": {
-            "title": "Write Code",
-            "description": "The Coder Agent follows the plan, writing clean, maintainable code across your full stack."
+            "title": "Smart Coding",
+            "description": "The Coder Agent executes the plan, writing clean, maintainable code across your entire stack."
         },
         "step3": {
-            "title": "Review",
-            "description": "The Reviewer Agent inspects the code for bugs, security issues, and style guide adherence."
+            "title": "Automated Review",
+            "description": "The Reviewer Agent audits the code for bugs, security vulnerabilities, and style guide adherence."
         },
         "step4": {
             "title": "Test & Validate",
-            "description": "The Tester Agent writes unit tests and the Judge validates that the code meets all initial requirements."
+            "description": "The Tester Agent writes unit tests while the Judge ensures all requirements are met before finishing."
         }
     },
     "Features": {
-        "badge": "Why AI Agent Flow?",
-        "headlinePrefix": "Primitives for",
+        "badge": "Why aiagentflow?",
+        "headlinePrefix": "Built for",
         "headlineSuffix": "Autonomous Engineering",
-        "description": "Everything you need to build, run, and scale specialized AI development workflows directly from your local terminal. No cloud lock-in. No context window exhaustion.",
+        "description": "Everything you need to ship software faster, directly from your terminal. No cloud lock-in, no data leaks, no context exhaustion.",
         "feature1": {
-            "title": "Local First",
-            "description": "Your code, your rules. No cloud lock-in or sending proprietary architecture to third-party orchestration servers."
+            "title": "Local-First",
+            "description": "Your code stays on your machine. No sending proprietary architecture to third-party servers."
         },
         "feature2": {
             "title": "Framework Agnostic",
-            "description": "Works with React, Vue, Svelte, Node, Python, and more. If you can code it, our agents can orchestrate it."
+            "description": "Works with React, Vue, Node, Python, and more. If you can build it, our agents can orchestrate it."
         },
         "feature3": {
-            "title": "Predictable Output",
-            "description": "By separating concerns (Architect vs Coder vs Reviewer), you eliminate massive context hallucinations and get reliable results."
+            "title": "Reliable Outputs",
+            "description": "By separating concerns between specialized agents, we eliminate hallucinations and deliver production-ready code."
         },
         "feature4": {
-            "title": "Self-Correcting",
-            "description": "Built-in Judge and Tester agents automatically retry failed tests and fix syntax errors before returning control to you."
+            "title": "Self-Healing",
+            "description": "Built-in Judge and Tester agents automatically detect, retry, and fix errors before you even see them."
         },
         "feature5": {
             "title": "Extensible",
-            "description": "Write custom agents or modify existing prompts. The entire framework is designed to be molded to your team's specific workflow."
+            "description": "Write custom agents or tweak prompts to match your team’s specific coding standards and workflow."
         },
         "feature6": {
             "title": "Streaming & Auto-Detection",
-            "description": "Use the --stream flag to watch agents code in real-time. Automatically detect available models from Anthropic, OpenAI, Gemini, and Ollama out-of-the-box."
-        }
-    },
-    "Demo": {
-        "badge": "See It In Action",
-        "headlinePrefix": "Stop typing boilerplate.",
-        "headlineSuffix": "Start directing.",
-        "description": "Invoke highly specialized agent swarms directly from your command line. Watch them plan, execute, and self-correct against real terminal output.",
-        "readDocs": "Read the Docs",
-        "scenarios": {
-            "feature": {
-                "label": "Build a Feature",
-                "request": "Build a responsive Next.js navigation header with Framer Motion animations.",
-                "cli": "> aiagentflow run \"Build a responsive Next.js navigation header...\"\n# Initializing AI task flow configuration...\n# Connecting to local DeepSeek Coder...\n\n[INFO]  🧠 Architect drafted `Header.tsx` structure\n[INFO]  💻 Coder implemented responsive Tailwind layout\n[INFO]  💻 Coder added Framer Motion hover states\n[INFO]  🔍 Reviewer approved mobile accessibility\n[SUCCESS] Wrote 1 file (1,452 tokens).",
-                "diff": "export function Header() {\n  return (\n    <motion.header\n      initial={{ y: -100 }}\n      animate={{ y: 0 }}\n      className=\"sticky top-0 z-50 w-full\"\n    >\n      {/* Navigation Content */}\n    </motion.header>\n  );\n}"
-            },
-            "bugfix": {
-                "label": "Fix a Bug",
-                "request": "Fix the hydration mismatch error in the ThemeProvider component.",
-                "cli": "> aiagentflow run \"Fix hydration mismatch inside ThemeProvider\"\n# Scanning generic AI agent developers workspace...\n\n[INFO]  🔍 Reviewer detected server/client state mismatch\n[INFO]  💻 Coder implemented `mounted` state hook\n[INFO]  💻 Coder deferred rendering until hydration\n[INFO]  🧪 Tester ran `pnpm build` (Passed)\n[SUCCESS] Updated 1 file (389 tokens).",
-                "diff": "export function ThemeProvider({ children }) {\n  const [mounted, setMounted] = useState(false);\n\n  // Wait until after client-side hydration\n  useEffect(() => {\n    setMounted(true);\n  }, []);\n\n  if (!mounted) return null;\n\n  return <NextThemesProvider>{children}</NextThemesProvider>;\n}"
-            },
-            "refactor": {
-                "label": "Refactor Code",
-                "request": "Refactor the massive user.ts service into a functional repository pattern.",
-                "cli": "> aiagentflow run \"Refactor user.ts into a repository pattern\"\n# Analyzing dependency graph for user.ts...\n\n[INFO]  🧠 Architect extracted 3 core interfaces\n[INFO]  💻 Coder isolated `UserAuthRepository`\n[INFO]  💻 Coder isolated `UserProfileRepository`\n[INFO]  🧪 Tester verified 14 unit tests pass\n[SUCCESS] Deleted user.ts, created 3 files (8,921 tokens).",
-                "diff": "// user.ts (Before - 1,200 lines)\n// ❌ Monolithic class with mixed responsibilities\n\n// src/repositories/UserRepository.ts (After)\nexport class UserRepository implements IUserRepository {\n  constructor(private readonly db: DatabaseClient) {}\n\n  async findById(id: string): Promise<User> {\n    return this.db.users.findUnique({ where: { id } });\n  }\n}"
-            }
+            "description": "Watch agents code in real-time with --stream. Automatically detects available models from Anthropic, OpenAI, Gemini, and Ollama."
         }
     },
     "Install": {
-        "badge": "Start Building",
-        "headlinePrefix": "Install in",
-        "description": "Add AI Agent Flow to any Node.js project. It brings its own zero-dependency engine, so you won't break your existing toolchain."
-    },
-    "Providers": {
-        "badge": "Bring Your Own AI",
-        "headline": "Compatible with the models you love",
-        "anthropic": {
-            "title": "Anthropic (Claude)",
-            "description": "State-of-the-art reasoning for architecture and complex coding tasks. Optimized for claude-sonnet-4-20250514."
-        },
-        "openai": {
-            "title": "OpenAI (GPT-4o)",
-            "description": "Lighting fast token generation for rapid code execution and complex agent routing."
-        },
-        "gemini": {
-            "title": "Google Gemini",
-            "description": "Access enormous context windows for scanning massive codebases effortlessly with Gemini 2.5 Pro."
-        },
-        "ollama": {
-            "title": "Ollama (Local Models)",
-            "description": "Keep everything 100% private. Run Llama 3 or DeepSeek models locally without any API costs."
-        }
-    },
-    "Community": {
-        "badge": "Open Source",
-        "headline": "Built for the community, by the community",
-        "description": "AI Agent Flow is MIT licensed and thrives on contributions. Join hundreds of developers building the future of autonomous engineering.",
-        "stars": "GitHub Stars",
-        "contributors": "Contributors",
-        "button": "Star on GitHub"
-    },
-    "Footer": {
-        "description": "The open-source multi-agent orchestration framework for software engineering. Built by developers, for developers.",
-        "resources": "Resources",
-        "blog": "Blog",
-        "docs": "Documentation",
-        "legal": "Legal",
-        "privacy": "Privacy Policy",
-        "terms": "Terms of Service",
-        "license": "License (MIT)",
-        "allRightsReserved": "AI Agent Flow Contributors. All rights reserved.",
-        "status": "All systems operational"
+        "badge": "Get Started",
+        "headlinePrefix": "Up and running",
+        "headlineSuffix": "in seconds",
+        "description": "Add @aiagentflow/cli to any Node.js project. Our zero-dependency engine ensures your environment stays clean."
     }
 }

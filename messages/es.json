@@ -2,152 +2,153 @@
     "Header": {
         "blog": "Blog",
         "docs": "Docs",
-        "comparisons": "Comparaciones",
+        "comparisons": "Comparativas",
         "github": "GitHub"
     },
     "Hero": {
-        "headlinePrefix": "Tu equipo de ingeniería de IA,",
-        "headlineSuffix": "Ejecutándose localmente",
-        "description": "Orquestra agentes de IA en un flujo de trabajo estructurado y de auto-hospedaje (self-hosting AI workflow). @aiagentflow/cli ofrece una configuración de flujo de tareas de IA (AI task flow configuration) que mantiene tu código local y a tu equipo productivo.",
-        "getStarted": "Empezar",
+        "headlinePrefix": "Tu propio equipo de ingeniería de IA,",
+        "headlineSuffix": "corriendo en tu local",
+        "description": "Orquestra agentes de IA en un flujo de trabajo self-hosted y profesional. @aiagentflow/cli te da el control total de tus tareas: mantén tu código privado y a tu equipo rindiendo al máximo.",
+        "getStarted": "Empezar ahora",
         "viewGitHub": "Ver en GitHub"
     },
     "Terminal": {
         "step1": "$ aiagentflow run \"Construir una API REST para usuarios\"",
-        "step2": "AI Workflow — Tarea en ejecución",
+        "step2": "AI Workflow — Ejecutando tarea",
         "step3": "──────────────────────────────",
-        "step4": "Tarea: Construir una API REST para usuarios",
+        "step4": "Tarea: Crear API REST de usuarios",
         "step5": " ",
         "step6": "[INFO]  🧠 Arquitecto iniciando...",
-        "step7": "✔ 🧠 Arquitecto completado (1,204 tokens)",
-        "step8": "[INFO]  💻 Programador iniciando...",
-        "step9": "✔ 💻 Programador completado (3,891 tokens)",
-        "step10": "[INFO]  Escribió 4 archivo(s)",
+        "step7": "✔ 🧠 Arquitecto listo (1,204 tokens)",
+        "step8": "[INFO]  💻 Coder iniciando...",
+        "step9": "✔ 💻 Coder listo (3,891 tokens)",
+        "step10": "[INFO]  4 archivo(s) generados",
         "step11": "[INFO]  🔍 Revisor iniciando...",
-        "step12": "✔ 🔍 Revisor completado (987 tokens)",
-        "step13": "[INFO]  🧪 Probador iniciando...",
-        "step14": "✔ 🧪 Probador completado (2,103 tokens)",
+        "step12": "✔ 🔍 Revisor listo (987 tokens)",
+        "step13": "[INFO]  🧪 Tester iniciando...",
+        "step14": "✔ 🧪 Tester listo (2,103 tokens)",
         "step15": "¡Tarea completada con éxito!"
     },
     "Pipeline": {
-        "badge": "Cómo Funciona",
-        "headlinePrefix": "Diseñado para",
-        "headlineSuffix": "Calidad y Velocidad",
-        "description": "Nuestros agentes especializados manejan todo el ciclo de desarrollo de software, desde la recopilación de requisitos hasta la escritura de pruebas, asegurando resultados de alta calidad en todo momento.",
+        "badge": "¿Cómo funciona?",
+        "headlinePrefix": "Diseñado para darte",
+        "headlineSuffix": "calidad y velocidad",
+        "description": "Nuestros agentes se encargan de todo el ciclo: desde entender tus requisitos hasta escribir los tests. Tú solo preocúpate de recibir código de alta calidad.",
         "step1": {
-            "title": "Analizar y Planificar",
-            "description": "El Agente Arquitecto lee tu prompt, analiza el código base y redacta un plan de implementación completo."
+            "title": "Análisis y Planificación",
+            "description": "El agente Arquitecto procesa tu prompt, entiende tu codebase y diseña un plan de implementación sólido."
         },
         "step2": {
-            "title": "Escribir Código",
-            "description": "El Agente Programador sigue el plan, escribiendo código limpio y mantenible en todo tu stack."
+            "title": "Coding Inteligente",
+            "description": "El agente Coder sigue el plan y escribe código limpio y mantenible para todo tu stack."
         },
         "step3": {
-            "title": "Revisar",
-            "description": "El Agente Revisor inspecciona el código en busca de errores, problemas de seguridad y cumplimiento de la guía de estilo."
+            "title": "Review Automático",
+            "description": "El agente Revisor audita el código buscando bugs, fallos de seguridad o faltas de estilo."
         },
         "step4": {
-            "title": "Probar y Validar",
-            "description": "El Agente Probador escribe pruebas unitarias y el Juez valida que el código cumple con todos los requisitos iniciales."
+            "title": "Testing y Validación",
+            "description": "El agente Tester escribe las pruebas unitarias y el Juez confirma que todo cumple con lo que pediste."
         }
     },
     "Features": {
-        "badge": "¿Por qué AI Agent Flow?",
-        "headlinePrefix": "Todo lo que necesitas para",
-        "headlineSuffix": "escalar tu desarrollo",
-        "description": "Deja de luchar con frameworks sobrecargados. AI Agent Flow te brinda las primitivas que necesitas para enviar software más rápido, directamente desde tu terminal.",
+        "badge": "¿Por qué aiagentflow?",
+        "headlinePrefix": "Lleva tu productividad",
+        "headlineSuffix": "al siguiente nivel",
+        "description": "Olvídate de frameworks pesados y complejos. aiagentflow te da la libertad de buildear y pushear software rápido directamente desde tu terminal.",
         "feature1": {
-            "title": "Local Primero",
-            "description": "Tu código, tus reglas. Sin dependencia de la nube ni envío de tu arquitectura propietaria a servidores de orquestación de terceros."
+            "title": "Local-First",
+            "description": "Tu código es tuyo. Sin vendor lock-in ni el riesgo de enviar tu propiedad intelectual a servidores de terceros."
         },
         "feature2": {
-            "title": "Agnóstico de Framework",
-            "description": "Funciona con React, Vue, Svelte, Node, Python y más. Si puedes codificarlo, nuestros agentes pueden orquestarlo."
+            "title": "Agnóstico al Framework",
+            "description": "React, Vue, Node o Python... da igual. Si sabes programarlo, nuestros agentes pueden orquestarlo sin problemas."
         },
         "feature3": {
-            "title": "Resultados Predecibles",
-            "description": "Al separar responsabilidades (Arquitecto vs Programador vs Revisor), eliminas las alucinaciones de contexto y obtienes resultados fiables."
+            "title": "Resultados Fiables",
+            "description": "Al separar roles (Arquitecto, Coder y Revisor), minimizamos las alucinaciones y garantizamos un output sólido."
         },
         "feature4": {
-            "title": "Autocorrección",
-            "description": "Los agentes Juez y Probador integrados reintentan automáticamente las pruebas fallidas y corrigen errores de sintaxis antes de devolverte el control."
+            "title": "Self-Healing",
+            "description": "Los agentes Juez y Tester detectan errores y los fixean automáticamente, ahorrándote horas de debugging."
         },
         "feature5": {
-            "title": "Extensible",
-            "description": "Escribe agentes personalizados o modifica los prompts existentes. Todo el framework está diseñado para adaptarse al flujo de trabajo específico de tu equipo."
+            "title": "100% Personalizable",
+            "description": "Crea tus propios agentes o ajusta los prompts para que se adapten exactamente al workflow de tu equipo."
         },
         "feature6": {
-            "title": "Streaming y Autodetección",
-            "description": "Usa la opción --stream para ver a los agentes programar en tiempo real. Detecta automáticamente los modelos disponibles de Anthropic, OpenAI, Gemini y Ollama desde el primer momento."
+            "title": "Streaming y Auto-detección",
+            "description": "Usa --stream para ver el código en tiempo real. Detectamos automáticamente tus modelos de Anthropic, OpenAI, Gemini u Ollama."
         }
     },
     "Demo": {
-        "badge": "Míralo en Acción",
-        "headlinePrefix": "Un framework.",
-        "headlineSuffix": "Múltiples formas de ejecutar.",
-        "description": "Ya sea que prefieras escribir código o usar la CLI, AI Agent Flow se adapta perfectamente a tus preferencias de herramientas.",
-        "readDocs": "Leer Documentación",
+        "badge": "Demo rápida",
+        "headlinePrefix": "Una sola herramienta,",
+        "headlineSuffix": "infinitas posibilidades",
+        "description": "Ya sea integrándolo en tu código o vía CLI, aiagentflow se ajusta perfectamente a tu forma de trabajar.",
+        "readDocs": "Ver documentación",
         "scenarios": {
             "feature": {
-                "label": "Nueva Función",
+                "label": "Nueva Feature",
                 "request": "Crear un componente de tabla de precios dinámica",
-                "cli": "# Inicializa tu proyecto\\naiagentflow init\\n\\n# Ejecuta una tarea con streaming\\naiagentflow run \"Crear un componente de tabla de precios dinámica\" --stream\\n\\n# Verifica el estado de los proveedores\\naiagentflow doctor"
+                "cli": "# Inicializa el proyecto\naiagentflow init\n\n# Ejecuta con streaming\naiagentflow run \"Crear una tabla de precios dinámica\" --stream\n\n# Chequea tus modelos\naiagentflow doctor"
             },
             "bugfix": {
-                "label": "Corrección de Error",
-                "request": "Corregir condición de carrera en el middleware de autenticación",
-                "cli": "aiagentflow run \"Corregir condición de carrera en el middleware de autenticación al manejar solicitudes de inicio de sesión concurrentes\" \\\\\\n    --stream \\\\\\n    --auto \\\\\\n    --context src/middleware/auth.ts"
+                "label": "Fix de Bug",
+                "request": "Corregir race condition en el auth middleware",
+                "cli": "aiagentflow run \"Fixear race condition en el auth middleware al manejar logins concurrentes\" \\\\\\n    --stream \\\\\\n    --auto \\\\\\n    --context src/middleware/auth.ts"
             },
             "refactor": {
-                "label": "Refactorización",
-                "request": "Modernizar el servicio de usuario heredado",
-                "cli": "aiagentflow run \"Refactorizar UserService para usar async/await e implementar el patrón repository\" \\\\\\n    --stream \\\\\\n    --auto"
+                "label": "Refactor",
+                "request": "Modernizar servicio de usuarios legacy",
+                "cli": "aiagentflow run \"Refactorizar UserService para usar async/await y aplicar patrón Repository\" \\\\\\n    --stream \\\\\\n    --auto"
             }
         }
     },
     "Install": {
-        "badge": "Empieza a Construir",
-        "headlinePrefix": "Instálalo en",
-        "description": "Añade @aiagentflow/cli a cualquier proyecto de Node.js. Trae su propio motor sin dependencias, por lo que no romperá tu cadena de herramientas existente."
+        "badge": "Empieza hoy",
+        "headlinePrefix": "Instalación en",
+        "headlineSuffix": "pocos segundos",
+        "description": "Instala @aiagentflow/cli en cualquier proyecto Node.js. Es zero-dependency, manteniendo tu entorno limpio y sin conflictos."
     },
     "Providers": {
-        "badge": "Trae tu propia IA",
-        "headline": "Compatible con los modelos que amas",
+        "badge": "Usa tu IA favorita",
+        "headline": "Compatible con los mejores modelos",
         "anthropic": {
             "title": "Anthropic (Claude)",
-            "description": "Razonamiento de vanguardia para arquitectura y tareas de codificación complejas. Optimizado para claude-sonnet-4-20250514."
+            "description": "Ideal para arquitecturas complejas. Optimizado para claude-sonnet-3.5 y superiores."
         },
         "openai": {
             "title": "OpenAI (GPT-4o)",
-            "description": "Generación de tokens ultrarrápida para ejecución rápida de código y enrutamiento complejo de agentes."
+            "description": "Velocidad pura para ejecución de tareas y routing inteligente de agentes."
         },
         "gemini": {
             "title": "Google Gemini",
-            "description": "Accede a enormes ventanas de contexto para escanear bases de código masivas sin esfuerzo con Gemini 2.5 Pro."
+            "description": "Aprovecha su enorme context window para analizar repositorios enteros en un segundo."
         },
         "ollama": {
-            "title": "Ollama (Modelos locales)",
-            "description": "Mantenlo todo 100% privado. Ejecuta modelos Llama 3 o DeepSeek localmente sin costes de API."
+            "title": "Ollama (Modelos Locales)",
+            "description": "Privacidad total y coste cero. Corre Llama 3 o DeepSeek directamente en tu máquina."
         }
     },
     "Community": {
-        "badge": "Código Abierto",
-        "headline": "Construido para la comunidad, por la comunidad",
-        "description": "AI Agent Flow tiene licencia MIT y prospera gracias a las contribuciones. Únete a cientos de desarrolladores que construyen el futuro de la ingeniería autónoma.",
+        "badge": "Open Source",
+        "headline": "De la comunidad, para la comunidad",
+        "description": "aiagentflow es un proyecto con licencia MIT. Únete a los cientos de devs que están definiendo el futuro de la ingeniería autónoma.",
         "stars": "Estrellas en GitHub",
-        "contributors": "Colaboradores",
-        "button": "Dar estrella en GitHub"
+        "contributors": "Contribuidores",
+        "button": "Danos una estrella"
     },
     "Footer": {
-        "description": "El framework de orquestación multi-agente de código abierto para ingeniería de software. Creado por desarrolladores, para desarrolladores.",
+        "description": "Framework de orquestación multi-agente open source. Por desarrolladores, para desarrolladores.",
         "resources": "Recursos",
         "blog": "Blog",
-        "docs": "Documentación",
+        "docs": "Docs",
         "legal": "Legal",
-        "privacy": "Política de Privacidad",
-        "terms": "Términos de Servicio",
+        "privacy": "Privacidad",
+        "terms": "Términos",
         "license": "Licencia (MIT)",
-        "allRightsReserved": "Colaboradores de AI Agent Flow. Todos los derechos reservados.",
-        "status": "Todos los sistemas operativos"
+        "allRightsReserved": "© Colaboradores de aiagentflow.",
+        "status": "Sistemas operativos"
     }
 }
