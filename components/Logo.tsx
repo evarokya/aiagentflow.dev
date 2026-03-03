@@ -14,57 +14,59 @@ export function Logo({ className, ...props }: LogoProps) {
         >
             <defs>
                 <linearGradient id="agentFlowGradComponent" x1="0%" y1="100%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#3B82F6" />
-                    <stop offset="100%" stopColor="#06B6D4" />
+                    <stop offset="0%" stopColor="#06B6D4" /> {/* Cyan */}
+                    <stop offset="100%" stopColor="#6366F1" /> {/* Indigo */}
                 </linearGradient>
                 <linearGradient id="agentFlowGlow" x1="0%" y1="100%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.4" />
-                    <stop offset="100%" stopColor="#06B6D4" stopOpacity="0.4" />
+                    <stop offset="0%" stopColor="#06B6D4" stopOpacity="0.5" />
+                    <stop offset="100%" stopColor="#6366F1" stopOpacity="0.5" />
                 </linearGradient>
             </defs>
 
-            {/* Glowing Backdrop */}
+            {/* Glowing Backdrop Diamond */}
             <path
-                d="M256 64 L384 416 L128 416 Z"
+                d="M256 64 L416 256 L256 448 L96 256 Z"
                 fill="none"
                 stroke="url(#agentFlowGlow)"
-                strokeWidth="48"
+                strokeWidth="60"
                 strokeLinejoin="round"
-                className="blur-md"
+                className="blur-xl"
             />
 
-            {/* The Main "A" geometry with continuous flowchart lines */}
+            {/* Inner Core Diamond */}
             <path
-                d="M 230 110 L 140 370"
+                d="M256 160 L336 256 L256 352 L176 256 Z"
                 fill="none"
                 stroke="url(#agentFlowGradComponent)"
-                strokeWidth="40"
-                strokeLinecap="round"
+                strokeWidth="16"
+                strokeLinejoin="round"
             />
 
+            {/* Outer Hull Diamond */}
             <path
-                d="M 282 110 L 372 370"
+                d="M256 64 L416 256 L256 448 L96 256 Z"
                 fill="none"
                 stroke="url(#agentFlowGradComponent)"
-                strokeWidth="40"
-                strokeLinecap="round"
+                strokeWidth="24"
+                strokeLinejoin="round"
             />
 
-            {/* Crossbar styled as an interconnected data node line */}
-            <path
-                d="M 175 280 L 335 280"
-                fill="none"
-                stroke="url(#agentFlowGradComponent)"
-                strokeWidth="32"
-                strokeLinecap="round"
-            />
+            {/* Connecting Struts (Network Aesthetic) */}
+            <path d="M256 64 L256 160" stroke="url(#agentFlowGradComponent)" strokeWidth="16" />
+            <path d="M256 448 L256 352" stroke="url(#agentFlowGradComponent)" strokeWidth="16" />
+            <path d="M96 256 L176 256" stroke="url(#agentFlowGradComponent)" strokeWidth="16" />
+            <path d="M416 256 L336 256" stroke="url(#agentFlowGradComponent)" strokeWidth="16" />
 
-            {/* Glowing Circuit Node / Agent */}
-            <circle cx="256" cy="110" r="28" fill="#ffffff" />
-            <circle cx="256" cy="110" r="14" fill="url(#agentFlowGradComponent)" />
+            {/* Network Nodes (Dots) */}
+            <circle cx="256" cy="64" r="16" fill="#fff" />
+            <circle cx="416" cy="256" r="16" fill="#fff" />
+            <circle cx="256" cy="448" r="16" fill="#fff" />
+            <circle cx="96" cy="256" r="16" fill="#fff" />
 
-            <circle cx="140" cy="370" r="24" fill="url(#agentFlowGradComponent)" />
-            <circle cx="372" cy="370" r="24" fill="url(#agentFlowGradComponent)" />
+            <circle cx="256" cy="160" r="12" fill="url(#agentFlowGradComponent)" />
+            <circle cx="336" cy="256" r="12" fill="url(#agentFlowGradComponent)" />
+            <circle cx="256" cy="352" r="12" fill="url(#agentFlowGradComponent)" />
+            <circle cx="176" cy="256" r="12" fill="url(#agentFlowGradComponent)" />
         </svg>
     );
 }
