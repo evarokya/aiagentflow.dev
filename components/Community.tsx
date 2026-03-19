@@ -6,12 +6,6 @@ import { useTranslations } from "next-intl";
 export function Community() {
     const t = useTranslations("Community");
 
-    const stats = [
-        { label: t("stars"), value: "1.2k+" },
-        { label: t("contributors"), value: "45+" },
-        { label: "Community Hub", value: "Discord" },
-    ];
-
     return (
         <section id="community" className="py-24 relative bg-slate-50 dark:bg-transparent transition-colors duration-500 overflow-hidden">
             {/* Animated Grid Background */}
